@@ -2,6 +2,19 @@
 
 <br />
 
+## Use Discord Syntax Highlighting
+
+When pasting code into Discord, make sure to paste it in a "code block" by using triple backticks. And make sure to use syntax highlighting for the language, by typing the name of the language next to the backticks.
+
+For example:
+
+````
+```lua
+local foo = "bar"
+Isaac.DebugString(foo)
+```
+````
+
 ## Format Code
 
 When asking for help, it is common to post a code-snippet. Before posting code, **please format it with an auto-formatter** so that it can be easily understood by others.
@@ -13,11 +26,8 @@ When asking for help, it is common to post a code-snippet. Before posting code, 
 
 ## No Screenshots
 
-When asking for help, it is common to post a screenshot of your code. **Don't do this**, because it isn't editable or copy-pastable. Instead, post the actual text code of the code using triple backticks, like this:
+When asking for help, it is common to post a screenshot of your code. **Don't do this**, because it isn't editable or copy-pastable. Instead, post the actual text code of the code using a code block. See the section on [Discord syntax highlighting](#use-discord-syntax-highlighting).
 
-```
-``````
-local foo = "bar"
-Isaac.DebugString(foo)
-``````
-```
+<br />
+
+##
