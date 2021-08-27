@@ -52,7 +52,7 @@ When asking for help, it is common to post a bunch of code that is unrelated to 
 Link previews can clutter the conversion, turning a tiny message into a massive wall of text. It is courteous to enclose all links in <>, like this:
 
 ```
-Thanks for helping! Here's a link to my code: <https://github.com/IsaacScript/isaacscript-common/blob/main/src/functions/array.ts#L3-L16>
+Here's a link to my code: <https://github.com/IsaacScript/isaacscript-common/blob/main/src/functions/array.ts#L3-L16>
 ```
 
 <br />
