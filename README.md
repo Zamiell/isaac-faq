@@ -6,7 +6,7 @@
 
 When pasting code into Discord, make sure to paste it in a "code block" by using triple backticks. And make sure to use syntax highlighting for the language, by typing the name of the language next to the backticks.
 
-For example, for Lua code:
+For example, this is a code snippet for Lua:
 
 ````
 ```lua
@@ -15,7 +15,7 @@ Isaac.DebugString(foo)
 ```
 ````
 
-Or, for TypeScript code:
+Or, a code snippet for TypeScript:
 
 ````
 ```ts
