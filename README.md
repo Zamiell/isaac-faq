@@ -15,6 +15,8 @@ Isaac.DebugString(foo)
 ```
 ````
 
+<br />
+
 ## Format Code
 
 When asking for help, it is common to post a code-snippet. Before posting code, **please format it with an auto-formatter** so that it can be easily understood by others.
