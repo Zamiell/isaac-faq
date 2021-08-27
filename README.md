@@ -46,3 +46,13 @@ When asking for help, it is common to post a screenshot of your code. **Don't do
 When asking for help, it is common to post a bunch of code that is unrelated to the problem. This makes questions hard to understand and usually means that the person asking the question is putting forth very little effort. Please read [this StackOverflow post on how to create minimal, reproducable examples](https://stackoverflow.com/help/minimal-reproducible-example).
 
 <br />
+
+## Don't Use Link Previews
+
+Link previews can clutter the conversion, turning a tiny message into a massive wall of text. It is courteous to enclose all links in <>, like this:
+
+```
+Thanks for helping! Here's a link to my code: <https://github.com/IsaacScript/isaacscript-common/blob/main/src/functions/array.ts#L3-L16>
+```
+
+<br />
