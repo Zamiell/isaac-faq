@@ -6,12 +6,21 @@
 
 When pasting code into Discord, make sure to paste it in a "code block" by using triple backticks. And make sure to use syntax highlighting for the language, by typing the name of the language next to the backticks.
 
-For example:
+For example, for Lua code:
 
 ````
 ```lua
 local foo = "bar"
 Isaac.DebugString(foo)
+```
+````
+
+Or, for TypeScript code:
+
+````
+```ts
+const foo = "bar";
+Isaac.DebugString(foo);
 ```
 ````
 
@@ -29,5 +38,11 @@ When asking for help, it is common to post a code-snippet. Before posting code, 
 ## No Screenshots
 
 When asking for help, it is common to post a screenshot of your code. **Don't do this**, because it isn't editable or copy-pastable. Instead, post the actual text code of the code using a code block. See the section on [Discord syntax highlighting](#use-discord-syntax-highlighting).
+
+<br />
+
+## Use Minimal, Reproducible Examples
+
+When asking for help, it is common to post a bunch of code that is unrelated to the problem. This makes questions hard to understand and usually means that the person asking the question is putting forth very little effort. Please read [this StackOverflow post on how to create minimal, reproducable examples](https://stackoverflow.com/help/minimal-reproducible-example).
 
 <br />
