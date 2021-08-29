@@ -60,3 +60,12 @@ Here's a link to my code: <https://github.com/IsaacScript/isaacscript-common/blo
 ```
 
 <br />
+
+## How Do I Start Modding Isaac?
+
+We generally recommend that people watch the Lytebringr's series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF). These were made for Afterbirth+, but not much has changed now that Repentance is out.
+
+The main difference is that the mods folder is now located at: `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\mods`
+
+- Cucco has also made a series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLUYzSIp7NO8cEer2FmtxSXlXoMFirvYDN).
+- The IsaacScript website has a good [text tutorial](https://isaacscript.github.io/docs/example-mod) on how to build an example mod using IsaacScript.
