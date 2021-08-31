@@ -2,6 +2,12 @@
 
 <br />
 
+## Read the Docs
+
+Search [Wofsuage's API documentation](https://wofsauge.github.io/IsaacDocs/rep/) before you ask a question.
+
+<br />
+
 ## Use Discord Syntax Highlighting
 
 When pasting code into Discord, make sure to paste it in a "code block" by using triple backticks. And make sure to use syntax highlighting for the language, by typing the name of the language next to the backticks.
