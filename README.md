@@ -75,3 +75,11 @@ Other resources:
 
 - Cucco has also made a series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLUYzSIp7NO8cEer2FmtxSXlXoMFirvYDN).
 - The IsaacScript website has a good [text tutorial](https://isaacscript.github.io/docs/example-mod) on how to build an example mod using IsaacScript.
+
+<br />
+
+## Why is my sprite showing up in-game as a black square?
+
+This happens when the sprite is saved with the wrong bit depth. Set it at 32-bit depth specifically. (Don't set it to be "Automatic".)
+
+<br />
