@@ -1,4 +1,4 @@
-# The Binding of Isaac: Repentance Modding - Common Responses & FAQ
+# The Binding of Isaac: Repentance Modding FAQ
 
 <br />
 
