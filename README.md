@@ -89,3 +89,9 @@ Other resources:
 This happens when the sprite is saved with the wrong bit depth. Set it at 32-bit depth specifically. (Don't set it to be "Automatic".)
 
 <br />
+
+## How Do I Make Sprites in the Isaac Style?
+
+Watch [this video](https://www.youtube.com/watch?v=cJ68vYqzSm0) by LeatherIceCream.
+
+<br />
