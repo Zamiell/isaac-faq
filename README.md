@@ -116,6 +116,6 @@ When you write programs, they may not work right away. Your first reaction shoul
 
 The tried-and-true method to figure out almost any bug is called "print debugging". In Isaac, this means printing out a bunch of messages to the log.txt file so that you can view it and see which parts of your code are being executed, and which are not. So, go to a bunch of places in your code and add `Isaac.DebugString("GETTING HERE 1")`, `Isaac.DebugString("GETTING HERE 2")`, and so on.
 
-Often times, the reasons that your code isn't working is that your variables are not what you think they are. So, print out what the variables are at each step of the way so that you can see that they are what you think they are, with something along the lines of: `Isaac.DebugString("GETTING HERE - FOO IS: " .. tostring(foo))`
+Often times, the reason that your code is not working is that your variables are not what you think they are. So, print out what the variables are at each step of the way so that you can confirm that they are what you think they are. Use something along the lines of: `Isaac.DebugString("GETTING HERE - FOO IS: " .. tostring(foo))`
 
 <br />
