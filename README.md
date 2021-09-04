@@ -67,7 +67,7 @@ Here's a link to my code: <https://github.com/IsaacScript/isaacscript-common/blo
 
 <br />
 
-## How Do I Start Modding Isaac?
+## How do I start modding Isaac?
 
 We generally recommend that people watch the Lytebringr's series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF). These were made for Afterbirth+, but not much has changed now that Repentance is out, so they are still your best bet for learning the ropes.
 
@@ -90,8 +90,22 @@ This happens when the sprite is saved with the wrong bit depth. Set it at 32-bit
 
 <br />
 
-## How Do I Make Sprites in the Isaac Style?
+## How do I make sprites in the Isaac style?
 
 Watch [this video](https://www.youtube.com/watch?v=cJ68vYqzSm0) by LeatherIceCream.
+
+<br />
+
+## Why isn't my code working? How do I know when errors occur?
+
+Lua is an interpretted language, which means that if you make a typo or have otherwise bad code, you will only be able to discover it once the program actually runs. If the Lua interpreters encounters an error, it will write it to the game's log.txt file.
+
+By default, this file is located at: `C:\Users\james\Documents\My Games\Binding of Isaac Repentance\log.txt`
+
+Open this file and search it carefully for Lua-related errors. (Ctrl + f for "error" is a good start.) This will often tell you the line number that you messed up on.
+
+It is also recommended to set `FadedConsoleDisplay=1` in the options.ini file so that it is a little bit more easy to discover errors while you play.
+
+For people comfortable with command-line applications, use my [isaac-log-viewer](https://github.com/Zamiell/isaac-log-viewer) script running on a second monitor as you code & test.
 
 <br />
