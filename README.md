@@ -84,6 +84,24 @@ Other resources:
 
 <br />
 
+## How do I use the resource extractor? How do I unpack the game files?
+
+By default, the game's resources are located here:
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\resources
+```
+
+However, this directory will be mostly empty unless you run the provided resource extrator. It is located here:
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\ResourceExtractor\ResourceExtractor.exe
+```
+
+Once you run the extractor, the resources directory will fill up with all of the XML files, ANM2 files, and images that the game uses.
+
+<br />
+
 ## Why is my sprite showing up in-game as a black square?
 
 This happens when the sprite is saved with the wrong bit depth. Set it at 32-bit depth specifically. (Don't set it to be "Automatic".)
