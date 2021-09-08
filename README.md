@@ -137,3 +137,11 @@ The tried-and-true method to figure out almost any bug is called "print debuggin
 Often times, the reason that your code is not working is that your variables are not what you think they are. So, print out what the variables are at each step of the way so that you can confirm that they are what you think they are. Use something along the lines of: `Isaac.DebugString("GETTING HERE - FOO IS: " .. tostring(foo))`
 
 <br />
+
+### I modified an XML file and it is crashing, what do I do?
+
+A crash means that the XML file is invalid, meaning that you messed up somewhere while editing the file. Start over from scratch and make tiny edits one at a time until you find the exact part the crashes the game.
+
+Another helpful troubleshooting tool is to use XML validation tools like [xmlvalidation.com](https://www.xmlvalidation.com/).
+
+<br />
