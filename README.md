@@ -98,7 +98,7 @@ However, this directory will be mostly empty unless you run the provided resourc
 C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\ResourceExtractor\ResourceExtractor.exe
 ```
 
-Once you run the extractor, the resources directory will fill up with all of the XML files, ANM2 files, and images that the game uses.
+Once you run the extractor, the resources directory will fill up with all of the XML files, ANM2 files, images, and other various files that the game uses.
 
 <br />
 
