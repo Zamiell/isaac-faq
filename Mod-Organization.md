@@ -136,7 +136,7 @@ return postUpdate
 local item1 = {}
 
 function item1:postUpdate()
-  // Code here
+  -- Code here
 end
 
 return item1
