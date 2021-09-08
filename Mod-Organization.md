@@ -95,10 +95,11 @@ In your mod, you might want to take advantage of the "optional arguments" featur
 ```ts
 // main.ts
 
-import * as postUpdate from "./callbacks/postUpdate";
+import * as postEntityKillInit from "./callbacks/postEntityKill";
 
 const mod = RegisterMod("My Mod", 1);
-postEntityKill.init(mod);
+
+postEntityKillInit(mod);
 ```
 
 ```ts
@@ -107,7 +108,7 @@ postEntityKill.init(mod);
 import * as item1 from "../items/item1";
 import * as item2 from "../items/item2";
 
-export function init(mod: Mod): void {
+export default function postEntityKillInit(mod: Mod): void {
   mod.AddCallback(
     ModCallbacks.MC_POST_ENTITY_KILL,
     main,
