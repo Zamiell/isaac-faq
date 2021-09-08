@@ -293,7 +293,7 @@ end
 
 <br />
 
-### Use Functions to Provide a High-Level Inventory
+## Use Functions to Provide a High-Level Inventory
 
 As programmers, we are trained to use functions to stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). In other words, whenever code needs to run more than one time, we stick it in a function to keep from repeating ourselves. But this isn't the only use for functions. Even if code is only run one time, we can still stick it in a function.
 
