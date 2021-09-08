@@ -2,13 +2,15 @@
 
 Software has the problem where if you keep on adding things to it, eventually it becomes a Frankenstein monster - hard to manage and hard to understand. It is helpful to keep your mod code nice and organized so that it never reaches a state of unmaintainable spaghetti.
 
-Small mods can be written in a single file - `main.ts` (for TypeScript) or `main.lua` (for Lua). But for bigger mods, you will want to split up your code into different files. For example, it makes sense for a mod pack that contains 10 items to have all of the code for each individual item live in a file dedicated to just that item.
+Small mods can be written in a single file - `main.ts` (for TypeScript) or `main.lua` (for Lua). But for bigger mods, you will want to split up your code into different files. For example, it makes sense for a mod pack that contains 10 items to have all of the code for each individual item live in a file dedicated to just that item. That way, you can leverage the `Ctrl + p` hotkey in VSCode to jump to the exact spot that you need to go.
 
-There are two good ways to organize a bigger mod:
+And if an item or feature has so much code that it gets to be 500-1000 lines, then consider splitting up that into multiple files. Instead of having a file called `item1.ts`, have a directory called `item1` with child files based on the particular property of the feature or the originating callback.
+
+But how do you glue it all together? There are two good ways to organize a bigger mod:
 
 <br />
 
-## Dependency Injection
+## 1) Dependency Injection
 
 Use depedency injection and have all callback registration happen in the files dedicated to the item/feature.
 
@@ -40,7 +42,7 @@ function postUpdate() {
 
 <br />
 
-## Callback Files
+## 2) Callback Files
 
 Have a separate file per callback that calls out to the individual functions.
 
@@ -84,7 +86,7 @@ Using TypeScript compliments this strategy because it ensures that everything gl
 
 <br />
 
-## Callback Files with Dependency Injection for Callbacks with Optional Arguments
+## 2a) Callback Files with Dependency Injection for Callbacks with Optional Arguments
 
 In your mod, you might want to take advantage of the "optional arguments" feature of the Isaac callbacks. However, we still want to contain all of the logic for a particular callback inside the file dedicated to that callback. So we can use dependency injection for this.
 
