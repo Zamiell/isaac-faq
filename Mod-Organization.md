@@ -342,7 +342,7 @@ Beyond the two organizational strategies that were discussed above, there are ot
 
 local item1 = require("mymod.items.item1")
 
-myMod = RegisterMod("My Mod", 1)
+myMod = RegisterMod("My Mod", 1) -- Initializing a global variable
 
 item1:init()
 ```
