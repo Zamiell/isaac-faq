@@ -144,7 +144,7 @@ return item1
 
 In this way, we only register one callback function per callback.
 
-One advantage of having an extra degrees of hierarchy is that you can more easily control the *order* of feature execution. This can be important for bigger mods. As a toy example, say that one item/feature takes away all items from a player at the beginning of a run, and another item/feature adds items to a player at the beginning of a run. In this case, you would need to ensure that the former feature is executed last. It's easy to accomplish this in a callback file.
+One advantage of having an extra degree of hierarchy is that you can more easily control the *order* of feature execution. This can be important for bigger mods. As a toy example, say that one item/feature takes away all items from a player at the beginning of a run, and another item/feature adds items to a player at the beginning of a run. In this case, you would need to ensure that the former feature is executed last. It's easy to accomplish this in a callback file.
 
 Another advantage of having two degrees of hierarchy is that the execution flow is easier to analyze and troubleshoot. Inevitably, you will need to troubleshoot problems in your mod. By commenting out functions in a specific callback file, you have more fine grained control than by simply disabling the initialization of an entire item/feature.
 
