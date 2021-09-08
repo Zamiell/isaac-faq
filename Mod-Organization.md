@@ -62,7 +62,7 @@ function item1:init(mod)
 end
 
 function item1:postUpdate()
-  // Code here
+  -- Code here
 end
 
 return item1
