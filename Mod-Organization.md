@@ -384,7 +384,7 @@ One way to stay organized is to use *namespacing* in combination with a global v
 ```lua
 -- item1.lua
 
-myMod.item1 = {
+myMod.item1 = { -- myMod is a global variable
   charges = 0,
   counters = 0,
 }
