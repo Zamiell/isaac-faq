@@ -95,7 +95,7 @@ In your mod, you might want to take advantage of the "optional arguments" featur
 ```ts
 // main.ts
 
-import * as postEntityKillInit from "./callbacks/postEntityKill";
+import postEntityKillInit from "./callbacks/postEntityKill";
 
 const mod = RegisterMod("My Mod", 1);
 
