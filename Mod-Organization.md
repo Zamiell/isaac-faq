@@ -82,7 +82,7 @@ In this way, we have one callback function per callback.
 
 One advantage of having two degrees of hierarchy is that you can control the *order* of the execution of all of the code in your mod. This can be important for bigger mods. For example, one item/feature might take away all items from a player, and another item/feature might add items to a player. In this case, you would have to ensure that the former feature is executed last.
 
-Another advantage of having two degrees of hierarchy is that the execution flow is eaier to analyze and troubleshoot. By commenting out functions in a speciifc callback file, you have more fine grained control than by simply disabling the initialization of an entire item/feature.
+Another advantage of having two degrees of hierarchy is that the execution flow is eaier to analyze and troubleshoot. By commenting out functions in a specific callback file, you have more fine grained control than by simply disabling the initialization of an entire item/feature.
 
 Using TypeScript compliments this strategy because it ensures that everything glues together properly.
 
