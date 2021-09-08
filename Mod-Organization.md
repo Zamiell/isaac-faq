@@ -40,7 +40,33 @@ function postUpdate() {
 }
 ```
 
-(In a Lua mod, this would look almost exactly the same, obviously replacing "import" with "require" and so on.)
+Or, in Lua:
+
+```lua
+-- main.lua
+
+local item1 = require("mymod.items.item1")
+
+local mod = RegisterMod("My Mod", 1)
+
+item1:init(mod)
+```
+
+```lua
+-- item1.lua
+
+local item1 = {}
+
+function item1:init(mod)
+  mod:AddCallback(ModCallbacks.MC_UPDATE, item1.postUpdate)
+end
+
+function item1:postUpdate()
+  // Code here
+end
+
+return item1
+```
 
 <br />
 
@@ -76,6 +102,44 @@ export function main(): void {
 export function postUpdate(): void {
   // Code here
 }
+```
+
+Or, in Lua:
+
+```lua
+-- main.lua
+
+local postUpdate = require("myMod.callbacks.postUpdate")
+
+local mod = RegisterMod("My Mod", 1)
+
+mod:AddCallback(ModCallbacks.POST_UPDATE, postUpdate.main)
+```
+
+```lua
+-- postUpdate.lua
+
+local postUpdate = {}
+
+local item1 = require(myMod.items.item1")
+
+function postUpdate:main()
+  item1:postUpdate()
+end
+
+return postUpdate
+```
+
+```lua
+-- item1.lua
+
+local item1 = {}
+
+function item1:postUpdate()
+  // Code here
+end
+
+return item1
 ```
 
 In this way, we have one callback function per callback.
@@ -128,6 +192,48 @@ function main(entity: Entity) {
 function mom(entity: Entity) {
   item2.postEntityKillMom(entity);
 }
+```
+
+Or, in Lua:
+
+```lua
+-- main.lua
+
+local postEntityKill = require("myMod.callbacks.postEntityKill")
+
+local mod = RegisterMod("My Mod", 1);
+
+postEntityKill.init(mod);
+```
+
+```lua
+-- postEntityKill.lua
+
+local postEntityKill = {}
+
+local item1 = require("myMod.items.item1")
+local item2 = require("myMod.items.item2")
+
+function postEntityKill:init(mod)
+  mod.AddCallback(
+    ModCallbacks.MC_POST_ENTITY_KILL,
+    postEntityKill.main
+  )
+
+  mod.AddCallback(
+    ModCallbacks.MC_POST_ENTITY_KILL,
+    postEntityKill.mom,
+    EntityType.ENTITY_MOM
+  )
+end
+
+function postEntityKill:main(entity)
+  item1:postEntityKill(entity)
+end
+
+function postEntityKill:mom(entity)
+  item2:postEntityKillMom(entity)
+end
 ```
 
 <br />
