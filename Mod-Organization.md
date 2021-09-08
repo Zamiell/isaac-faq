@@ -46,7 +46,7 @@ function postUpdate() {
 
 ## 2) Callback Files
 
-Have a separate file per callback that calls out to the individual functions.
+Have a separate file per callback that calls out to the individual mod features.
 
 This looks like:
 
