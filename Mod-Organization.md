@@ -325,11 +325,11 @@ end
 return item1
 ```
 
-This code has a nice property: by reading the `postNewRoom()` function, we get a high-level inventory of the things that happen. In other words, we can immediately see that three things happen on every new room. But we don't have to read through hundreds of lines of code in order to find out *what* happens on every new room - we can instead read the nice little summary that it provides. As a reader, we don't have to bother wading into any of these child functions if we don't want to - all of those implementation details have been cleanly abstracted away.
+This code has a nice property: by reading the `postNewRoom()` function, we get a high-level inventory of the things that happen. If we want to figure out what the function is doing, we *don't* have to read through hundreds of lines of code. Instead, we can instead read the nice little three-line summary. If we want to, we can wade further into the child functions, but we don't have to - all of those implementation details have been abstracted away.
 
-This strategy also makes it easier to find bugs. For example, if a function is named `**removeAllGridEntities**()`, and then we find a situation where the function does *not* remove all of the grid entities, then it's clear where the bug is. We can immediately tell from the name of the function that whoever wrote it originally intended it to remove all of the grid entities. On the other hand, if it was just a block of code in the middle of some other, bigger function, then determining that is not so clear.
+This strategy also makes it easier to find bugs. For example, if a function is named `removeAllGridEntities()`, and then we find a situation where the function does *not* remove all of the grid entities, then it is clear where the bug is. We can immediately tell from the name of the function that whoever wrote it originally intended it to remove all of the grid entities. On the other hand, if it was just a block of code in the middle of some other, bigger function, then determining that is not so clear.
 
-As an aside, when I say "whoever wrote it", I mean to say that it might have been written by someone else on your team. But if you don't work on a team, the "someone else" might be **you** from months/years ago. Either way, you are in the same situation. :)
+As an aside, when I say "whoever wrote it", I mean to say that it might have been written by someone else on your team. But if you don't work on a team, the "someone else" might be **you** from months/years ago. Either way, you are in the same situation, wondering about the true purpose of the code. :)
 
 <br />
 
