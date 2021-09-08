@@ -98,8 +98,7 @@ In your mod, you might want to take advantage of the "optional arguments" featur
 import * as postUpdate from "./callbacks/postUpdate";
 
 const mod = RegisterMod("My Mod", 1);
-mod.AddCallback(ModCallbacks.MC_POST_ENTITY_KILL, postEntityKill.main);
-postEntityKill.init();
+postEntityKill.init(mod);
 ```
 
 ```ts
@@ -111,12 +110,17 @@ import * as item2 from "../items/item2";
 export function init(mod: Mod): void {
   mod.AddCallback(
     ModCallbacks.MC_POST_ENTITY_KILL,
+    main,
+  );
+
+  mod.AddCallback(
+    ModCallbacks.MC_POST_ENTITY_KILL,
     mom,
     EntityType.ENTITY_MOM,
   );
 }
 
-export function main(entity: Entity): void {
+function main(entity: Entity) {
   item1.postEntityKill(entity);
 }
 
