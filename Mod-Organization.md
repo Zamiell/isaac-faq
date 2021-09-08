@@ -6,7 +6,7 @@ Software has the problem where if you keep on adding things to it, eventually it
 
 Small mods can be written in a single file - `main.ts` (for TypeScript) or `main.lua` (for Lua). But for bigger mods, you will want to split up your code into different files. For example, it makes sense for a mod pack that contains 10 items to have all of the code for each individual item live in a file dedicated to just that item. That way, you can leverage the `Ctrl + p` hotkey in VSCode to jump to the exact spot that you need to go. And if you need to fix a bug with item 1, then you don't have to go on a scavenger hunt throughout the entire repository - you can just focus all of your attention on the file called `item1.ts`.
 
-And if an item/feature file has so much code that it gets to be 500-1000 lines, then consider splitting up that file into multiple files. Instead of having a file called `item1.ts`, you can have a directory called `item1` with child files based on the originating callback or some other distinguishing attribute.
+And if an item/feature file has so much code that it gets to be 500-1000 lines, then consider splitting up that file into multiple files. Instead of having a file called `item1.ts`, you can have a directory called `item1` with child files based on the originating callback or some other distinguishing attribute. By keeping files small, `Ctrl + p` will always warp to where you want to go with lightning speed.
 
 But how do you glue it all together? In general, there are two pretty good ways to organize a bigger mod.
 
