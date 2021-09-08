@@ -142,6 +142,6 @@ Often times, the reason that your code is not working is that your variables are
 
 A crash means that the XML file is invalid, meaning that you messed up somewhere while editing the file. Start over from scratch and make tiny edits one at a time until you find the exact part the crashes the game.
 
-Another helpful troubleshooting tool is to use XML validation tools like [xmlvalidation.com](https://www.xmlvalidation.com/).
+Another helpful troubleshooting tool is validators like [xmlvalidation.com](https://www.xmlvalidation.com/).
 
 <br />
