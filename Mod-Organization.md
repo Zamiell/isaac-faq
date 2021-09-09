@@ -541,9 +541,9 @@ Much better! We can clearly see that the function is coming from `item2.lua` fil
 
 ### 3) Double Whammy
 
-Another problem with import a file for side-effects it that it's all or nothing. So an item that exposes functionality to other features isn't a very good fit for this model.
+Another problem with importing for side-effects it that it's all or nothing. So an item that exposes functionality to other features is not a very good fit for this model.
 
-For example, say that I'm writing code for item 2 and I want to handle the synergy with item 1:
+For example, say that we are writing code for item 2 and we want to handle the synergy with item 1:
 
 ```lua
 -- item1.lua
