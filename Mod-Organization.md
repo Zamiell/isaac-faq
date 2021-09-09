@@ -489,7 +489,7 @@ By carefully scoping all of our variables, we make it a lot easier to understand
 
 In the Isaac Lua environment, other mods will be able to access the global variables that you set. Sometimes, this is intentioal - you are explicitly exporting functionality to be used by other mods. But a lot of the time, it's not intentional, and a mod is designed around using global variables as a means for all of the files to talk to each other.
 
-Mods that are structured like this are at a risk of someone else reaching in and deleting or overwriting the global variables. You might think that this is unlikely to happen, and in most cases I would agree. But why take the chance? Make your mod more resilient to failure and use local variables instead. Refactoring global variables into local variables only takes a tiny amount of effort, and you'll feel better about making your mod scoped properly.
+Mods that are structured like this are at a risk of someone else reaching in and deleting or overwriting the global variables. In truth, this kind of thing is rare. But why take the chance? Take pride in making your mod resilient to failure and use local variables instead. Refactoring global variables into local variables only takes a tiny amount of effort, and you'll feel better about making your mod scoped properly.
 
 <br />
 
