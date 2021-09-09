@@ -363,7 +363,7 @@ end
 return item1
 ```
 
-In this way, you can avoid using dependency injection, which reduces the complexity a little. Using global variables can get the job done. But there are several disadvantages with using global variables.
+In this way, you can avoid using dependency injection, which reduces the complexity a little. But there are several disadvantages with using global variables.
 
 <br />
 
