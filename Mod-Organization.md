@@ -395,7 +395,7 @@ function item1:activate()
 end
 ```
 
-This is a little gross, because we are now typing a fair amount of boilerplate every time we need to access or modify a variable. One way to get around this is to use locally cache the reference:
+This is a little gross, because we are now typing a fair amount of boilerplate every time we need to access or modify a variable. One way to get around this is to locally cache the reference:
 
 ```lua
 -- item1.lua
