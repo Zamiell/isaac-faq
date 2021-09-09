@@ -475,11 +475,12 @@ And everything works in an identical way as before.
 
 ### 6) Thinking About Scopes
 
-Rather than just shitting out a variable declaration, stop for a moment and carefully consider what the *scope* for your new variable should be:
+Rather than just shitting out a variable declaration, stop for a moment and carefully consider what the *scope* for your new variable should be. By default, you should scope a variable as local as you possibly can:
+
 - Is the variable only used by one specific function? Then it should be scoped local to the function.
 - Do a lot of functions in the same file use the variable? Then it should be scoped local to the file.
 - Does the variable need to be modified by other mods? Then make it a global variable.
-  - But this should be pretty rare. (And for some variables, it might make more sense to expose helper functions like `discharge()` and `addCounter()` like in the previous code-snippet.
+  - But this should be pretty rare. (And for some variables, it might make more sense to expose helper functions like `discharge()` and `addCounter()` like in the previous code-snippet.)
 
 By carefully scoping all of our variables, we make it a lot easier to understand the code and greatly narrow the problem-space for any particular bug.
 
