@@ -594,7 +594,7 @@ local item1 = require("myMod.items.item1")
 item1:charge()
 ```
 
-Here, the author of file 2 figured that all he was doing was charging item 1. But surprise! Unbeknownst to they, simply by requiring the file, it executed other code, and it reset a variable.
+Here, the author of file 2 figured that all he was doing was charging item 1. But surprise! Unbeknownst to them, simply by requiring the file, it executed other code, and it reset a variable.
 
 Due to how `require` caching works in Lua, this side-effect would only happen once, so it would likely not cause a bug at runtime. But writing code like this is confusing! It's hard to reason about code when importing some files has side-effects, and importing other files does not.
 
