@@ -598,4 +598,4 @@ Here, the author of file 2 figured that all he was doing was charging item 1. Bu
 
 Due to how `require` caching works in Lua, this side-effect would only happen once, so it would likely not cause a bug at runtime. But writing code like this is confusing! It's hard to reason about code when importing some files has side-effects, and importing other files does not.
 
-When coding, consistency is key - get in the habit of never having any side effects in your code. If all a file does is initialize some code, then wrap it in an `init()` function so that all of your files are consistent.
+When coding, consistency is key - get in the habit of never having any side effects in your code. If all a file does is initialize some code, then wrap it in an `init()` function so that all of your files have consistent export types.
