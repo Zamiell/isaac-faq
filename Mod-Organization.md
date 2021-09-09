@@ -477,18 +477,123 @@ And everything works in an identical way as before.
 
 Rather than just shitting out a variable declaration, stop for a moment and carefully consider what the *scope* for your new variable should be:
 - Is the variable only used by one specific function? Then it should be scoped local to the function.
-- Do a lot of functions in the same file use the v
+- Do a lot of functions in the same file use the variable? Then it should be scoped local to the file.
+- Does the variable need to be modified by other mods? Then make it a global variable.
+  - But this should be pretty rare. (And for some variables, it might make more sense to expose helper functions like `discharge()` and `addCounter()` like in the previous code-snippet.
 
+<br />
 
-Say that item 2 has a synergy with item 1.
+### 7) Resiliency
 
-### 1) Resiliency
+At the risk of stating something obvious, in the Isaac Lua environment, other mods will be able to access the global variables that you set. Sometimes, this is intentioal - you are explicitly exporting functionality to be used by other mods. But a lot of the time, it's not intentional, and a mod is designed around using global variables as a means for all of the files to talk to each other.
 
-Obviously, global variables are global. In the Isaac Lua environment, other mods are able to access the global variables that you set. Meaning that other mods can delete your global variables, which will probably make your mod unfunctional. Why take the chance? Make your mod more resilient to failure and use local variables instead.
+Mods that are structured like this are at a risk of someone else reaching in and deleting or overwriting the global variables. You might think that this is unlikely to happen, and in most cases I would agree. But why take the chance? Make your mod more resilient to failure and use local variables instead. Refactoring global variables into local variables only takes a tiny amount of effort, and you'll feel better about making your mod scoped properly.
 
-But what about exporting functionality to other mods?
-
+<br />
 
 ## Avoiding Side Effects
 
-Some mods import files for side effects, meaning that instead of importing specific files or functions, they just 
+### 1) Definition
+
+Some mods import files for "side effects", which means that instead of importing a file for a function or a variable, they just execute all of the code in the file:
+
+```lua
+-- main.lua
+myMod = RegisterMod("My Mod", 1) -- Initializing a global variable
+require("item1.lua")
+
+-- item1.lua
+myMod:AddCallback(ModCallbacks.MC_POST_UPDATE, postUpdate)
+```
+
+Immediately, we can see that this strategy only works if you are using global variables to connect the files together; dependency injection is impossible.
+
+<br />
+
+### 2) Lack of Namespacing
+
+Another problem with importing files this way is that we lose track of where code is coming from. Consider the following code-snippet:
+
+```lua
+require("item1.lua")
+require("item2.lua")
+require("item3.lua")
+
+foo();
+```
+
+Which file did `foo()` come from? Who knows! Now, we have to go on a scavenger hunt to find out. Instead, let's write the code with proper exports:
+
+```lua
+local item1 = require("item1.lua")
+local item2 = require("item2.lua")
+local item3 = require("item3.lua")
+
+item2.foo();
+```
+
+Much better! We can clearly see that the function is coming from `item2.lua` file. This is *namespacing* in action.
+
+<br />
+
+### 3) Double Whammy
+
+Another problem with import a file for side-effects it that it's all or nothing. So an item that exposes functionality to other features isn't a very good fit for this model.
+
+For example, say that I'm writing code for item 2 and I want to handle the synergy with item 1:
+
+```lua
+-- item1.lua
+function charge()
+  -- Code here
+  -- This function is a global function and was instantiated because
+  -- the file was imported for side-effects
+end
+
+-- item2.lua
+function postNewRoom()
+  charge()
+end
+```
+
+This is the composition of the blunders from the previous two sections:
+- Bad scoping: `charge()` can be invoked anywhere without explicitly importing it and there can be name collisions.
+- Namespacing: Where is `charge()` coming from? It could be coming from anywhere.
+
+Of course, this is kind of a contrived example, because we would never name a global function called `charge()`. Instead, we would name it `item1Charge()` so that it is more clear where it is coming from and what it is doing. This makes the namespacing problem less bad. But this has other problems. It's annoying to add this boilerplate prefix to every single function in the `item1.lua` file. And it's *redundant* to name a function `item1Charge()` in a file called `item1.lua` - that should be obvious. Using a prefix is a hack for not scoping the functions properly to begin with.
+
+<br />
+
+### 4) The "Require Surprise"
+
+Side effects are even more insidious when a Lua module has a mixture of executing code and exported functions.
+
+Say that we fix the problem with the previous code-snippet by exporting the specific `charge()` function:
+
+```lua
+-- item1.lua
+
+local item1 = {}
+
+item1.someVariable = initalizationFunction()
+
+function item1:charge()
+  -- Code here
+end
+
+return item1
+```
+
+```lua
+-- item2.lua
+
+-- Handle the synergy with item 1
+local item1 = require("myMod.items.item1")
+item1:charge()
+```
+
+Here, the author of file 2 figured that all he was doing was charging item 1. But surprise! Unbeknownst to they, simply by requiring the file, it executed other code, and it reset a variable.
+
+Due to how `require` caching works in Lua, this side-effect would only happen once, so it would likely not cause a bug at runtime. But writing code like this is confusing! It's hard to reason about code when importing some files has side-effects, and importing other files does not.
+
+When coding, consistency is key - get in the habit of never having any side effects in your code. If all a file does is initialize some code, then wrap it in an `init()` function so that all of your files are consistent.
