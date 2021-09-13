@@ -154,6 +154,6 @@ Simply use [this mod](sounds-display.lua), which will tell you what the ID of an
 
 ## What is Single Line Responsibility (SLR)?
 
-When writing code, put some effort in making it look nice and be easy to read, especially if you are showing it to other people or asking for help. For this purpose, it is a good idea to follow the "single line responsibility" rule - meaning that **one line** should only do **one thing**. Read [this blog](https://midu.dev/single-line-responsability-haz-una-cosa-por-linea/) for more details about why SLR is great.
+When writing code, put some effort into making it look nice and be easy to read for others (especially if you are showing it to other people or asking for help). In this vein, it is a good idea to follow the "single line responsibility" rule - meaning that **one line** should only do **one thing**. Read [this blog](https://midu.dev/single-line-responsability-haz-una-cosa-por-linea/) for more details about why SLR is great.
 
 <br />
