@@ -43,7 +43,7 @@ When asking for help, it is common to post a code-snippet. Before posting code, 
 
 ## No Screenshots
 
-When asking for help, it is common to post a screenshot of your code. **Don't do this**, because it isn't editable or copy-pastable. Instead, post the actual text of the code. See the section on [Discord syntax highlighting](#use-discord-syntax-highlighting).
+When asking for help, it is common to post a screenshot of your code. **Don't do this**, because it isn't editable or copy-pastable. Instead, post the actual text of the code. Also see the section on [Discord syntax highlighting](#use-discord-syntax-highlighting).
 
 <br />
 
