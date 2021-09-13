@@ -157,3 +157,9 @@ Simply use [this mod](sounds-display.lua), which will tell you what the ID of an
 When writing code, put some effort into making it look nice and be easy to read for others (especially if you are showing it to other people or asking for help). In this vein, it is a good idea to follow the "single line responsibility" rule - meaning that **one line** should only do **one thing**. Read [this blog](https://midu.dev/single-line-responsability-haz-una-cosa-por-linea/) for more details about why SLR is great.
 
 <br />
+
+## How do I apply a costume to my character?
+
+This is called a "null costume" and it is accomplished via the `EntityPlayer.AddNullCostume()` method. For more information, see [Lytebringr's 8th video - Costumes and Item Pools](https://www.youtube.com/watch?v=R1CdCyGL1DQ&list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF&index=9).
+
+<br />
