@@ -145,3 +145,9 @@ A crash means that the XML file is invalid, meaning that you messed up somewhere
 Another helpful troubleshooting tool is validators like [xmlvalidation.com](https://www.xmlvalidation.com/).
 
 <br />
+
+## What is the ID of [the sound that I care about]?
+
+Simply use [this mod](sounds-display.lua), which will tell you what the ID of any currently-playing sound is.
+
+<br />
