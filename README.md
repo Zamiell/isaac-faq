@@ -168,9 +168,9 @@ This is called a "null costume" and it is accomplished via the `EntityPlayer.Add
 
 Mods affect the game by putting code inside of *callbacks*. Each callback fires when a particular event happens in the game. There are 72 different callbacks to choose from, so you have to choose the right one depending on what you want to do.
 
-For example, the most basic callback is the MC_POST_GAME_STARTED, which fires once at the beginning of a new run. You would put code in here to do something custom at the beginning of every run.
+For example, the most basic callback is `MC_POST_GAME_STARTED`, which fires once at the beginning of a new run. You would put code in here to do something custom at the beginning of every run.
 
-Another common callback that mods use is the MC_POST_UPDATE callback, which fires on every single update frame (i.e. 30 times per second). You would put code in this callback for custom items that have constant effects.
+Another common callback that mods use is `MC_POST_UPDATE`, which fires on every single update frame (i.e. 30 times per second). You would put code in this callback for custom items that have constant effects.
 
 Go through the [official docs](https://wofsauge.github.io/IsaacDocs/rep/enums/ModCallbacks.html) and read what all of the callbacks do so that you can get familiar with them.
 
