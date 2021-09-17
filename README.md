@@ -175,3 +175,9 @@ Another common callback that mods use is `MC_POST_UPDATE`, which fires on every 
 Go through the [official docs](https://wofsauge.github.io/IsaacDocs/rep/enums/ModCallbacks.html) and read what all of the callbacks do so that you can get familiar with them.
 
 <br />
+
+## How do I create a new floor/level/stage?
+
+Unfortunately, Isaac does not natively support modded custom floors. BudJMT and DeadInfinity have built a custom system called [StageAPI](https://github.com/Meowlala/BOIStageAPI15) that allows mods to add custom floors in a hacky way. However, StageAPI is not easy to use, so unless you are already an experienced Isaac modder & coder, you should stick to more simple projects.
+
+<br />
