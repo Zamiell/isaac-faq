@@ -193,3 +193,15 @@ There is no built-in way to do this, so you will have to get inventive. For the 
 Simply use [Sanio's library](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255) for this, or study the source code and reimplement it yourself.
 
 <br />
+
+## What is the difference between an API and a library?
+
+Some mods on the workshop package functionality together as an abstraction for other poeple to use. In software, this is what is typically known as a "library". As a programmer, it is usually a lot easier to leverage other people's battle-tested libraries than to roll your own from scratch.
+
+On the other hand, an API is short for application programming interface, and it is exactly what it sounds like. An application might want to expose some functionality to external users and software, and it would do that through an explicitly defined interface. Libraries expose an API so that end-users can consume them. But note that *any* software can have an API, not just a library. For example, the Revelations Mod is a popular mod that adds new floors, bosses, and items to the game. But it also exposes an API so that it can be made compatible with other mods.
+
+Historically, Isaac libraries have labeled themselves as "APIs", but this is a misnomer. Some examples of this include [StageAPI](https://github.com/Meowlala/BOIStageAPI15) and [MinimapAPI](https://github.com/TazTxUK/MinimapAPI). On the other hand, an example of a library that is correctly named is Sanio's [Costume Protector](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255).
+
+If you are creating a new library, please use correct terminology to name your project, which helps prevent confusion for newcomers to the Isaac modding scene.
+
+<br />
