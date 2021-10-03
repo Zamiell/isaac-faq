@@ -213,7 +213,7 @@ If you are creating a new library, please use correct terminology to name your p
 
 <br />
 
-## How do I iterate over a list from the API?
+## How do I iterate over a list object from the API?
 
 For example, in Lua:
 
