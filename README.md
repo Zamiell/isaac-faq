@@ -268,3 +268,15 @@ function postFamiliarUpdateMyFamiliar(familiar: EntityFamiliar) {
 ```
 
 <br />
+
+## What are ANM2 file?
+
+- In Isaac, animations are represented as anm2 files in the `resources/gfx` folder.
+- Each entity in the game has an associated anm2 file.
+- Additionally, UI elements are rendered using various anm2 files (in the `resources/gfx/ui` folder).
+- anm2 files are simply XML files with a different file extension.
+- To edit the vanilla animations or add new animations, you can:
+  - Edit the files directly using a text editor. (Kilburn does this.)
+  - Edit the files using the provided Isaac Animation Editor, which is located at: `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\IsaacAnimationEditor\IsaacAnimationEditor.exe`.
+
+<br />
