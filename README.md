@@ -205,3 +205,9 @@ Historically, Isaac libraries have labeled themselves as "APIs", but this is a m
 If you are creating a new library, please use correct terminology to name your project, which helps prevent confusion for newcomers to the Isaac modding scene.
 
 <br />
+
+## How do I overwrite vanilla music?
+
+Use Taz's [Music Mod Callback](https://steamcommunity.com/sharedfiles/filedetails/?id=2491006386&searchtext=music+callback).
+
+<br />
