@@ -277,6 +277,6 @@ function postFamiliarUpdateMyFamiliar(familiar: EntityFamiliar) {
 - anm2 files are simply XML files with a different file extension.
 - To edit the vanilla animations or add new animations, you can:
   - Edit the files directly using a text editor. (Kilburn does this.)
-  - Edit the files using the provided Isaac Animation Editor, which is located at: `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\IsaacAnimationEditor\IsaacAnimationEditor.exe`.
+  - Edit the files using the provided Isaac Animation Editor, which is located at: `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\IsaacAnimationEditor\IsaacAnimationEditor.exe`
 
 <br />
