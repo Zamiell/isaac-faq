@@ -259,11 +259,11 @@ For example, in TypeScript:
 
 ```ts
 function postFamiliarInitMyFamiliar(familiar: EntityFamiliar) {
-  familiar.AddToFollowers()
+  familiar.AddToFollowers();
 }
 
 function postFamiliarUpdateMyFamiliar(familiar: EntityFamiliar) {
-  familiar.FollowParent()
+  familiar.FollowParent();
 }
 ```
 
