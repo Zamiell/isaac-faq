@@ -234,7 +234,7 @@ const game = Game();
 const level = game.GetLevel();
 const rooms = level.GetRooms();
 for (let i = 0; i < rooms.Size; i++) {
-  const room = rooms.Get(i)
+  const room = rooms.Get(i);
   // Do something with the room
 }
 ```
