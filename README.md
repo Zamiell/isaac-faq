@@ -240,3 +240,31 @@ for (let i = 0; i < rooms.Size; i++) {
 ```
 
 <br />
+
+## How do I get a familiar to follow the player like Brother Bobby does?
+
+For example, in Lua:
+
+```lua
+function postFamiliarInitMyFamiliar(familiar)
+  familiar:AddToFollowers()
+end
+
+function postFamiliarUpdateMyFamiliar(familiar)
+  familiar:FollowParent()
+end
+```
+
+For example, in TypeScript:
+
+```ts
+function postFamiliarInitMyFamiliar(familiar: EntityFamiliar) {
+  familiar.AddToFollowers()
+}
+
+function postFamiliarUpdateMyFamiliar(familiar: EntityFamiliar) {
+  familiar.FollowParent()
+}
+```
+
+<br />
