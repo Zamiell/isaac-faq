@@ -212,3 +212,31 @@ If you are creating a new library, please use correct terminology to name your p
 - For dynamic replacement, use Taz's [Music Mod Callback](https://steamcommunity.com/sharedfiles/filedetails/?id=2491006386&searchtext=music+callback).
 
 <br />
+
+## How do I iterate over a list from the API?
+
+For example, in Lua:
+
+```lua
+local game = Game()
+local level = game:GetLevel()
+local rooms = level:GetRooms()
+for i = 0, rooms.Size - 1 do
+  local room = rooms:Get(i)
+  -- Do something with the room
+end
+```
+
+For example, in TypeScript:
+
+```ts
+const game = Game();
+const level = game.GetLevel();
+const rooms = level.GetRooms();
+for (let i = 0; i < rooms.Size; i++) {
+  const room = rooms.Get(i)
+  // Do something with the room
+}
+```
+
+<br />
