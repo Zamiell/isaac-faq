@@ -209,7 +209,7 @@ If you are creating a new library, please use correct terminology to name your p
 ## How do I overwrite vanilla music?
 
 - For normal music replacement, you can simply blow away the respective vanilla resource files.
-- For dynamic replacement, use Taz's [Music Mod Callback](https://steamcommunity.com/sharedfiles/filedetails/?id=2491006386&searchtext=music+callback).
+- For dynamic replacement, use Taz's [Music Mod Callback](https://steamcommunity.com/sharedfiles/filedetails/?id=2491006386).
 
 <br />
 
