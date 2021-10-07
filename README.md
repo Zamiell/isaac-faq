@@ -210,7 +210,7 @@ On the other hand, an API is short for application programming interface, and it
 
 Historically, Isaac libraries have labeled themselves as "APIs", but this is a misnomer. Some examples of this include [StageAPI](https://github.com/Meowlala/BOIStageAPI15) and [MinimapAPI](https://github.com/TazTxUK/MinimapAPI). On the other hand, an example of a library that is correctly named is Sanio's [Costume Protector](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255).
 
-If you are creating a new library, please use correct terminology to name your project, which helps prevent confusion for newcomers to the Isaac modding scene.
+If you are creating a new library, please use the correct terminology to name your project, which helps prevent confusion for newcomers to the Isaac modding scene.
 
 <br />
 
