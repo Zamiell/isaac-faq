@@ -280,3 +280,9 @@ function postFamiliarUpdateMyFamiliar(familiar: EntityFamiliar) {
   - Edit the files using the provided Isaac Animation Editor, which is located at: `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\IsaacAnimationEditor\IsaacAnimationEditor.exe`
 
 <br />
+
+## How do you use StageAPI to add new bosses?
+
+See [this screenshot](https://cdn.discordapp.com/attachments/205854782542315520/895485829458325604/unknown.png) from Xalum.
+
+<br />
