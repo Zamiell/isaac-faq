@@ -279,7 +279,7 @@ function postFamiliarUpdateMyFamiliar(familiar: EntityFamiliar) {
 
 ## What are ANM2 files?
 
-- In Isaac, animations are represented as anm2 files in the `resources/gfx` folder.
+- In Isaac, animations are represented by anm2 files in the `resources/gfx` folder.
 - Each entity in the game has an associated anm2 file.
 - Additionally, UI elements are rendered using various anm2 files (in the `resources/gfx/ui` folder).
 - anm2 files are simply XML files with a different file extension.
