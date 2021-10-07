@@ -158,6 +158,14 @@ When writing code, put some effort into making it look nice and be easy to read 
 
 <br />
 
+## How do I do X?
+
+The best way to figure out how to do something is to simply download a mod that does a similar thing to what you want and study the code.
+
+<br />
+
+<br />
+
 ## How do I apply a costume to my character?
 
 This is called a "null costume" and it is accomplished via the `EntityPlayer.AddNullCostume()` method. For more information, see [Lytebringr's 8th video](https://www.youtube.com/watch?v=R1CdCyGL1DQ&list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF&index=9).
