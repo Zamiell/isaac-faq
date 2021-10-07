@@ -160,7 +160,7 @@ When writing code, put some effort into making it look nice and be easy to read 
 
 ## How do I do X?
 
-The best way to figure out how to do something is to simply download a mod that does a similar thing to what you want and study the code.
+The fastest way to figure out how to do something is to simply download a few mods that provide similar functionality to what you want to do, and then study the code.
 
 <br />
 
