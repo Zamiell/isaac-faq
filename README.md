@@ -130,7 +130,7 @@ For people comfortable with command-line applications, use my [isaac-log-viewer]
 
 ## When is the log.txt cleared?
 
-Every time that you open the game, all of the contents of the log.txt is deleted. Thus, if you need to information from the log after a bug occurs, make sure that you do not re-launch the game.
+Every time that you open the game, all of the contents of the log.txt is deleted. Thus, if you need information from the log after a bug occurs, make sure that you do not re-launch the game.
 
 <br />
 
