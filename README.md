@@ -327,7 +327,7 @@ return foo
 
 Here, "foo" is a Lua *module* that provides variables and methods.
 
-One important aspect of `require` is that when it is used, it caches the result. Thus, when a file is required in two different places in the code, it will execute all the code normally on the first require, and then return a reference to the module on the second require. (This kind of makes sense, because there is no need to execute the same code over and over.)
+One important aspect of `require` is that when it is used, it caches the result. Thus, when a file is required in two different places in the code, it will execute all the code normally on the first require, and then return a reference to the module on the second require. (This default behavior makes sense, because there is no need to execute the same code over and over.)
 
 ### The `luamod` Problem With `require`
 
