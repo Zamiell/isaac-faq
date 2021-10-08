@@ -374,4 +374,4 @@ By using this pattern in combination with directory namespacing, you work around
 
 ### IsaacScript
 
-Finally, note that the two caching problems discussed above are non-problems if you are writing your mod with TypeScript, because the transpiler automatically combines all code into a single "main.lua" file. This is a nice reason to use TypeScript, but of course, there are [many better advantages](https://isaacscript.github.io/docs/features) to using TypeScript other than to simply fix the `require` function, so you might want to consider it for your current or future projects.
+Finally, note that the two caching problems discussed above are non-problems if you are writing your mod with TypeScript because the transpiler automatically combines all code into a single "main.lua" file. This is a nice reason to use TypeScript, but of course, there are [many other advantages](https://isaacscript.github.io/docs/features) to using TypeScript other than to simply fix the `require` function, so you might want to consider it for your current or future projects.
