@@ -310,6 +310,7 @@ See [this screenshot](https://cdn.discordapp.com/attachments/205854782542315520/
 ```lua
 -- main.lua
 local foo = require("foo")
+
 foo:bar() -- Prints "hello"
 ```
 
