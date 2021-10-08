@@ -370,7 +370,7 @@ if not success then
 end
 ```
 
-By using this pattern in combination with namespacing, you work around both problems. The only limitation is that developers on your Lua project will not be able to use `luamod` if they also have `--luadebug` turned on.
+By using this pattern in combination with namespacing, you work around both problems. The only limitation is that developers on your Lua project will not be able to use the `luamod` command if they also have the `--luadebug` flag turned on.
 
 ### IsaacScript
 
