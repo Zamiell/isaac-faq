@@ -128,6 +128,12 @@ For people comfortable with command-line applications, use my [isaac-log-viewer]
 
 <br />
 
+## When is the log.txt cleared?
+
+Every time that you open the game, all of the contents of the log.txt is deleted. Thus, if you need to information from the log after a bug occurs, make sure that you do not re-launch the game.
+
+<br />
+
 ## How do I troubleshoot my code?
 
 When you write programs, they may not work right away. Your first reaction should not be to paste a bunch of code into Discord and ask "why doesn't this work?". Doing that means you aren't putting forth very much effort to try and solve the problem on your own.
