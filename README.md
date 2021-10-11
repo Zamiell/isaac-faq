@@ -375,3 +375,17 @@ By using this pattern in combination with directory namespacing, you work around
 ### IsaacScript
 
 Finally, note that the two caching problems discussed above are non-problems if you are writing your mod with TypeScript because the transpiler automatically combines all code into a single "main.lua" file. This is a nice reason to use TypeScript, but of course, there are [many other advantages](https://isaacscript.github.io/docs/features) to using TypeScript other than to simply fix the `require` function, so you might want to consider it for your current or future projects.
+
+<br />
+
+## How do I edit rooms?
+
+The official room editor is provided with the game and is located at: `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\RoomEditor\RoomEditor.exe`
+
+This was the tool that Edmund used to create all of the rooms for Rebirth and Afterbirth. However, the official editor is not very good and does not work properly with any Repentance rooms.
+
+In 2014, Chronometrics made a 3rd party room editor called [Basement Renovator](https://github.com/Basement-Renovator/Basement-Renovator) to improve upon the official editor. It is open-source and is located on GitHub. Since Basement Renovator is so much better than the official room editor, even the official developers now use Basement Renovator (which is why none of the Repentance rooms will work in the official editor).
+
+Basement Renovator is written in Python, so you can either run it from source or simply download a pre-bundled exe file from the [releases page](https://github.com/Basement-Renovator/Basement-Renovator/releases).
+
+<br />
