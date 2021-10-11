@@ -331,6 +331,8 @@ One important aspect of `require` is that when it is used, it caches the result.
 
 ### The `luamod` Problem With `require`
 
+`luamod` is a command to reload a mod. This is helpful when you are developing a mod and you want to immediately test your changes without having to close and re-open the game.
+
 Unfortunately, require caching causes the `luamod` console command to not work correctly. If code inside of a module is updated, it will not be reflected in game after using the `luamod` command because the reference to the module is already cached.
 
 ### The Namespacing Problem With `require`
