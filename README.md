@@ -154,7 +154,7 @@ Another helpful troubleshooting tool is validators like [xmlvalidation.com](http
 
 ## What is the ID of [the sound that I care about]?
 
-Simply use [this mod](sounds-display.lua), which will tell you what the ID of any currently-playing sound is.
+Simply use [this mod](sounds-display.lua), which will tell you what the ID of any currently playing sound effect is.
 
 <br />
 
