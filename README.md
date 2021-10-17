@@ -391,3 +391,9 @@ In 2014, Chronometrics made a 3rd party room editor called [Basement Renovator](
 Basement Renovator is written in Python, so you can either run it from source or simply download a pre-bundled exe file from the [releases page](https://github.com/Basement-Renovator/Basement-Renovator/releases).
 
 <br />
+
+## Where can I see the code for [some vanilla item]?
+
+You can't. The game is programmed in the C++ programming language and the source code is propritary, for what should be obvious reasons. If you want to make a custom item that works in a similar way to a vanilla item, you will have to completely reimplement it from scratch in Lua or TypeScript.
+
+<br />
