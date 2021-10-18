@@ -152,6 +152,10 @@ Another helpful troubleshooting tool is validators like [xmlvalidation.com](http
 
 <br />
 
+## I enabled a mod and now my game is crashing. How can I fix this?
+
+You can try looking through the log.txt file to see if anything interesting is there. However, in the vast majority of cases, mods crashing will not output anything helpful to the log. Instead, simply disable your mods one by one until you find the exact mod that is causing the crash.
+
 ## What is the ID of [the sound that I care about]?
 
 Simply use [this mod](sounds-display.lua), which will tell you what the ID of any currently playing sound effect is.
