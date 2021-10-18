@@ -156,7 +156,7 @@ Another helpful troubleshooting tool is validators like [xmlvalidation.com](http
 
 You can try looking through the log.txt file to see if anything interesting is there. However, in the vast majority of cases, the log will not show any helpful information when the game crashes.
 
-Instead, you can find the problem by simply disabling your mods one by one until you find the exact mod that is causing the crash. Then, you can report it to the developer of the mod.
+Instead, you can find the problem by simply disabling your mods one by one until you find the exact mod that is causing the crash. Then, you can report it to the developer of the mod, or try to manually fix the code yourself.
 
 <br />
 
