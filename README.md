@@ -390,7 +390,8 @@ Finally, note that the two caching problems discussed above are non-problems if 
 
 ## How do I edit rooms?
 
-The official room editor is provided with the game and is located at: `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\RoomEditor\RoomEditor.exe`
+The official room editor is provided with the game and is located at:<br />
+`C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\RoomEditor\RoomEditor.exe`
 
 This was the tool that Edmund used to create all of the rooms for Rebirth and Afterbirth. However, the official editor is not very good and does not work properly with any Repentance rooms.
 
