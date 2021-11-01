@@ -217,7 +217,7 @@ In TypeScript land, the situation is identical. TypeScript allows the `any` type
 
 This is half-true. Prior to October 31st, IsaacScript would not handle the special case of end-users symlinking their mods directory to an entirely different directly. However, fixing this bug was as simple as [removing a single character](https://github.com/IsaacScript/isaacscript/pull/11/files#diff-bc9705d0f7a567399044dfc66ccc82d4d9aa1cff116842a0094d54e463c9ecbcR68), which was handily performed by Kyojo in a pull request within hours of Jill bringing up the problem in the IsaacScript Discord.
 
-Jill seems to imply that this as a major flaw in the software, but I don't think that is very fair. Most people don't use Linux, and most people don't decide to symlink their mods directory to somewhere else.
+Jill seems to imply that this was somehow a major flaw in the software, but I don't think that is very fair. Most people don't use Linux, and most people don't decide to symlink their mods directory to somewhere else.
 
 <br />
 
