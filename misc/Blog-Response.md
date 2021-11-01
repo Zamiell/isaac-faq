@@ -2,7 +2,7 @@
 
 Jill posted a [fairly log blog](https://blog.oat.zone/p/7c181fbf-99bc-40a8-b710-7384ca8d4252/) about IsaacScript. I welcome well-intentioned criticism, so I thank Jill for putting it together, which must have taken a long time.
 
-Jill brings forth the following points:
+She brings forth the following points:
 
 1. TypeScript isn't a good programming language.
 2. Other programming languages that transpile to Lua should have been chosen instead of TypeScript.
