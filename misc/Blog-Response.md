@@ -19,7 +19,7 @@ She brings forth the following points:
 13. The transpiled output is hard to read.
 14. Someone reading the Lua code wouldn't know that IsaacScript is used and would be confused.
 
-Some of these points I agree with, and some are confused, so let's go through each in turn.
+Some of these points I agree with, and some are deeply confused, so let's go through each in turn.
 
 <br />
 
