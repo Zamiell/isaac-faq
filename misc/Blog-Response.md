@@ -153,7 +153,7 @@ So I'd argue that listing Prettier as a feature is warranted, especially when th
 
 Jill mentions that you don't need ESLint because you can use Luacheck. But this is a little misleading.
 
-I've used Luacheck myself for the past 5 years, and I would highly recommend it to anyone who works with Lua projects. However, the tool hasn't gotten many updates since the maintainer of the project died back in 2018. And the tool is very limited compared to what you would expect from a linter in any other language. As a fun fact, the severe limitations of Luacheck were one of the direct reasons that caused me to get frustrated enough to create IsaacScript in the first place.
+I've used Luacheck myself for the past 5 years, and I would highly recommend it to anyone who works with Lua projects. However, the tool hasn't gotten many updates since [the maintainer of the project died](https://github.com/mpeterv/luacheck/issues/198) back in 2018. And the tool is very limited compared to what you would expect from a linter in any other language. As a fun fact, the severe limitations of Luacheck were one of the direct reasons that caused me to get frustrated enough to create IsaacScript in the first place.
 
 On the other hand, ESLint is hands down the most popular and best linter in the world. It is actively maintained and has the ability to write custom plugins to do anything you want. The ESLint ecosystem has tons of existing rules, plugins, and even a support Discord for when things go wrong. This isn't exactly an apples to oranges comparison.
 
