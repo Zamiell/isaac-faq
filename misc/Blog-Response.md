@@ -175,7 +175,7 @@ enum Situations {
   // Situation4, // If we uncomment this line, the program will no longer compile
 }
 
-function doThingBasedOnSituation(situation: Situation) {
+function getThingBasedOnSituation(situation: Situation) {
   switch (situation) {
     case Situation1: {
       return "foo";
