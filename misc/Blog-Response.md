@@ -248,7 +248,7 @@ In general, I think Jill is confused about how TypeScript casting works. In my m
 
 I agree that it would be nice for the `__TS__` functions to be local to the transpiled project. In fact, it's one of the open issues on the TypeScriptToLua Github. Maybe it will get implemented soon!
 
-As my friends on the modding Discord server will know, I hate polluting the global namespace when it isn't required. But it's worth mentioning that until the TypeScriptToLua authors implement a "local" mode, there really isn't much practical consequence of making these functions global. The likelihood of this affecting any other mods in the ecosystem seems extremely tiny, so this feels like a pretty silly nitpick.
+As my friends on the modding Discord server will know, I hate polluting the global namespace when it isn't required. But it's worth mentioning that until the TypeScriptToLua authors implement a "local" mode, there really isn't much practical consequence of making these functions global. The likelihood of this affecting any other mods in the ecosystem seems extremely tiny, so this feels like a very small nitpick.
 
 <br />
 
