@@ -117,7 +117,7 @@ Jill starts off this section by showcasing that Lua language servers provide som
 
 While every function in the game doesn't have this level of detail, a lot of them do, and tell you useful things that you would otherwise have to open up the docs to look for. This feature is fantastic and saves you a lot of time.
 
-Jill's main point here is that it this should not be listed as a TypeScript feature, because it is possible for someone to make this happen in Lua (using something like [EmmyLua](https://github.com/EmmyLua/EmmyLua-LanguageServer)). I agree that it's *possible*, but such a framework **does not currently exist**. If it ever gets created, and it is as thorough as the IsaacScript API comments are, then when that day comes, IsaacScript will have one less feature over the competition. Until then, it's not super relevant to say that "it could be possible in Lua" without such a thing actually existing for people to use.
+Jill's main point here is that this should not be listed as a TypeScript feature, because it is possible for someone to make this happen in Lua (using something like [EmmyLua](https://github.com/EmmyLua/EmmyLua-LanguageServer)). I agree that it's *possible*, but such a framework **does not currently exist**. If it ever gets created, and it is as thorough as the IsaacScript API comments are, then when that day comes, IsaacScript will have one less feature over the competition. Until then, it's not super relevant to say that "it could be possible in Lua" without such a thing actually existing for people to use.
 
 ### API Accuracy
 
