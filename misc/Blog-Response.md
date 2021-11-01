@@ -10,7 +10,7 @@ She brings forth the following points:
 4. It uses a compiler, which increases overhead, and extra overhead is bad.
 5. It is advertised at beginners when it should only be advertised at more advanced users.
 6. Some of the features can be accomplished by extra Lua tooling.
-7. IsaacScript does not work properly if you have created a symbolic link on top of your mods directory. (A symbolic link is a special redirection that Linux users sometimes do, but is rare to see in Windows.)
+7. IsaacScript does not work properly if you have created a symbolic link on top of your mods directory.
 8. There are no TypeScript comments in the Lua output.
 9. You need to cast to get around functions that return undefined.
 10. It pollutes the global namespace with `__TS__` functions.
