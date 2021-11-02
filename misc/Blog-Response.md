@@ -376,7 +376,7 @@ Jill doesn't provide any reasons for this beyond just stating that this is the c
 
 Of course, working in Lua would be easier if everyone in the team already knew Lua and no-one knew TypeScript, but this is fairly self-evident and is a non-point.
 
-> and its branding as the solution to all Isaac modding problems, especially to beginners, is misleading.
+> its branding as the solution to all Isaac modding problems, especially to beginners, is misleading.
 
 This is the only concluding point of Jill's that I agree with and does not seem to be a misrepresentation. If IsaacScript is branded as a solution to "every Isaac modding problem", then that is obviously a mistake, and I apologize if that appears to be the case. To be fair though, I don't think anyone is claiming that IsaacScript solves every single modding problem. The IsaacScript webpage does a pretty decent job of explaining what IsaacScript is, what situations it is good for, and who should use it. But the website is always open to improvement, and maybe it should be updated to have stronger wording to ward away beginners (see #4 above). If you want to help, I'm open to PRs.
 
