@@ -1,6 +1,6 @@
 # Isaacscript, and Why It Doesn't Suck
 
-Jill posted a [fairly log blog](https://blog.oat.zone/p/7c181fbf-99bc-40a8-b710-7384ca8d4252/) about IsaacScript. I welcome well-intentioned criticism, so I thank Jill for putting it together, which must have taken a long time.
+Jill posted a [fairly log blog](https://blog.oat.zone/isaacscript-and-why-it-sucks/) about IsaacScript. I welcome well-intentioned criticism, so I thank Jill for putting it together, which must have taken a long time.
 
 She brings forth the following points:
 
