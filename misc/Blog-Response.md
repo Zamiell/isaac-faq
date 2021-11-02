@@ -61,7 +61,7 @@ In fact, this gives you the best of both worlds: you can choose operator overloa
 
 It is indeed true that using a compiler increases overhead. Jill is quite right to showcase here that IsaacScript significantly increases the complexity of your setup, and that should not be overlooked. I agree with her that people who are not already familiar with command-line tools and/or programming should probably not be using the tool. And extra overhead adds more things to troubleshoot when things go wrong.
 
-But let's get a little more specific and try to quantify exactly what that overhead is.
+But let's get a little more specific and try to quantify exactly what that overhead is, instead of just saying that "any overhead is bad".
 
 ### Installing
 
