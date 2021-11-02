@@ -316,7 +316,7 @@ message:  db        "Hello, World", 10
 
 As we can see, the compiled output doesn't really look much like what we started with. Rather, it is a lower level version of the code, which is naturally going to be more verbose.
 
-For nearly all intents and purposes, we don't really care *what* the X86 code looks like, because we never need to look at it. All we care about is the source code in C++. The source code is what we read to understand how the program works. The source code is the thing that gets checked into GitHub. The source code is the thing that is going to be read by other programmers on the team.
+For nearly all intents and purposes, we don't really care *what* the X86 code looks like, because we should never need to look at it. All we care about is the source code in C++. The source code is what we read to understand how the program works. The source code is the thing that gets checked into GitHub. The source code is the thing that is going to be read by other programmers on the team.
 
 Imagine that someone came along and told you that "a disadvantage of coding in C++ is that the compiled output is really hard to read". This would probably strike you as being quite strange. What point is there in reading the X86 code? It might as well be written in Klingon instead of X86 for all we care, since we never have to deal with it.
 
