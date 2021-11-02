@@ -69,7 +69,7 @@ The time to install IsaacScript is anywhere between 1 minute (if you already kno
 
 ### Running
 
-The steps to run IsaacScript are just double clicking on a shortcut, or typing a few keystrokes into a shell. Both of these can be performed in a fraction of second.
+The steps to run IsaacScript are just double clicking on a shortcut, or typing a few keystrokes into a shell. Both of these can be performed in a fraction of a second.
 
 ### Learning TypeScript
 
