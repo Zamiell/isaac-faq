@@ -75,9 +75,13 @@ The steps to run IsaacScript are just double clicking on a shortcut, or typing a
 
 For those who have only programmed in Lua before, you could say that another cost would be to learn the syntax of the TypeScript programming language. Of course, many people already know both languages, and some people *only* know TypeScript, so this cost wouldn't apply to everyone.
 
-### Transpilation
+### Transpilation Time
 
-Debugging runtime errors becomes slightly more tricky because the Lua line numbers won't match up to your TypeScript line numbers. So you could consider "harder troubleshooting" as another cost of using the tool.
+It takes time to compile a mod, so you might have to wait a few seconds after hitting "save" in your IDE before your mod is ready to test. To be fair, you probably won't notice this unless you have a slow computer and/or a large mod, but it should be pointed out that compilation isn't entirely free.
+
+### Transpilation Debugging
+
+Furthermore, debugging runtime errors becomes slightly more tricky with transpilation because the Lua line numbers won't match up to your TypeScript line numbers. So you could consider "harder troubleshooting" as another cost of using the tool.
 
 Thankfully, this is almost never a problem in practice, because 1) using TypeScript prevents nearly all runtime errors (that's the point of using TypeScript), and 2) the Lua code is very close to the TypeScript code, so it is trivial to find the matching line of TypeScript.
 
