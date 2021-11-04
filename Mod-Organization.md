@@ -306,8 +306,8 @@ local item1 = {}
 
 function item1:postNewRoom()
   item1:removeAllGridEntities()
-  item2:spawnRocks()
-  item3:spawnExtraEnemies()
+  item1:spawnRocks()
+  item1:spawnExtraEnemies()
 end
 
 function item1:removeAllGridEntities()
