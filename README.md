@@ -333,3 +333,13 @@ Basement Renovator is written in Python, so you can either run it from source or
 You can't. The game is programmed in the C++ programming language and the source code is propritary, for what should be obvious reasons. This means that if you want to make a custom item that works in a similar way to a vanilla item, you will have to completely reimplement it yourself from scratch. (You can often use the wiki as an implementation reference.)
 
 <br />
+
+## How do I know when a player has picked up a collectible item?
+
+There is no vanilla callback for this. As a workaround, you can check `EntityPlayer.IsItemQueueEmpty()` on every PostUpdate frame, and then check `EntityPlayer.QueuedItem` when it is not empty. Obviously, this will not work for items that never get queued.
+
+For IsaacScript users, you can simply use the provided `[MC_POST_ITEM_PICKUP](https://isaacscript.github.io/docs/function-signatures-custom#mc_post_item_pickup)` callback.
+
+If you want to implement this callback yourself, the source code / algorithm is provided [here](https://github.com/IsaacScript/isaacscript-common/blob/main/src/callbacks/itemPickup.ts).
+
+<br />
