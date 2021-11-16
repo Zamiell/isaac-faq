@@ -455,7 +455,7 @@ function item1:addCounter()
 end
 ```
 
-This is referred to as "informal" scoping. Our code is now much easier to reason about and debug. However, it is still technically *possible* for another file to modify the variables of item 1. But everyone on the team agrees to not do that.
+This is referred to as "informal" scoping. Our code is now much easier to reason about and debug. However, it is still technically *possible* for another file to modify the variables of item 1. But everyone on the team could agree to not do that.
 
 <br />
 
