@@ -8,9 +8,20 @@ local WHITE = KColor(1, 1, 1, 1)
 -- Mod variables
 local messageArray = {}
 local font = Font()
-font:Load("font/pftempestasevencondensed.fnt") -- A vanilla font good for this kind of text
+font:Load("font/terminus.fnt")
 local lineHeight = font:GetLineHeight()
 local sfxManager = SFXManager()
+
+-- From: https://stackoverflow.com/questions/33510736
+local function includes(t, val)
+  for index, value in ipairs(t) do
+    if value == val then
+      return true
+    end
+  end
+
+  return false
+end
 
 local function pushMessageArray(msg)
   messageArray[#messageArray + 1] = msg
@@ -28,10 +39,12 @@ function mod:PostRender()
 end
 
 function mod:RecordPlayingSounds()
-  messageArray = {}
   for soundEffectName, soundEffect in pairs(SoundEffect) do
     if sfxManager:IsPlaying(soundEffect) then
-      pushMessageArray(tostring(soundEffect) .. " - " .. soundEffectName)
+      local message = tostring(soundEffect) .. " - " .. soundEffectName
+      if not includes(messageArray, message) then
+        pushMessageArray(message)
+      end
     end
   end
 end
