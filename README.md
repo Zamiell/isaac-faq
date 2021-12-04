@@ -343,3 +343,14 @@ For IsaacScript users, you can simply use the provided `[MC_POST_ITEM_PICKUP](ht
 If you want to implement this callback yourself, the source code / algorithm is provided [here](https://github.com/IsaacScript/isaacscript-common/blob/main/src/callbacks/itemPickup.ts).
 
 <br />
+
+## What is the difference between `pairs` and `ipairs`?
+
+- `pairs` is for iterating over Lua tables that represent a [map](https://en.wikipedia.org/wiki/Associative_array). In other words, something with key/value associations.
+- `ipairs` is for iterating over Lua tables that represent an [array](https://en.wikipedia.org/wiki/Array_data_structure). In other words, something that contains a list of elements.
+
+[Code speaks louder than words](https://code.labstack.com/9n1B9g7n).
+
+Since Lua is [untyped](https://www.tutorialspoint.com/What-are-the-differences-between-untyped-and-dynamically-typed-programming-languages) and uses tables represent multiple different data structures, `pairs` and `ipairs` serve as a flag to tell the reader what the underlying data structure really is.
+
+<br />
