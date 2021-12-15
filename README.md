@@ -360,4 +360,4 @@ Since Lua is [untyped](https://www.tutorialspoint.com/What-are-the-differences-b
 You can:
 
 1) Type "spawn x" into the in-game console. For example, "spawn confessional" would show that the Confessional entity has an identifier of 6.17. This means that it has an entity type of 6 and a variant of 17.
-2) Or, you can ctrl+f in the "resources/entities2.xml" file for the entity you want.
+2) Or, you can ctrl+f in the "resources/entities2.xml" file (or the "resources-dlc3/entities2.xml" file) for the entity you want.
