@@ -354,3 +354,10 @@ If you want to implement this callback yourself, the source code / algorithm is 
 Since Lua is [untyped](https://www.tutorialspoint.com/What-are-the-differences-between-untyped-and-dynamically-typed-programming-languages) and uses tables to represent multiple different data structures, `pairs` and `ipairs` serve as a flag to tell the reader what the underlying data structure really is.
 
 <br />
+
+## How do you tell what the entity type, variant, or subtype of a particular entity is?
+
+You can:
+
+- Type "spawn x" into the in-game console. For example, "spawn confessional" would show that the Confessional entity has an identifier of 6.17. This means that it has an entity type of 6 and a variant of 17.
+- Ctrl+f in the "resources/entities2.xml" file for the entity you want.
