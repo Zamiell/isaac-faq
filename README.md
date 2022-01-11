@@ -353,7 +353,31 @@ If you want to implement this callback yourself, the source code / algorithm is 
 - `pairs` is for iterating over Lua tables that represent a [map](https://en.wikipedia.org/wiki/Associative_array). In other words, something with key/value associations.
 - `ipairs` is for iterating over Lua tables that represent an [array](https://en.wikipedia.org/wiki/Array_data_structure). In other words, something that contains a list of elements.
 
-[Code speaks louder than words](https://code.labstack.com/9n1B9g7n).
+Code speaks louder than words:
+
+```lua
+local map = {
+  foo = "bar",
+  baz = 123,
+}
+
+for key, value in pairs(map) do
+  print(key) -- Prints foo, baz
+  print(value) -- Prints bar, 123
+end
+```
+```lua
+local array = {
+  123,
+  456,
+  789,
+}
+
+for i, element in ipairs(array) do
+  print(i) -- Prints 1, 2, 3
+  print(element) -- Prints 123, 456, 789
+end
+```
 
 Since Lua is [untyped](https://www.tutorialspoint.com/What-are-the-differences-between-untyped-and-dynamically-typed-programming-languages) and uses tables to represent multiple different data structures, `pairs` and `ipairs` serve as a flag to tell the reader what the underlying data structure really is.
 
