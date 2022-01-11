@@ -118,7 +118,7 @@ Watch [this video](https://www.youtube.com/watch?v=cJ68vYqzSm0) by LeatherIceCre
 
 <br />
 
-## Why isn't my code working? How do I know when errors occur?
+## Why isn't my code working? How do I know when errors occur? Where is the log.txt file located?
 
 Lua is an interpretted language, which means that if you make a typo or have otherwise bad code, you will only be able to discover it once the program actually runs. If the Lua interpreters encounters an error, it will write it to the game's log.txt file.
 
