@@ -170,7 +170,7 @@ First, check out the log.txt file for clues as to why the game is crashing. Howe
 
 If you are programming your mod in Lua, then your only option is to simply insert a lot of print statements to try and narrow down where the crash is occuring.
 
-If you are programming your mod in TypeScript using the [IsaacScript framework](https://isaacscript.github.io/), then you can use [this crash debug plugin](https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts) that will put the exactly line that the mod is crashing at in the log.txt, which is extremely handy.
+If you are programming your mod in TypeScript using the [IsaacScript framework](https://isaacscript.github.io/), then you can use [this crash debug plugin](https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts) that will put the exact line that the mod is crashing at in the log.txt, which is extremely handy.
 
 <br />
 
