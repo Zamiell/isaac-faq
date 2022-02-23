@@ -122,7 +122,7 @@ Watch [this video](https://www.youtube.com/watch?v=cJ68vYqzSm0) by LeatherIceCre
 
 Lua is an interpretted language, which means that if you make a typo or have otherwise bad code, you will only be able to discover it once the program actually runs. If the Lua interpreters encounters an error, it will write it to the game's log.txt file.
 
-By default, this file is located at: `C:\Users\james\Documents\My Games\Binding of Isaac Repentance\log.txt`
+By default, this file is located at: `C:\Users\[username]\Documents\My Games\Binding of Isaac Repentance\log.txt`
 
 Open this file and search it carefully for Lua-related errors. (Ctrl + f for "error" is a good start.) This will often tell you the line number that you messed up on.
 
