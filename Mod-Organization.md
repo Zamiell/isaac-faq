@@ -10,7 +10,7 @@ And if an item/feature file has so much code that it gets to be 500-1000 lines, 
 
 But how do you glue it all together? In general, there are two pretty good ways to organize a bigger mod.
 
-<br />
+<br>
 
 ## 1) Main --> Feature (with Dependency Injection)
 
@@ -68,7 +68,7 @@ end
 return item1
 ```
 
-<br />
+<br>
 
 ## 2) Main --> Callback --> Feature
 
@@ -150,7 +150,7 @@ Another advantage of having two degrees of hierarchy is that the execution flow 
 
 Using TypeScript compliments this strategy because it ensures that everything glues together properly.
 
-<br />
+<br>
 
 ## 2a) Main --> Callback --> Feature (with Dependency Injection)
 
@@ -238,7 +238,7 @@ end
 
 In general, this is a great strategy to use in Isaac mods. It provides a nice separation of conerns and makes the code very easy to understand. Of course, every mod is unique, so you should think about a hierarchy that works for best your particular mod.
 
-<br />
+<br>
 
 ## Naming Feature Functions
 
@@ -291,7 +291,7 @@ function item1:doThing()
 end
 ```
 
-<br />
+<br>
 
 ## Use Functions to Provide a High-Level Inventory
 
@@ -331,7 +331,7 @@ This strategy also makes it easier to find bugs. For example, if a function is n
 
 As an aside, when I say "whoever wrote it", I mean to say that it might have been written by someone else on your team. But even if you don't work on a team, the "someone else" might be **you** from months/years ago. Either way, you are in the same situation, wondering about the true purpose of the code. :)
 
-<br />
+<br>
 
 ## Avoiding Global Variables
 
@@ -365,7 +365,7 @@ return item1
 
 In this way, you can avoid using dependency injection, which reduces the complexity a little. But there are several disadvantages with using global variables.
 
-<br />
+<br>
 
 ### 1) Variable Scoping
 
@@ -375,7 +375,7 @@ A small mod might have ten or twenty different variables. And keeping track of t
 
 As you might have guessed, keeping track of variables in your head does not scale very well. In a big mod with thousands of variables, it is impossible to keep track. Just by looking at the name of a variable, you will have no idea where it is initialized, where it is used, and where it is reset. You need a segmentation strategy to stay organized.
 
-<br />
+<br>
 
 ### 2) Namespacing with a Global Variable
 
@@ -414,7 +414,7 @@ end
 
 This works well, but it does not address the more concerning problem: the variables are *scoped* incorrectly. What does that mean exactly?
 
-<br />
+<br>
 
 ### 3) Uh Oh, Spaghetti Code
 
@@ -424,7 +424,7 @@ But now, when item 1 has a bug, how do we figure out what is wrong? The variable
 
 In this example, the *scope* of these variables is global - everything can touch them. This is what the term "spaghetti code" is talking about: everything connects to everything else. As coders, we should strive to not let things get this bad. We should aim to provide compartmentalized abstractions that make it easy to diagnose problems and manage complexity.
 
-<br />
+<br>
 
 ### 4) Informal Scoping
 
@@ -457,7 +457,7 @@ end
 
 This is referred to as "informal" scoping. Our code is now much easier to reason about and debug. However, it is still technically *possible* for another file to modify the variables of item 1. But everyone on the team could agree to not do that.
 
-<br />
+<br>
 
 ### 5) Formal Scoping
 
@@ -471,7 +471,7 @@ myMod.item1 = v
 
 And everything works in an identical way as before.
 
-<br />
+<br>
 
 ### 6) Thinking About Scopes
 
@@ -484,7 +484,7 @@ Rather than just shitting out a variable declaration, stop for a moment and care
 
 By carefully scoping all of our variables, we make it a lot easier to understand the code and greatly narrow the problem-space for any particular bug.
 
-<br />
+<br>
 
 ### 7) Resiliency
 
@@ -492,7 +492,7 @@ In the Isaac Lua environment, other mods will be able to access the global varia
 
 Mods that are structured like this are at a risk of someone else reaching in and deleting or overwriting the global variables. In truth, this kind of thing is rare. But why take the chance? Refactoring global variables into local variables only takes a tiny amount of effort.
 
-<br />
+<br>
 
 ## Avoiding Side Effects
 
@@ -511,7 +511,7 @@ myMod:AddCallback(ModCallbacks.MC_POST_UPDATE, postUpdate)
 
 Immediately, we can see that this strategy only works if you are using global variables to connect the files together; dependency injection is impossible.
 
-<br />
+<br>
 
 ### 2) Lack of Namespacing
 
@@ -537,7 +537,7 @@ item2.foo();
 
 Much better! We can clearly see that the function is coming from `item2.lua` file. This is *namespacing* in action.
 
-<br />
+<br>
 
 ### 3) Double Whammy
 
@@ -565,7 +565,7 @@ This is the composition of the blunders from the previous two sections:
 
 Of course, this is kind of a contrived example, because we would never name a global function called `charge()`. Instead, we would name it `item1Charge()` so that it is more clear where it is coming from and what it is doing. This makes the namespacing problem less bad. But this has other problems. It's annoying to add this boilerplate prefix to every single function in the `item1.lua` file. And it's *redundant* to name a function `item1Charge()` in a file called `item1.lua` - that should be obvious. Using a prefix is a hack for not scoping the functions properly to begin with.
 
-<br />
+<br>
 
 ### 4) The "Require Surprise"
 

@@ -21,7 +21,7 @@ She brings forth the following points:
 
 Some of these points I agree with, and some are deeply confused, so let's go through each in turn.
 
-<br />
+<br>
 
 ## 1. TypeScript isn't a good programming language.
 
@@ -35,7 +35,7 @@ I'll try to steelman this point. More generally, the only feature that I am awar
 
 When we examine it from the opposite direction, TypeScript has plenty of features that Lua does not have. Beyond the obvious point of having type safety, TypeScript has switch statements, assignment operators, higher-order functions, and real ternaries, just to name a few. Yummy.
 
-<br />
+<br>
 
 ## 2. Other programming languages that transpile to Lua should have been chosen instead of TypeScript.
 
@@ -47,7 +47,7 @@ On the other hand, the 5 languages that Jill recommends are tiny projects with n
 
 Furthermore, the transpilation of TypeScriptToLua is essentially flawless and gets solid reviews from many others who have used it to code "Lua mods" for DotA2, World of Warcraft, Factorio, and others. Do any big mods written in Haxe even exist for these games? TypeScript still appears to be the clear winner in 2021.
 
-<br />
+<br>
 
 ## 3. There is no operator overloading.
 
@@ -55,7 +55,7 @@ Jill complains that code without operator overloading is verbose. However, this 
 
 In fact, this gives you the best of both worlds: you can choose operator overloading, or you can choose the extra type safety. Either way, this is strictly an *advantage* for TypeScript over Lua, because the case where operator overloading is enabled is equivalent to the default state of affairs in Lua. (And in Lua you don't have the option to choose the other path.)
 
-<br />
+<br>
 
 ## 4. It uses a compiler, which increases overhead, and extra overhead is bad.
 
@@ -93,7 +93,7 @@ As for Lua, programming mods has essentially no cost - you open up Notepad, type
 
 So, for people who *are* familiar with command-line tools and/or programming, the question becomes more of a cost-benefit analysis. Is it worth it to spend a few minutes to install IsaacScript and have a more complex setup in return for saving hours and hours of mod-troubleshooting? For anyone making a small mod that will only take an hour or so to make in the first place, the answer is almost unquestionably **no**. For anyone making a big mod, the answer is almost unquestionably **yes**. For anyone making medium mods, it probably depends on other factors.
 
-<br />
+<br>
 
 ## 5. It is advertised at beginners when it should only be advertised at more advanced users.
 
@@ -105,7 +105,7 @@ Just think about how silly that is - pouring over code, adding print statements,
 
 So, the benefits for beginners can be immense. But do the benefits outweigh the costs? That is a difficult question to answer. I think I do agree with Jill that IsaacScript is best-suited for people who already know how to program TypeScript and already know how Isaac modding works. As we move further away from that side of the spectrum, things get a little more murky. There are definitely benefits of using the tool, regardless of what your skill level is, but I do take Jill's point that IsaacScript should not be recommended to everyone. If the website doesn't do a good enough job of explaining that, then it probably needs to be updated.
 
-<br />
+<br>
 
 ## 6. Some of the features can be accomplished by extra Lua tooling.
 
@@ -113,11 +113,11 @@ So, the benefits for beginners can be immense. But do the benefits outweigh the 
 
 Jill starts off this section by showcasing that Lua language servers provide some mouseover info, which is true. However, this is vastly inferior to IsaacScript. For example, this is a screenshot of what happens when I mouse over the `AddTrinket` method:
 
-<br />
+<br>
 
 ![AddTrinket mouseover text](mouseover.png)
 
-<br />
+<br>
 
 While every function in the game doesn't have this level of detail, a lot of them do, and tell you useful things that you would otherwise have to open up the docs to look for. This feature is fantastic and saves you a lot of time.
 
@@ -215,7 +215,7 @@ In Lua, you normally have no type safety, because nothing is typed. Alternativel
 
 In TypeScript land, the situation is identical. TypeScript allows the `any` type as an escape hatch when you don't care what the actual type is. In this section of the blog, Jill seems to be proposing that `any` is somehow a bug, and that TypeScript shouldn't ever allow `any`. But of course, that would be quite silly, because the programmer should be empowered to do what they want. If a TypeScript programmer wants to have a completely type-safe program, then they can simply never use the `any` type in their program, or enable a lint rule that disallows it programmatically. So I think that it's the exact opposite of what Jill describes: having `any` available to use if you want is only an advantage, not a disadvantage.
 
-<br />
+<br>
 
 ## 7. IsaacScript does not work properly if you have created a symbolic link on top of your mods directory.
 
@@ -223,7 +223,7 @@ This is half-true. Prior to October 31st, IsaacScript would not handle the speci
 
 Jill seems to imply that this was somehow a major flaw in the software, but I don't think that is very fair. Most people don't use Linux, and most people don't decide to symlink their mods directory to somewhere else.
 
-<br />
+<br>
 
 ## 8. There are no TypeScript comments in the Lua output.
 
@@ -231,7 +231,7 @@ I agree that it would be nice for TypeScript comments to get copied over. In fac
 
 Until then, I think it's worth noting that while having comments would be nice, it makes **zero practical difference**. Jill points out that without comments, troubleshooting might become really hard, but this is dead wrong. When you get a runtime error and a Lua line number, finding the matching TypeScript code is trivial because all of the Lua function names and variable names are the same.
 
-<br />
+<br>
 
 ## 9. You need to cast to get around functions that return undefined.
 
@@ -246,7 +246,7 @@ And if I may, let's take a quick moment to reflect on how easy to read and high-
 
 In general, I think Jill is confused about how TypeScript casting works. In my mods, I hardly ever cast anything. One notable exception is `Entity.GetData()`, since the return type on that is `Record<string, unknown>`, and it is often useful to cast that into a more specific interface to achieve even better type safety than what `Record<string, unknown>` would provide. (Notice that in this case we are casting to get *more* type safety, not less. =p)
 
-<br />
+<br>
 
 ## 10. It pollutes the global namespace with `__TS__` functions.
 
@@ -254,7 +254,7 @@ I agree that it would be nice for the `__TS__` functions to be local to the tran
 
 As my friends on the modding Discord server will know, I hate polluting the global namespace when it isn't required. But it's worth mentioning that until the TypeScriptToLua authors implement a "local" mode, there really isn't much practical consequence of making these functions global. The likelihood of this affecting any other mods in the ecosystem seems extremely tiny, so this feels like a very small nitpick.
 
-<br />
+<br>
 
 ## 11. It adds extra transpiled functions, even if they are not used in the source code.
 
@@ -268,7 +268,7 @@ Even if it were not possible to use the `inline` compiler flag, this criticism i
 
 It's important to remember that as programmers, we [should only be worried about performance optimizations that are measurable](http://www.catb.org/~esr/writings/taoup/html/ch12s02.html). The time differential between the game loading a 10 KB Lua file and a 11 KB Lua file is going to be on the order of nanoseconds - it wouldn't be something that you would ever be able to meaningfully measure. Thus, worrying about this is a complete waste of time.
 
-<br />
+<br>
 
 ## 12. Using IsaacScript makes your mod lag more.
 
@@ -282,7 +282,7 @@ In the specific case that Jill outlines, we can see that `filter` incurs an extr
 
 Finally, I can't help but notice that this criticism in particular is not even aimed at TypeScript itself, but rather at higher-order functions. As a final nail in the coffin here, I will state that nothing prevents you from using good-old-fashioned for loops in TypeScript in exactly the same way that you would in Lua - it will be transpiled to the exact same thing!
 
-<br />
+<br>
 
 ## 13. The transpiled output is hard to read.
 
@@ -334,7 +334,7 @@ However, there is one big caveat that we have to discuss. When runtime errors oc
 
 It's also important to remember that runtime errors are **very rare** in IsaacScript land - that's the whole point of using TypeScript in the first place!
 
-<br />
+<br>
 
 ## 14. Someone reading the Lua code wouldn't know that IsaacScript is used and would be confused.
 
@@ -360,7 +360,7 @@ Jill also mentions that if the first mod she looked at was programmed in TypeScr
 
 Regardless, since [JavaScript is objectively more popular than Lua](https://www.tiobe.com/tiobe-index/), I think a more likely hypothetical is one where a newcomer is emboldened to realize that they can just use the languages that the already know instead of having to deal with Lua.
 
-<br />
+<br>
 
 ## Conclusion
 

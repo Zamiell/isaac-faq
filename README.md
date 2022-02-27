@@ -86,7 +86,7 @@ Other resources:
 C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\mods
 ```
 
-<br />
+<br>
 
 ## How do I use the resource extractor? How do I unpack the game files?
 
@@ -104,19 +104,19 @@ C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools
 
 Once you run the extractor, the resources directory will fill up with all of the XML files, ANM2 files, images, and other various files that the game uses.
 
-<br />
+<br>
 
 ## Why is my sprite showing up in-game as a black square?
 
 This happens when the sprite is saved with the wrong bit depth. Set it at 32-bit depth specifically. (Don't set it to be "Automatic".)
 
-<br />
+<br>
 
 ## How do I make sprites in the Isaac style?
 
 Watch [this video](https://www.youtube.com/watch?v=cJ68vYqzSm0) by LeatherIceCream.
 
-<br />
+<br>
 
 ## Why isn't my code working? How do I know when errors occur? Where is the log.txt file located?
 
@@ -130,13 +130,13 @@ It is also recommended to set `FadedConsoleDisplay=1` in the options.ini file so
 
 For people comfortable with command-line applications, use my [isaac-log-viewer](https://github.com/Zamiell/isaac-log-viewer) script and have it running on a second monitor as you code & test.
 
-<br />
+<br>
 
 ## When is the log.txt cleared?
 
 Every time that you open the game, all of the contents of the log.txt is deleted. Thus, if you need information from the log after a bug occurs, make sure that you do not re-launch the game.
 
-<br />
+<br>
 
 ## How do I troubleshoot my code?
 
@@ -146,7 +146,7 @@ The tried-and-true method to figure out almost any bug is called "print debuggin
 
 Often times, the reason that your code is not working is that your variables are not what you think they are. So, print out what the variables are at each step of the way so that you can confirm that they are what you think they are. Use something along the lines of: `Isaac.DebugString("GETTING HERE - FOO IS: " .. tostring(foo))`
 
-<br />
+<br>
 
 ## I modified an XML file and the game crashes when I open it or when I go into a new run.
 
@@ -154,7 +154,7 @@ A crash means that the XML file is invalid, meaning that you messed up somewhere
 
 Another helpful troubleshooting tool is validators like [xmlvalidation.com](https://www.xmlvalidation.com/).
 
-<br />
+<br>
 
 ## I enabled a mod and now my game is crashing. How can I fix this?
 
@@ -162,7 +162,7 @@ You can try looking through the log.txt file to see if anything interesting is t
 
 Instead, you can find the problem by simply disabling your mods one by one until you find the exact mod that is causing the crash. Then, you can report it to the developer of the mod, or try to manually fix the code yourself.
 
-<br />
+<br>
 
 ## My mod is causing the game to crash. How do I figure out which line of code is causing the crash?
 
@@ -172,33 +172,33 @@ If you are programming your mod in Lua, then your only option is to simply inser
 
 If you are programming your mod in TypeScript using the [IsaacScript framework](https://isaacscript.github.io/), then you can use [this crash debug plugin](https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts) that will put the exact line that the mod is crashing at in the log.txt, which is extremely handy.
 
-<br />
+<br>
 
 ## What is the ID of [the sound that I care about]?
 
 Simply use [this mod](misc/sounds-display.lua), which will tell you what the ID of any currently playing sound effect is.
 
-<br />
+<br>
 
 ## What is Single Line Responsibility (SLR)?
 
 When writing code, put some effort into making it look nice and be easy to read for others, especially if you are showing it to other people or asking for help. In this vein, it is a good idea to follow the "single line responsibility" rule - meaning that **one line** should only do **one thing**. Read [this blog](https://midu.dev/single-line-responsability-haz-una-cosa-por-linea/) for more details about why SLR is great.
 
-<br />
+<br>
 
 ## How do I code X?
 
 The fastest way to figure out how to do something is to simply download a few mods that provide similar functionality to what you want to do, and then study the code.
 
-<br />
+<br>
 
-<br />
+<br>
 
 ## How do I apply a costume to my character?
 
 This is called a "null costume" and it is accomplished via the `EntityPlayer.AddNullCostume()` method. For more information, see [Lytebringr's 8th video](https://www.youtube.com/watch?v=R1CdCyGL1DQ&list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF&index=9).
 
-<br />
+<br>
 
 ## What is a callback?
 
@@ -210,25 +210,25 @@ Another common callback that mods use is `MC_POST_UPDATE`, which fires on every 
 
 Go through the [official docs](https://wofsauge.github.io/IsaacDocs/rep/enums/ModCallbacks.html) and read what all of the callbacks do so that you can get familiar with them.
 
-<br />
+<br>
 
 ## How do I create a new floor/level/stage?
 
 Unfortunately, Isaac does not natively support modded custom floors. BudJMT and DeadInfinity have built a custom system called [StageAPI](https://github.com/Meowlala/BOIStageAPI15) that allows mods to add custom floors in a hacky way. However, StageAPI is not easy to use, so unless you are already an experienced Isaac modder & coder, you should stick to more simple projects.
 
-<br />
+<br>
 
 ## How do I modify the Devil Room / Angel Room chances?
 
 There is no built-in way to do this, so you will have to get inventive. For the most control, you can delete all vanilla Devil/Angel doors and completely re-implement the system from scratch. Otherwise, you can temporarily give items to the player such as Goat Head or Rosary Bead, or use things like [Game.SetLastDevilRoomStage()](SetLastDevilRoomStage ) or [Level.SetRedHeartDamage()](https://wofsauge.github.io/IsaacDocs/rep/Level.html#setredheartdamage). You also might want to use [LevelStateFlags](https://wofsauge.github.io/IsaacDocs/rep/enums/LevelStateFlag.html).
 
-<br />
+<br>
 
 ## How do I make the costume on my custom character persistent?
 
 Simply use [Sanio's library](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255) for this, or study the source code and reimplement it yourself.
 
-<br />
+<br>
 
 ## What is the difference between an API and a library?
 
@@ -240,14 +240,14 @@ Historically, Isaac libraries have labeled themselves as "APIs", but this is a m
 
 If you are creating a new library, please use the correct terminology to name your project, which helps prevent confusion for newcomers to the Isaac modding scene.
 
-<br />
+<br>
 
 ## How do I overwrite vanilla music?
 
 - For normal music replacement, you can simply blow away the respective vanilla resource files.
 - For dynamic replacement, use Taz's [Music Mod Callback](https://steamcommunity.com/sharedfiles/filedetails/?id=2491006386).
 
-<br />
+<br>
 
 ## How do I iterate over a list object from the API?
 
@@ -275,7 +275,7 @@ for (let i = 0; i < rooms.Size; i++) {
 }
 ```
 
-<br />
+<br>
 
 ## How do I get a familiar to follow the player like Brother Bobby does?
 
@@ -303,7 +303,7 @@ function postFamiliarUpdateMyFamiliar(familiar: EntityFamiliar) {
 }
 ```
 
-<br />
+<br>
 
 ## What are ANM2 files?
 
@@ -315,23 +315,23 @@ function postFamiliarUpdateMyFamiliar(familiar: EntityFamiliar) {
   - Edit the files directly using a text editor. (Kilburn does this.)
   - Edit the files using the provided Isaac Animation Editor, which is located at: `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\IsaacAnimationEditor\IsaacAnimationEditor.exe`
 
-<br />
+<br>
 
 ## How do you use StageAPI to add new bosses?
 
 See [this screenshot](https://cdn.discordapp.com/attachments/205854782542315520/895485829458325604/unknown.png) from Xalum.
 
-<br />
+<br>
 
 ## What is the difference between `require` and `include`?
 
 See the [docs](https://wofsauge.github.io/IsaacDocs/rep/tutorials/Using-Additional-Lua-Files.html).
 
-<br />
+<br>
 
 ## How do I edit rooms?
 
-The official room editor is provided with the game and is located at:<br />
+The official room editor is provided with the game and is located at:<br>
 `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\RoomEditor\RoomEditor.exe`
 
 This was the tool that Edmund used to create all of the rooms for Rebirth and Afterbirth. However, the official editor is not very good and does not work properly with any Repentance rooms.
@@ -340,13 +340,13 @@ In 2014, Chronometrics made a 3rd party room editor called [Basement Renovator](
 
 Basement Renovator is written in Python, so you can either run it from source or simply download a pre-bundled exe file from the [releases page](https://github.com/Basement-Renovator/Basement-Renovator/releases).
 
-<br />
+<br>
 
 ## Where can I see the code for [some vanilla item] or [some vanilla mechanic]?
 
 You can't. The game is programmed in the C++ programming language and the source code is propritary, for what should be obvious reasons. This means that if you want to make a custom item that works in a similar way to a vanilla item, you will have to completely reimplement it yourself from scratch. (You can often use the wiki as an implementation reference.)
 
-<br />
+<br>
 
 ## How do I know when a player has picked up a collectible item?
 
@@ -356,7 +356,7 @@ For IsaacScript users, you can simply use the provided `[MC_POST_ITEM_PICKUP](ht
 
 If you want to implement this callback yourself, the source code / algorithm is provided [here](https://github.com/IsaacScript/isaacscript-common/blob/main/src/callbacks/itemPickup.ts).
 
-<br />
+<br>
 
 ## What is the difference between `pairs` and `ipairs`?
 
@@ -391,7 +391,7 @@ end
 
 Since Lua is [untyped](https://www.tutorialspoint.com/What-are-the-differences-between-untyped-and-dynamically-typed-programming-languages) and uses tables to represent multiple different data structures, `pairs` and `ipairs` serve as a flag to tell the reader what the underlying data structure really is.
 
-<br />
+<br>
 
 ## How do you tell what the entity type, variant, or subtype of a particular entity is?
 
@@ -400,4 +400,4 @@ You can:
 1) Type "spawn x" into the in-game console. For example, "spawn confessional" would show that the Confessional entity has an identifier of 6.17. This means that it has an entity type of 6 and a variant of 17.
 2) Or, you can ctrl+f in the "resources-dlc3/entities2.xml" file for the entity you want.
 
-<br />
+<br>
