@@ -1,12 +1,12 @@
 # The Binding of Isaac: Repentance Modding FAQ
 
-<br />
+<br>
 
 ## Read the Docs
 
 Search [Wofsuage's API documentation](https://wofsauge.github.io/IsaacDocs/rep/) before you ask a question.
 
-<br />
+<br>
 
 ## Use Discord Syntax Highlighting
 
@@ -30,7 +30,7 @@ Isaac.DebugString(foo);
 ```
 ````
 
-<br />
+<br>
 
 ## Format Code
 
@@ -39,13 +39,13 @@ When asking for help, it is common to post a code-snippet. Before posting code, 
 - In Lua, use [Lua Beautifier](https://goonlinetools.com/lua-beautifier/), [LuaFormatter](https://github.com/Koihik/LuaFormatter), or [lua-fmt](https://github.com/trixnz/lua-fmt).
 - In TypeScript, use [Prettier](https://prettier.io/).
 
-<br />
+<br>
 
 ## No Screenshots
 
 When asking for help, it is common to post a screenshot of your code. **Don't do this**, because it isn't editable or copy-pastable. Instead, post the actual text of the code. Also see the section on [Discord syntax highlighting](#use-discord-syntax-highlighting).
 
-<br />
+<br>
 
 ## Use Minimal, Reproducible Examples
 
@@ -53,7 +53,7 @@ When asking for help, it is common to post a bunch of code that is unrelated to 
 
 Please read [this StackOverflow post on how to create minimal, reproducable examples](https://stackoverflow.com/help/minimal-reproducible-example).
 
-<br />
+<br>
 
 ## Don't Use Link Previews
 
@@ -65,7 +65,7 @@ For example:
 Here's a link to my code: <https://github.com/IsaacScript/isaacscript-common/blob/main/src/functions/array.ts#L3-L16>
 ```
 
-<br />
+<br>
 
 ## How do I get started modding Isaac?
 
@@ -78,7 +78,7 @@ Other resources:
 - Cucco has also made a series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLUYzSIp7NO8cEer2FmtxSXlXoMFirvYDN).
 - The IsaacScript website has a good [text tutorial](https://isaacscript.github.io/docs/example-mod) on how to build an example mod using [IsaacScript](https://isaacscript.github.io/).
 
-<br />
+<br>
 
 ## Where is the directory/folder for mods located?
 
@@ -399,3 +399,5 @@ You can:
 
 1) Type "spawn x" into the in-game console. For example, "spawn confessional" would show that the Confessional entity has an identifier of 6.17. This means that it has an entity type of 6 and a variant of 17.
 2) Or, you can ctrl+f in the "resources-dlc3/entities2.xml" file for the entity you want.
+
+<br />
