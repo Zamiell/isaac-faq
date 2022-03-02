@@ -194,8 +194,7 @@ function getThingBasedOnSituation(situation: Situation) {
     }
 
     default: {
-      ensureAllCases(situation);
-      return "";
+      return ensureAllCases(situation);
     }
   }
 }
