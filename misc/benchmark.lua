@@ -6,7 +6,7 @@
 -- This is a mod that will benchmark two different functions to calculate how much more efficient
 -- one function is over the other.
 
-local mod = RegisterMod("test-benchmark", 1);
+local mod = RegisterMod("test-benchmark", 1)
 
 -- Benchmark configuration
 local NUM_TRIALS = 5000000 -- This is how many times each of the two functions will be executed
