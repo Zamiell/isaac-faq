@@ -198,6 +198,40 @@ The fastest way to figure out how to do something is to simply download a few mo
 
 This is called a "null costume" and it is accomplished via the `EntityPlayer.AddNullCostume()` method. For more information, see [Lytebringr's 8th video](https://www.youtube.com/watch?v=R1CdCyGL1DQ&list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF&index=9).
 
+The follow is an example of a mod adding a null costume:
+
+```lua
+local MOD_NAME = "My Mod"
+
+-- For EntityType.ENTITY_PLAYER (1)
+local PlayerVariant = {
+  PLAYER = 0,
+  COOP_BABY = 1,
+}
+
+local PlayerTypeCustom = {
+  FOO = GetPlayerTypeByName("Foo"),
+}
+
+local NullItemIDCustom = {
+  BAR = Isaac.GetCostumeIdByPath("gfx/characters/bar.anm2"),
+}
+
+local mod = RegisterMod(MOD_NAME, 1)
+
+function mod:postPlayerInit(player)
+  local character = player:GetPlayerType()
+
+  if (
+    player.Variant == PlayerVariant.PLAYER
+    and character == PlayerTypeCustom.FOO
+  ) then
+    player:AddNullCostume(NullItemIDCustom.BAR)
+  end
+end
+mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, mod.postPlayerInit)
+```
+
 <br>
 
 ## What is a callback?
@@ -227,6 +261,8 @@ There is no built-in way to do this, so you will have to get inventive. For the 
 ## How do I make the costume on my custom character persistent?
 
 Simply use [Sanio's library](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255) for this, or study the source code and reimplement it yourself.
+
+For a reference implementation, see [Andrew the Bunny Knight](https://steamcommunity.com/sharedfiles/filedetails/?id=2531089854).
 
 <br>
 
