@@ -210,7 +210,7 @@ local PlayerVariant = {
 }
 
 local PlayerTypeCustom = {
-  FOO = GetPlayerTypeByName("Foo"),
+  FOO = Isaac.GetPlayerTypeByName("Foo"),
 }
 
 local NullItemIDCustom = {
