@@ -18,10 +18,6 @@ local THRESHOLD_IN_SECONDS = 0.001 -- 1 millisecond
 local averages = {}
 local game = Game()
 
-local function round(a, b)
-  return (a - a % b) / b
-end
-
 -- ModCallbacks.MC_POST_GAME_STARTED (15)
 function mod:PostGameStarted()
   Isaac.DebugString("Using a threshold in seconds of: " .. tostring(THRESHOLD_IN_SECONDS))
