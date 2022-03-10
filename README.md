@@ -234,6 +234,12 @@ mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, mod.postPlayerInit)
 
 <br>
 
+## How do I prevent the costume on my custom character from changing due to the player picking up items and so forth?
+
+Use Sanio's [Costume Protector](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255) library.
+
+<br>
+
 ## What is a callback?
 
 Mods affect the game by putting code inside of *callbacks*. Each callback fires when a particular event happens in the game. There are 72 different callbacks to choose from, so you have to choose the right one depending on what you want to do.
