@@ -386,7 +386,11 @@ Basement Renovator is written in Python, so you can either run it from source or
 
 ## Where can I see the code for [some vanilla item] or [some vanilla mechanic]?
 
-You can't. The game is programmed in the C++ programming language and the source code is propritary, for what should be obvious reasons. This means that if you want to make a custom item that works in a similar way to a vanilla item, you will have to completely reimplement it yourself from scratch. (You can often use the wiki as an implementation reference.)
+You can't. The game is programmed in the C++ programming language and the source code is propritary.
+
+This means that if you want to make a custom item that works in a similar way to a vanilla item, you will have to completely reimplement it yourself from scratch. (You can often use the wiki as an implementation reference.)
+
+This also means that if you want to change the way a vanilla item works, you will often have to reimplement the item from scratch.
 
 <br>
 
