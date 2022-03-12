@@ -173,6 +173,7 @@ In Isaac, callbacks are the root of nearly all code. So, when opening up a featu
 
 local item1 = {}
 
+-- ModCallbacks.MC_POST_UPDATE (1)
 function item1:postUpdate()
   -- Code here
 end
