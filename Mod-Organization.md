@@ -196,17 +196,20 @@ item1:doThing()
 But now we've lost the ability to know what's happening by looking at the `item1.lua` file. Instead, let's be more explicit and self-documenting:
 
 ```lua
--- in file: postUpdate.lua
+--[[ in file: postUpdate.lua ]]--
 item1:postUpdate()
 
--- in file: postEntityKill.lua
+--[[ in file: postEntityKill.lua ]]--
 item1:postEntityKill()
 
--- in file: item1.lua
+--[[ in file: item1.lua ]]--
+
+-- ModCallbacks.MC_POST_UPDATE (1)
 function item1:postUpdate()
   item1:doThing()
 end
 
+-- ModCallbacks.MC_POST_ENTITY_KILL (68)
 function item1:postEntityKill()
   item1:doThing()
 end
