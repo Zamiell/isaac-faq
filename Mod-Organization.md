@@ -12,7 +12,7 @@ But how do you glue it all together? In general, there are two pretty good ways 
 
 <br>
 
-## 1) Main --> Feature (with Dependency Injection)
+## 1) Main --> Feature
 
 Use depedency injection and have all callback registration happen in the files dedicated to the item/feature.
 
@@ -83,7 +83,7 @@ import * as postUpdate from "./callbacks/postUpdate";
 
 const mod = RegisterMod("My Mod", 1);
 
-mod.AddCallback(ModCallbacks.POST_UPDATE, postUpdate.main);
+postUpdate.init(mod);
 ```
 
 ```ts
@@ -91,7 +91,11 @@ mod.AddCallback(ModCallbacks.POST_UPDATE, postUpdate.main);
 
 import * as item1 from "../items/item1";
 
-export function main(): void {
+export function init(): void {
+  mod.AddCallback(ModCallbacks.MC_POST_UPDATE, main);
+}
+
+function main() {
   item1.postUpdate();
 }
 ```
@@ -99,6 +103,7 @@ export function main(): void {
 ```ts
 // item1.ts
 
+// ModCallbacks.MC_POST_UPDATE (1)
 export function postUpdate(): void {
   // Code here
 }
@@ -113,7 +118,7 @@ local postUpdate = require("myMod.callbacks.postUpdate")
 
 local mod = RegisterMod("My Mod", 1)
 
-mod:AddCallback(ModCallbacks.POST_UPDATE, postUpdate.main)
+postUpdate:init(mod)
 ```
 
 ```lua
@@ -122,6 +127,10 @@ mod:AddCallback(ModCallbacks.POST_UPDATE, postUpdate.main)
 local postUpdate = {}
 
 local item1 = require("myMod.items.item1")
+
+function postUpdate:init()
+  mod:AddCallback(ModCallbacks.MC_POST_UPDATE, postUpdate.main)
+end
 
 function postUpdate:main()
   item1:postUpdate()
@@ -135,6 +144,7 @@ return postUpdate
 
 local item1 = {}
 
+-- ModCallbacks.MC_POST_UPDATE (1)
 function item1:postUpdate()
   -- Code here
 end
@@ -149,92 +159,6 @@ One advantage of having an extra degree of hierarchy is that you can more easily
 Another advantage of having two degrees of hierarchy is that the execution flow is easier to analyze and troubleshoot. Inevitably, you will need to troubleshoot problems in your mod. By commenting out functions in a specific callback file, you have more fine grained control than by simply disabling the initialization of an entire item/feature.
 
 Using TypeScript compliments this strategy because it ensures that everything glues together properly.
-
-<br>
-
-## 2a) Main --> Callback --> Feature (with Dependency Injection)
-
-In your mod, you might want to take advantage of the "optional arguments" feature of the Isaac callbacks. However, we still want to contain all of the logic for a particular callback inside the file dedicated to that callback. So we can use dependency injection for this.
-
-```ts
-// main.ts
-
-import postEntityKillInit from "./callbacks/postEntityKill";
-
-const mod = RegisterMod("My Mod", 1);
-
-postEntityKillInit(mod);
-```
-
-```ts
-// postEntityKill.ts
-
-import * as item1 from "../items/item1";
-import * as item2 from "../items/item2";
-
-export default function postEntityKillInit(mod: Mod): void {
-  mod.AddCallback(
-    ModCallbacks.MC_POST_ENTITY_KILL,
-    main,
-  );
-
-  mod.AddCallback(
-    ModCallbacks.MC_POST_ENTITY_KILL,
-    mom,
-    EntityType.ENTITY_MOM,
-  );
-}
-
-function main(entity: Entity) {
-  item1.postEntityKill(entity);
-}
-
-function mom(entity: Entity) {
-  item2.postEntityKillMom(entity);
-}
-```
-
-Or, in Lua:
-
-```lua
--- main.lua
-
-local postEntityKill = require("myMod.callbacks.postEntityKill")
-
-local mod = RegisterMod("My Mod", 1);
-
-postEntityKill.init(mod);
-```
-
-```lua
--- postEntityKill.lua
-
-local postEntityKill = {}
-
-local item1 = require("myMod.items.item1")
-local item2 = require("myMod.items.item2")
-
-function postEntityKill:init(mod)
-  mod.AddCallback(
-    ModCallbacks.MC_POST_ENTITY_KILL,
-    postEntityKill.main
-  )
-
-  mod.AddCallback(
-    ModCallbacks.MC_POST_ENTITY_KILL,
-    postEntityKill.mom,
-    EntityType.ENTITY_MOM
-  )
-end
-
-function postEntityKill:main(entity)
-  item1:postEntityKill(entity)
-end
-
-function postEntityKill:mom(entity)
-  item2:postEntityKillMom(entity)
-end
-```
 
 In general, this is a great strategy to use in Isaac mods. It provides a nice separation of conerns and makes the code very easy to understand. Of course, every mod is unique, so you should think about a hierarchy that works for best your particular mod.
 
