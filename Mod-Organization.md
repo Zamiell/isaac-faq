@@ -128,7 +128,7 @@ local postUpdate = {}
 
 local item1 = require("myMod.items.item1")
 
-function postUpdate:init()
+function postUpdate:init(mod)
   mod:AddCallback(ModCallbacks.MC_POST_UPDATE, postUpdate.main)
 end
 
