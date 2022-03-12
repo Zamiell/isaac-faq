@@ -257,7 +257,7 @@ This code has a nice property: by reading the `postNewRoom()` function, we get a
 
 This strategy also makes it easier to find bugs. For example, if a function is named `removeAllGridEntities()`, and then we find a situation where the function does *not* remove all of the grid entities, then it is clear where the bug is. We can immediately tell from the name of the function that whoever wrote it originally intended it to remove all of the grid entities. On the other hand, if it was just a block of code in the middle of some other, bigger function, then determining that is not so clear.
 
-As an aside, when I say "whoever wrote it", I mean to say that it might have been written by someone else on your team. But even if you don't work on a team, the "someone else" might be **you** from months/years ago. Either way, you are in the same situation, wondering about the true purpose of the code. :)
+As an aside, when I say "whoever wrote it", I mean to say that it might have been written by someone else on your team. But even if you don't work on a team, the "someone else" might be **you** from months/years ago. Either way, you are in the same situation, wondering about the true purpose of the code.
 
 <br>
 
