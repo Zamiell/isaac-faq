@@ -14,7 +14,7 @@ But how do you glue it all together? In general, there are two pretty good ways 
 
 ## 1) Main --> Feature
 
-Use depedency injection and have all callback registration happen in the files dedicated to the item/feature.
+Have all callback registration happen in the files dedicated to the item/feature.
 
 This looks like:
 
@@ -291,7 +291,7 @@ end
 return item1
 ```
 
-In this way, you can avoid using dependency injection, which reduces the complexity a little. But there are several disadvantages with using global variables.
+In this way, you can avoid passing the mod object into a function, which reduces the complexity a little. But there are several disadvantages with using global variables.
 
 <br>
 
