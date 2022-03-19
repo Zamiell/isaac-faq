@@ -460,6 +460,7 @@ setBlindfold(player, true);
 If you are using Lua, copy-paste the following function into your mod and/or standard library:
 
 ```lua
+-- Written by Zamiel, technique created by im_tem
 function setBlindfold(player, enabled, modifyCostume)
   local game = Game()
   local character = player:GetPlayerType()
