@@ -447,3 +447,43 @@ You can:
 2) Or, you can ctrl+f in the "resources-dlc3/entities2.xml" file for the entity you want.
 
 <br>
+
+## How do I blindfold the player?
+
+If you are using [IsaacScript](https://isaacscript.github.io/), then all you have to do is call the `setBlindfold` function, like so:
+
+```ts
+const player = Isaac.GetPlayer();
+setBlindfold(player, true);
+```
+
+If you are using Lua, copy-paste the following function into your mod and/or standard library:
+
+```lua
+function setBlindfold(player, enabled, modifyCostume)
+  local game = Game()
+  local character = player:GetPlayerType()
+  local challenge = Isaac.GetChallenge()
+
+  if enabled then
+    game.Challenge = Challenge.CHALLENGE_SOLAR_SYSTEM -- This challenge has a blindfold
+    player:ChangePlayerType(character)
+    game.Challenge = challenge
+
+    -- The costume is applied automatically
+    if not modifyCostume then
+      player:TryRemoveNullCostume(NullItemID.ID_BLINDFOLD)
+    end
+  else
+    game.Challenge = Challenge.CHALLENGE_NULL
+    player:ChangePlayerType(character)
+    game.Challenge = challenge
+
+    if modifyCostume then
+      player:TryRemoveNullCostume(NullItemID.ID_BLINDFOLD)
+    end
+  end
+end
+```
+
+<br>
