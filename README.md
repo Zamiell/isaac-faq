@@ -104,6 +104,8 @@ C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools
 
 Once you run the extractor, the resources directory will fill up with all of the XML files, ANM2 files, images, and other various files that the game uses.
 
+Note that you also have to re-run the resource extractor every time that there is a vanilla patch.
+
 <br>
 
 ## Why is my sprite showing up in-game as a black square?
