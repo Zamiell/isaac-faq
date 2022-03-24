@@ -57,6 +57,8 @@ Dark Esau is not a familiar, but he is persistent in an identical way that famil
 
 Note that when the player gets to a new floor, a new copy of Dark Esau will be spawned and it will have a different `InitSeed` than the one on the previous floor.
 
+<br>
+
 ### Emulated Persistent Entities (One-per-Room)
 
 By default, entities are not persistent, meaning that they will despawn when the player leaves the room. But you may have a custom entity that you want to *make* persistent to the specific room in the same way that a heart drop is. This means that you will have to keep track of the room and position, and then manually respawn it when the player re-enters the room.
