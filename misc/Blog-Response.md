@@ -1,4 +1,4 @@
-# Isaacscript, and Why It Doesn't Suck
+# IsaacScript, and Why It Doesn't Suck
 
 Jill posted a [fairly long blog](https://blog.oat.zone/isaacscript-and-why-it-sucks/) about IsaacScript. I welcome well-intentioned criticism, so I thank Jill for putting it together, which must have taken a long time.
 
@@ -41,7 +41,7 @@ When we examine it from the opposite direction, TypeScript has plenty of feature
 
 Jill goes on to say that MoonScript, Teal, Fennel, Amulet, and Haxe would all be better choices than TypeScript, because they are "designed to be compiled". That is a little misleading. Here, I think Jill is ignorant of how these languages work, because [all](https://github.com/leafo/moonscript/blob/b7efcd131046ed921ae1075d7c0f6a3b64a570f7/docs/command_line.md#syntax-transformer) [five](https://github.com/teal-language/tl/blob/6b46e4051eb4a73138f827387017f9bcfe1befbe/spec/parser/parser_spec.lua) [of](https://github.com/bakpakin/Fennel/blob/5b142c22c679a23f0f63873e923e16d354bcbc82/src/fennel/compiler.fnl) [these](https://github.com/ianmaclarty/amulet/blob/8fa43fcdc5e145f607ba195eb9a053b423f24655/third_party/glsl-optimizer/src/glsl/glsl_parser.yy) [languages](https://github.com/HaxeFoundation/haxe/blob/0ef19b4e282502800896ec41ad5b2fdf10a50f03/src/generators/genlua.ml) convert code to an AST (abstract syntax tree), which can then be converted to any language in an agnostic way. In fact, this is [exactly how TypeScriptToLua works as well](https://github.com/TypeScriptToLua/TypeScriptToLua/blob/master/src/LuaAST.ts), so there is no meaningful difference here.
 
-In fact, before deciding on TypeScript, I did investigate all five of these options. But TypeScript stood out as the clear winner among them. TypeScript has world-class tooling and a robust ecosystem - huge swathes of the internet have shifted their codebases to TypeScript in the past few years.
+In fact, before deciding on TypeScript, I did investigate all five of these options. But TypeScript stood out as the clear winner among them. TypeScript has world-class tooling and a robust ecosystem - huge swathes of the internet have shifted their code-bases to TypeScript in the past few years.
 
 On the other hand, the 5 languages that Jill recommends are tiny projects with next-to-no adoption. To be fair, Haxe deserves a special mention here, as it has gained some traction recently with the hit browser game [Friday Night Funkin](https://github.com/ninjamuffin99/Funkin). But the size of the Haxe ecosystem pales in comparison to TypeScript. If I'm having a weird Haxe problem, the likelihood of finding a StackOverflow question or an open-source project on GitHub to help me out is orders of magnitude less likely than if I was googling for an equivalent TypeScript problem. Ecosystem matters!
 
@@ -133,7 +133,7 @@ Jill is correct in saying that this isn't an important feature. She states that 
 
 Jill claims that IsaacScript is a "monolith", linking a blog post that goes over the downsides of having tightly coupled software. However, she doesn't mention *how* IsaacScript is tightly coupled, she just states that it is. This is an annoying pattern that we repeatedly see in this blog.
 
-In short, I don't think that Jill understands what the tool is doing very well. IsaacScript is objectively very modular: linting is optional, automatic mod reloading is optional, the expanded standard library is optional, and even the definitions themselves are optional. You can easily drop in your own solutions for any of these by changing a single line in the "package.json" file. Furthermore, the IsaacScript tool itself is just a convienence, and is completely optional, since you can just run TSTL yourself. So I think that this criticism misses the mark.
+In short, I don't think that Jill understands what the tool is doing very well. IsaacScript is objectively very modular: linting is optional, automatic mod reloading is optional, the expanded standard library is optional, and even the definitions themselves are optional. You can easily drop in your own solutions for any of these by changing a single line in the "package.json" file. Furthermore, the IsaacScript tool itself is just a convenience, and is completely optional, since you can just run TSTL yourself. So I think that this criticism misses the mark.
 
 ### Require/Include
 
@@ -218,7 +218,7 @@ In TypeScript land, the situation is identical. TypeScript allows the `any` type
 
 ## 7. IsaacScript does not work properly if you have created a symbolic link on top of your mods directory.
 
-This is half-true. Prior to October 31st, IsaacScript would not handle the special case of end-users symlinking their mods directory to an entirely different directly. However, fixing this bug was as simple as [removing a single character](https://github.com/IsaacScript/isaacscript/pull/11/files#diff-bc9705d0f7a567399044dfc66ccc82d4d9aa1cff116842a0094d54e463c9ecbcR68), which was handily performed by Kyojo in a pull request within hours of Jill bringing up the problem in the IsaacScript Discord.
+This is half-true. Prior to October 31st, IsaacScript would not handle the special case of end-users sym-linking their mods directory to an entirely different directly. However, fixing this bug was as simple as [removing a single character](https://github.com/IsaacScript/isaacscript/pull/11/files#diff-bc9705d0f7a567399044dfc66ccc82d4d9aa1cff116842a0094d54e463c9ecbcR68), which was handily performed by Kyojo in a pull request within hours of Jill bringing up the problem in the IsaacScript Discord.
 
 Jill seems to imply that this was somehow a major flaw in the software, but I don't think that is very fair. Most people don't use Linux, and most people don't decide to symlink their mods directory to somewhere else.
 
@@ -329,7 +329,7 @@ I speculate that the root of this criticism is that Lua programmers have beautif
 
 Of course, this logic only makes sense when your brain it thinking in Lua-mode. Once you start to think in TypeScript, it doesn't make a whiff of a difference what the transpiled output looks like, because all you are doing is reading the TypeScript code. Lua is **not the source code**, TypeScript is, and all that matters is the source code. So this is not something that anyone should be reasonably concerned with.
 
-However, there is one big caveat that we have to discuss. When runtime errors occur, the Isaac log file will tell you the line of Lua that the error happened on. This means that IsaacScript coders might have to jump into the transpiled "main.lua" file from time to time to find out what went wrong. So if the Lua file is a mess, then troubleshooting runtime errors could become very difficult. In pratice though, this is **not a problem** because the generated Lua code is very close to the TypeScript code, with all of the same variable names, function names, and so on. So for any given line of Lua code, it is utterly trivial to Ctrl+Shift+F and find the corresponding line of TypeScript code.
+However, there is one big caveat that we have to discuss. When runtime errors occur, the Isaac log file will tell you the line of Lua that the error happened on. This means that IsaacScript coders might have to jump into the transpiled "main.lua" file from time to time to find out what went wrong. So if the Lua file is a mess, then troubleshooting runtime errors could become very difficult. In practice though, this is **not a problem** because the generated Lua code is very close to the TypeScript code, with all of the same variable names, function names, and so on. So for any given line of Lua code, it is utterly trivial to Ctrl+Shift+F and find the corresponding line of TypeScript code.
 
 It's also important to remember that runtime errors are **very rare** in IsaacScript land - that's the whole point of using TypeScript in the first place!
 
@@ -383,7 +383,7 @@ Of course, working in Lua would be easier if everyone in the team already knew L
 
 This is the only concluding point of Jill's that I agree with and does not seem to be a misrepresentation. If IsaacScript is branded as a solution to "every Isaac modding problem", then that is obviously a mistake, and I apologize if that appears to be the case. To be fair though, I don't think anyone is claiming that IsaacScript solves every single modding problem. The IsaacScript webpage does a pretty decent job of explaining what IsaacScript is, what situations it is good for, and who should use it. But the website is always open to improvement, and maybe it should be updated to have stronger wording to ward away beginners (see #4 above). If you want to help, I'm open to PRs.
 
-Overall, Jill brought up a bunch of good points in this blog, but also advertised plenty of misinformation and showcased a big lack of understanding about the tool. To be fair to Jill, I don't think anyone should expect her to be an expert in IsaacScript after a day or two of messing around with it. But on the other hand, I feel like it would have been much more straightforward to simply *ask about these problems in the IsaacScript Discord* instead of writing a huge blog post, since myself or others in the Discord server could have easily disspelled these misunderstandings/falsehoods before being published.
+Overall, Jill brought up a bunch of good points in this blog, but also advertised plenty of misinformation and showcased a big lack of understanding about the tool. To be fair to Jill, I don't think anyone should expect her to be an expert in IsaacScript after a day or two of messing around with it. But on the other hand, I feel like it would have been much more straightforward to simply *ask about these problems in the IsaacScript Discord* instead of writing a huge blog post, since myself or others in the Discord server could have easily dispelled these misunderstandings/falsehoods before being published.
 
 While Jill's post had a negative tone to it, there are a few other people in the modding community who have had negative things to say about IsaacScript in the past. To those detractors, hopefully this post helped alleviate some of your specific concerns!
 

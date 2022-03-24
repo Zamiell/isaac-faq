@@ -43,7 +43,7 @@ When asking for help, it is common to post a code-snippet. Before posting code, 
 
 ## No Screenshots
 
-When asking for help, it is common to post a screenshot of your code. **Don't do this**, because it isn't editable or copy-pastable. Instead, post the actual text of the code. Also see the section on [Discord syntax highlighting](#use-discord-syntax-highlighting).
+When asking for help, it is common to post a screenshot of your code. **Don't do this**, because it isn't editable or copy-pasteable. Instead, post the actual text of the code. Also see the section on [Discord syntax highlighting](#use-discord-syntax-highlighting).
 
 <br>
 
@@ -51,7 +51,7 @@ When asking for help, it is common to post a screenshot of your code. **Don't do
 
 When asking for help, it is common to post a bunch of code that is unrelated to the problem. This makes questions hard to understand and usually means that the person asking the question is putting forth very little effort.
 
-Please read [this StackOverflow post on how to create minimal, reproducable examples](https://stackoverflow.com/help/minimal-reproducible-example).
+Please read [this StackOverflow post on how to create minimal, reproducible examples](https://stackoverflow.com/help/minimal-reproducible-example).
 
 <br>
 
@@ -96,7 +96,7 @@ By default, the game's resources are located here:
 C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\resources
 ```
 
-However, this directory will be mostly empty unless you run the provided resource extrator. It is located here:
+However, this directory will be mostly empty unless you run the provided resource extractor. It is located here:
 
 ```
 C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\ResourceExtractor\ResourceExtractor.exe
@@ -122,7 +122,7 @@ Watch [this video](https://www.youtube.com/watch?v=cJ68vYqzSm0) by LeatherIceCre
 
 ## Why isn't my code working? How do I know when errors occur? Where is the log.txt file located?
 
-Lua is an interpretted language, which means that if you make a typo or have otherwise bad code, you will only be able to discover it once the program actually runs. If the Lua interpreters encounters an error, it will write it to the game's log.txt file.
+Lua is an interpreted language, which means that if you make a typo or have otherwise bad code, you will only be able to discover it once the program actually runs. If the Lua interpreters encounters an error, it will write it to the game's log.txt file.
 
 By default, this file is located at: `C:\Users\[username]\Documents\My Games\Binding of Isaac Repentance\log.txt`
 
@@ -170,7 +170,7 @@ Instead, you can find the problem by simply disabling your mods one by one until
 
 First, check out the log.txt file for clues as to why the game is crashing. However, in the vast majority of cases, the log will not show any helpful information when the game crashes.
 
-If you are programming your mod in Lua, then your only option is to simply insert a lot of print statements to try and narrow down where the crash is occuring.
+If you are programming your mod in Lua, then your only option is to simply insert a lot of print statements to try and narrow down where the crash is occurring.
 
 If you are programming your mod in TypeScript using the [IsaacScript framework](https://isaacscript.github.io/), then you can use [this crash debug plugin](https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts) that will put the exact line that the mod is crashing at in the log.txt, which is extremely handy.
 
@@ -268,7 +268,7 @@ There is no built-in way to do this, so you will have to get inventive. For the 
 
 ## How do I make the costume on my custom character persistent?
 
-Simply use [Sanio's library](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255) for this, or study the source code and reimplement it yourself.
+Simply use [Sanio's library](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255) for this, or study the source code and re-implement it yourself.
 
 For a reference implementation, see [Andrew the Bunny Knight](https://steamcommunity.com/sharedfiles/filedetails/?id=2531089854).
 
@@ -276,7 +276,7 @@ For a reference implementation, see [Andrew the Bunny Knight](https://steamcommu
 
 ## What is the difference between an API and a library?
 
-Some mods on the workshop package functionality together as an abstraction for other poeple to use. In software, this is what is typically known as a "library". As a programmer, it is usually a lot easier to leverage other people's battle-tested libraries than to roll your own from scratch.
+Some mods on the workshop package functionality together as an abstraction for other people to use. In software, this is what is typically known as a "library". As a programmer, it is usually a lot easier to leverage other people's battle-tested libraries than to roll your own from scratch.
 
 On the other hand, an API is short for application programming interface, and it is exactly what it sounds like. An application might want to expose some functionality to external users and software, and it would do that through an explicitly defined interface. Libraries expose an API so that end-users can consume them. But note that *any* software can have an API, not just a library. For example, the Revelations Mod is a popular mod that adds new floors, bosses, and items to the game. But it also exposes an API so that it can be made compatible with other mods.
 
@@ -388,11 +388,11 @@ Basement Renovator is written in Python, so you can either run it from source or
 
 ## Where can I see the code for [some vanilla item] or [some vanilla mechanic]?
 
-You can't. The game is programmed in the C++ programming language and the source code is propritary.
+You can't. The game is programmed in the C++ programming language and the source code is proprietary.
 
-This means that if you want to make a custom item that works in a similar way to a vanilla item, you will have to completely reimplement it yourself from scratch. (You can often use the wiki as an implementation reference.)
+This means that if you want to make a custom item that works in a similar way to a vanilla item, you will have to completely re-implement it yourself from scratch. (You can often use the wiki as an implementation reference.)
 
-This also means that if you want to change the way a vanilla item works, you will often have to reimplement the item from scratch.
+This also means that if you want to change the way a vanilla item works, you will often have to re-implement the item from scratch.
 
 <br>
 

@@ -1,4 +1,4 @@
-# Mod Oragnization
+# Mod Organization
 
 This is a short blog about how to organize a big Isaac mod - one that has thousands of lines of code. It's aimed at more experienced programmers who want to be the best coders that they can be, and not just get the job done as quickly as possible. The principles here are agnostic in that they equally apply to a mod written in TypeScript or a mod written in Lua.
 
@@ -45,7 +45,7 @@ Or, in Lua:
 ```lua
 -- main.lua
 
-local item1 = require("mymod.items.item1")
+local item1 = require("myMod.items.item1")
 
 local mod = RegisterMod("My Mod", 1)
 
@@ -160,7 +160,7 @@ Another advantage of having two degrees of hierarchy is that the execution flow 
 
 Using TypeScript compliments this strategy because it ensures that everything glues together properly.
 
-In general, this is a great strategy to use in Isaac mods. It provides a nice separation of conerns and makes the code very easy to understand. Of course, every mod is unique, so you should think about a hierarchy that works for best your particular mod.
+In general, this is a great strategy to use in Isaac mods. It provides a nice separation of concerns and makes the code very easy to understand. Of course, every mod is unique, so you should think about a hierarchy that works for best your particular mod.
 
 <br>
 
@@ -268,7 +268,7 @@ Beyond the two organizational strategies that were discussed above, there are ot
 ```lua
 -- main.lua
 
-local item1 = require("mymod.items.item1")
+local item1 = require("myMod.items.item1")
 
 myMod = RegisterMod("My Mod", 1) -- Initializing a global variable
 
@@ -416,7 +416,7 @@ By carefully scoping all of our variables, we make it a lot easier to understand
 
 ### 7) Resiliency
 
-In the Isaac Lua environment, other mods will be able to access the global variables that you set. Sometimes, this is intentioal - you are explicitly exporting functionality to be used by other mods. But a lot of the time, it's not intentional, and a mod is designed around using global variables as a means for all of the files to talk to each other.
+In the Isaac Lua environment, other mods will be able to access the global variables that you set. Sometimes, this is intentional - you are explicitly exporting functionality to be used by other mods. But a lot of the time, it's not intentional, and a mod is designed around using global variables as a means for all of the files to talk to each other.
 
 Mods that are structured like this are at a risk of someone else reaching in and deleting or overwriting the global variables. In truth, this kind of thing is rare. But why take the chance? Refactoring global variables into local variables only takes a tiny amount of effort.
 
