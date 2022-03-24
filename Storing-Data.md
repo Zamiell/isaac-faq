@@ -135,7 +135,9 @@ In conclusion, for this case:
 - You need to use a key/index of `CollectibleIndex` (which is the output of the `getCollectibleIndex` function).
 - You need to use a value of a table/primitive containing your arbitrary data.
 
-### Summary
+<br>
+
+### Indexing Summary
 
 There is no universal scheme for indexing entities. In general, you should use `PtrHash` as an index, but specific kinds of entities require specific indexing schemes. Some indexing schemes are persistent, and some are not, so you must understand the trade-offs involved.
 
