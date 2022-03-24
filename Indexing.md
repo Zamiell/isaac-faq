@@ -49,6 +49,8 @@ For this case:
 - You need to use a key/index of `Entity.InitSeed`.
 - You need to use a value of a table/primitive containing your arbitrary data.
 
+<br>
+
 ### Dark Esau
 
 Dark Esau is not a familiar, but he is persistent in an identical way that familiars are. You can also use `Entity.InitSeed` to index Dark Esau.
