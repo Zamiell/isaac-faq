@@ -170,7 +170,7 @@ Mods will contain a bunch of mod features, and each of these features may store 
 
 The Isaac API offers a `Mod.SaveData` method to store data into a "save#.dat" file. Since this method takes a string, you must first convert all of your data to a string. The naive way to accomplish to have every variable in the mod live on a shared table, and then use `json.encode` to store it. And then you can use `json.decode` to restore it. Easy!
 
-However, this strategy has a few gotchas.
+However, this strategy has a few gotchas:
 - Anything that is a type of `userdata` won't be serialized properly, such as a `Color`, `RNG`, or `Vector`. So, with this strategy, you should avoid storing these objects directly in your saved data structures. However, this is kind of a pain, as working with vectors is extremely common, and it is easier to use `RNG` objects than seeds (since you don't have to `Next` them every time you use them).
 - The JSON library is unable to distinguish between a maps with number keys and an array. It will assume that both of these are an array. Thus, in the case of a map with number keys, it will insert `null` in every empty spot, leading to crashes. For example, a map with indexes of 5 and 10 would be converted to the following array: `[null, null, null, null, "myValueForIndex5", null, null, null, null, "myValueForIndex10"]`. Many Isaac modders work around this problem by manually converting their map keys to strings, but this is a foot gun that can cause pain if you forget to do it. You shouldn't have to convert keys when working with your data structures - this is an implementation detail that can be abstracted away.
 
