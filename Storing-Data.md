@@ -180,7 +180,7 @@ For more advanced users, you will want to do better than this:
 - Building on the previous section, once we have a save data manager that accomplishes automatic resetting, we already have the building blocks for a system that can just automatically dump everything that it manages into the "save#.dat" file at the appropriate times.
 - The "deep-cloner" responsible for saving a copy of all of the default values can be extended to handle special cases of `Color`, `RNG`, and `Vector`, and serialize them appropriately.
 - The "deep-cloner" can also properly handle converting maps with number keys to strings, which completely abstracts away the foot-gun.
-- We can use "brand" Lua tables with specific keys to denote situations where specific kinds of serialization has occurred, such as `__VECTOR` or `__MAP_WITH_NUMBER_KEYS`. During deserialization, we can use the brands to properly instantiate the respective object.
+- We can "brand" Lua tables with specific keys to denote situations where specific kinds of serialization has occurred, such as `__VECTOR` or `__MAP_WITH_NUMBER_KEYS`. During deserialization, we can use the brands to properly instantiate the respective object.
 - We can throw a helpful runtime error if a mod feature tries to serialize an unserializable thing, like an `EntityPtr`.
 
 Your end goal should try to be something that accomplishes all of the things that DeadInfinity outlines in [this GitHub issue](https://github.com/Meowlala/RepentanceAPIIssueTracker/issues/168).
