@@ -33,7 +33,7 @@ For this case:
 
 Note that:
 - As the name implies, `PtrHash` is a pointer hash tied to the specific entity. Thus, in most cases, the lifetime of the index is per-room, or more specifically, whenever the entity despawns.
-- Using `PtrHash` is better than using `Entity.Index`, since the latter will not work in some situations (i.e. when the entity is morphed).
+- Using `PtrHash` is better than using `Entity.Index`, since the latter will not work in some situations (e.g. when the entity is morphed).
 
 <br>
 
