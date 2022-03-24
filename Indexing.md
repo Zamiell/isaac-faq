@@ -87,7 +87,7 @@ Instead, we can use the `EntityPlayer.GetCollectibleRNG` method with an arbitrar
 
 However, since the RNG value is the same for both Tainted Lazarus and Dead Tainted Lazarus, we need to revert to using the RNG of `CollectibleType.COLLECTIBLE_INNER_EYE` (2) for Dead Tainted Lazarus.
 
-Note that since The Forgotten and The Soul also share the same RNG, they will also result in the same index. This is usually what is desired, since they share the same items. However, if it isn't the case, then you can use the RNG for `CollectibleType.COLLECTIBLE_SPOON_BENDER` (3) for The Soul.
+Note that since The Forgotten and The Soul also share the same RNG, they will have the same index. This is usually what is desired, since they share the same collectibles. However, if this is not desired, then you can use the RNG for `CollectibleType.COLLECTIBLE_SPOON_BENDER` (3) for The Soul.
 
 All of this should be abstracted into a `getPlayerIndex` function. (In IsaacScript, this is included in the standard library.)
 
