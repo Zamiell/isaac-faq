@@ -4,7 +4,7 @@
 
 Generically speaking, mods need to store data about entities in order to accomplish features that rely on stateful tracking. "Entities" include players, familiars, pickups, NPCs, and so on. However, storing data about entities is far from straightforward.
 
-To start with, the game helpfully provides a `Entity.GetData` method to return a table that it keeps track of for each entity. You can add arbitrary keys and values to this table. And since it is a method of the `Entity` itself, you can somewhat-easily retrieve the data table in any particular callback that you want. At first glance, this seems like the obvious solution to this problem. Unfortunatly, `GetData` is unsuitable for the following reasons:
+To start with, the game helpfully provides a `Entity.GetData` method to return a table that it keeps track of for each entity. You can add arbitrary keys and values to this table. And since it is a method of the `Entity` itself, you can somewhat-easily retrieve the data table in any particular callback that you want. At first glance, this seems like the obvious solution to this problem. Unfortunately, `GetData` is unsuitable for the following reasons:
 
 1. **The table is a global variable.** In other words, this means that other mods will get the same table, which can cause conflicts. It also means that other mods can modify or destroy your data. Carefully namespacing your variable names can mitigate this problem, but it's still not a good solution if you want your mod to be perfect.
 1. **The table is ephemeral, meaning that when the entity despawns, the table will be deleted and you will lose your data.** For example, pickups are a type of entity that at first glance appears to be persistent. Meaning that when you get a heart drop in one room, you can backtrack to that room later, and the heart drop will still be there. However, behind the scenes, what is really happening is that the heart drop is despawned when you leave the room, and then a brand-new heart pickup entity is respawned when you re-enter the room. In this situation, if you had previously stored data on the `GetData` table of the heart pickup, the brand-new entity would not have this same data.
@@ -120,7 +120,7 @@ Using `Entity.Position` as part of the index is problematic, since players can p
 
 Mega Chests spawn two collectibles on the exact same position. However, both of them will have different `InitSeeds`, so this is not a problem for this indexing scheme.
 
-If the collectible is inside of a Treasure Room, a different indexing scheem should be used in order to handle the case of the player seeing the same collectible again in a post-Ascent Treasure Room. For this case, you can use a 5-tuple of stage, stage type, `GridIndex`, `Entity.SubType`, and `Entity.InitSeed`. Note that:
+If the collectible is inside of a Treasure Room, a different indexing scheme should be used in order to handle the case of the player seeing the same collectible again in a post-Ascent Treasure Room. For this case, you can use a 5-tuple of stage, stage type, `GridIndex`, `Entity.SubType`, and `Entity.InitSeed`. Note that:
 - Using the `RoomDescriptor.ListIndex` or the `RoomDescriptor.GridIndex` is not suitable for this purpose, since both of these values can change in the post-Ascent Treasure Room.)
 - Even though there can be two Treasure Rooms on an XL floor, both Treasure Rooms should not have collectibles with the same `GridIndex`, `Entity.SubType`, and `Entity.InitSeed`.
 
@@ -156,28 +156,33 @@ The naive way to accomplish automatic variable resetting is to have a single `ru
 
 For more advanced users, you will want to do better than this:
 - One problem with a shared table is that the variables are scoped incorrectly: every mod feature can mutate the variables of every other mod feature, which is the definition of spaghetti. It's also more difficult to read the code and understand the lifetime of a particular variable and see where it is used. Better to have all of the variables relating to item 1 be local to a file called "item1".
-- The resetting functionality is per-mod. You have to reimplement the system in every new mod you create. And we know that when [we are repeating ourselves](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), we need a better solution. This kind of functionality should be abstracted away into a library that any arbitrary mod can consume.
+- The resetting functionality is per-mod. You have to re-implement the system in every new mod you create. And we know that when [we are repeating ourselves](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), we need a better solution. This kind of functionality should be abstracted away into a library that any arbitrary mod can consume.
 
-Thus, you can create a "save data manager" library that allows you to register arbitrary data, with sub-tables of `persistent`, `run`, `level`, or `room`. And the save data manager will automatically reset the variables at the appropriate times. Armed with this abstraction, writing mods becomes a lot easier. (In IsaacScript, this is included in the standard library.)
+Thus, you can create a "save data manager" library that allows you to register arbitrary data, with sub-tables of `persistent`, `run`, `level`, or `room`. When the data comes into the manager, a deep-copy of the input is made, which serves as the default values. With the "default copy", the save data manager can automatically reset the variables at the appropriate times. Armed with this abstraction, writing mods becomes a lot easier. (But this is only the first half; also see the subsequent section.)
 
 <br>
 
 ## Serialization Into the "save#.Dat" Files
 
-Mods will contain a bunch of mod features, and each of these features is going to store stateful data. When the `MC_PRE_GAME_EXIT` callback fires, all of this data needs to be combined and written to disk.
+Mods will contain a bunch of mod features, and each of these features may store stateful data. When the `MC_PRE_GAME_EXIT` callback fires, all of this data needs to be combined and written to disk. And when the `MC_POST_GAME_STARTED` callback fires, we need to restore all of the data from disk.
 
-The Isaac API offers a `Mod.SaveData` method to store data into the "save#.dat" file. Since this method takes a string, you must first convert all of your data to a string. The naive way to accomplish to have every variable in the mod live on a shared table, and then use the output of `json.encode` to store. Easy!
+The Isaac API offers a `Mod.SaveData` method to store data into the "save#.dat" file. Since this method takes a string, you must first convert all of your data to a string. The naive way to accomplish to have every variable in the mod live on a shared table, and then use the output of `json.encode` to store it. And then we can use the output of `json.decode` to restore it. Easy!
 
-However, this strategy has a few gotchas. Anything that is a type of `userdata` won't be serialized properly, such as a `Color`, `RNG`, or `Vector`.
+However, this strategy has a few gotchas.
+- Anything that is a type of `userdata` won't be serialized properly, such as a `Color`, `RNG`, or `Vector`. So, with this strategy, you should avoid storing these objects directly in your saved data structures. However, this is kind of a pain, as working with vectors is extremely common, and it is easier to use `RNG` objects than seeds (since you don't have to `Next` them every time you use them).
+- The JSON library is unable to distinguish between a maps with number keys and an array. It will assume that both of these are an array. Thus, in the case of a map with number keys, it will insert `null` in every empty spot, leading to crashes. For example, a map with indexes of 5 and 10 would be converted to the following array: `[null, null, null, null, "myValueForIndex5", null, null, null, null, "myValueForIndex10"]`. Many Isaac modders work around this problem by manually converting their map keys to strings, but this is a foot gun that can cause pain if you forget to do it. You shouldn't have to convert keys when working with your data structures - this is an implementation detail that can be abstracted away.
 
-Serialization is a bit tricky. Booleans, strings, and numbers are fairly straightforward. But since mods will store tables within tables, we need to write a recursive deep-cloner that handles an arbitrary amount of depth.
+For more advanced users, you will want to do better than this:
+- As explained in the previous section, we definitely don't want to have a gargantuan global table with every variable in it.
+- We want to abstract serialization away into a library so that we don't have to copy-paste the same code into all of the mods that we write.
+- Building on the previous section, once we have a save data manager that accomplishes automatic resetting, we already have the building blocks for a system that can just automatically dump everything that it manages into the "save#.dat" file at the appropriate times.
+- The "deep-cloner" responsible for saving a copy of all of the default values can be extended to handle special cases of `Color`, `RNG`, and `Vector`, and serialize them appropriately.
+- The "deep-cloner" can also properly handle converting maps with number keys to strings, which completely abstracts away the foot-gun.
+- We can use "brand" Lua tables with specific keys to denote situations where specific kinds of serialization has occurred, such as `__VECTOR` or `__MAP_WITH_NUMBER_KEYS`. During deserialization, we can use the brands to properly instantiate the respective object.
+- We can throw a helpful runtime error if a mod feature tries to serialize an unserializable thing, like an `EntityPtr`.
 
-as some things cannot be serialization, such as `EntityPtr`
+Your end goal should try to be something that accomplishes all of the things that DeadInfinity outlines in [this GitHub issue](https://github.com/Meowlala/RepentanceAPIIssueTracker/issues/168).
 
-Similar to automatic-variable-resetting in the previous section, this is also a task that you don't want to have to copy-paste into every mod that you write. Better to abstract this away and delegate it to a save data manager library that handles it automatically.
-
-all of the variables for the features need to be combinedyou have a bunch of mod features that all contain their own state variables, and all of these need to be combined together and stored in the 
-
-, and this is also a problem that is best delegated to a save data manager
+It's worth noting that if you are use IsaacScript, you can avoid dealing with any of this since you can simply use the well-tested save data manager this is included in the standard library.
 
 <br>
