@@ -1,4 +1,4 @@
-# Indexes for Mods in The Binding of Isaac: Repentance
+# Storing Data for Mods in The Binding of Isaac: Repentance
 
 ## The Problem
 
@@ -134,5 +134,50 @@ In conclusion, for this case:
 - You need to store variables on a table that is reset per run. (You can also reset it per level if do you want data to persist into a post-Ascent Treasure Room.)
 - You need to use a key/index of `CollectibleIndex` (which is the output of the `getCollectibleIndex` function).
 - You need to use a value of a table/primitive containing your arbitrary data.
+
+### Summary
+
+There is no universal scheme for indexing entities. In general, you should use `PtrHash` as an index, but specific kinds of entities require specific indexing schemes. Some indexing schemes are persistent, and some are not, and you must understand the trade-offs involved.
+
+<br>
+
+## Resetting Variables
+
+Mod variables can be classified as falling under the 4 following categories:
+
+1. `persistent` - Should never be automatically reset; all mutations are manual.
+1. `run` - Should be reset at the beginning of every new run.
+1. `level` - Should be reset at the beginning of every new level reached.
+1. `room` - Should be reset at the beginning of every room entered.
+
+When coding a larger mod with several features, it is helpful to provide an abstraction for this that mod-features can leverage.
+
+The naive way to accomplish automatic variable resetting is to have a single `run`, `level`, and `room` table per-mod with some kind of "reset" function that restores every value to a pre-specified default. Then, all the features in the mod can stick their variables on this shared table. This is what I did in Racing+ for several years.
+
+For more advanced users, you will want to do better than this:
+- One problem with a shared table is that the variables are scoped incorrectly: every mod feature can mutate the variables of every other mod feature, which is the definition of spaghetti. It's also more difficult to read the code and understand the lifetime of a particular variable and see where it is used. Better to have all of the variables releating to item 1 be local to a file called "file1".
+- The resetting functionality is per-mod. You have to reimplement the system in every new mod you create. And we know that when [we are repeating ourselves](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), we need a better solution. This kind of functionality should be abstracted away into a library that any arbitrary mod can consume.
+
+Thus, you can create a "save data manager" library that allows you to register arbitrary data, with sub-tables of `persistent`, `run`, `level`, or `room`. And the save data manager will automatically reset the variables at the appropriate times. Armed with this abstraction, writing mods becomes a lot easier. (In IsaacScript, this is included in the standard library.)
+
+<br>
+
+## Serialization Into the "save#.Dat" Files
+
+Mods will contain a bunch of mod features, and each of these features is going to store stateful data. When the `MC_PRE_GAME_EXIT` callback fires, all of this data needs to be combined and written to disk (e.g. in the "save#.dat" file).
+
+Since the Isaac API offers a 
+
+Again, the naive way to accomplish to have every variable in the mod live on a shared table, and then stick this table inside `json.encode`.
+
+Serialization is a bit tricky. Booleans, strings, and numbers are fairly straightforward. But since mods will store tables within tables, we need to write a recursive deep-cloner that handles an arbitrary amount of depth.
+
+as some things cannot be serialization, such as `EntityPtr`
+
+Similar to automatic-variable-resetting in the previous section, this is also a task that you don't want to have to copy-paste into every mod that you write. Better to abstract this away and delegate it to a save data manager library that handles it automatically.
+
+all of the variables for the features need to be combinedyou have a bunch of mod features that all contain their own state variables, and all of these need to be combined together and stored in the 
+
+, and this is also a problem that is best delegated to a save data manager
 
 <br>
