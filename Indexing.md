@@ -69,6 +69,31 @@ Note that:
 
 <br>
 
+### Players
+
+In naive mods, information will only be stored about the first player. However, in order to be robust, mods must handle up to 4 players playing at the same time. But finding an good index player is difficult:
+
+- We cannot use the index from `Isaac.GetPlayer(i)` since this fails in the case where there are two players and the first player leaves the run.
+- We cannot use `EntityPlayer.ControllerIndex` as an index because it fails in the case of Jacob & Esau or Tainted Forgotten. It also fails in the case of a player changing their controls mid-run.
+- We cannot use `EntityPlayer.GetData().index` because it does not persist across saving and continuing.
+- We cannot use `GetPtrHash()` as an index because it does not persist across exiting and relaunching the game.
+- We cannot use `EntityPlayer.InitSeed` because it is not consistent with additional players beyond the first.
+
+Instead, we can use the `EntityPlayer.GetCollectibleRNG` method with an arbitrary value of `CollectibleType.COLLECTIBLE_SAD_ONION` (1). This works even if the player does not have any Sad Onions.
+
+However, since the RNG value is the same for both Tainted Lazarus and Dead Tainted Lazarus, we need to revert to using the RNG of `CollectibleType.COLLECTIBLE_INNER_EYE` (2) for Dead Tainted Lazarus.
+
+Note that since The Forgotten and The Soul also share the same RNG, they will also result in the same index. This is usually what is desired, since they share the same items. However, if it isn't the case, then you can use the RNG for `CollectibleType.COLLECTIBLE_SPOON_BENDER` (3) for The Soul.
+
+All of this should be abstracted into a `getPlayerIndex` function. (In IsaacScript, this is included in the standard library.)
+
+In conclusion, for this case:
+- You need to store variables on a table that is reset per run.
+- You need to use a key/index of `PlayerIndex` (which is the output of the `getPlayerIndex` function).
+- You need to use a value of a table/primitive containing your arbitrary data.
+
+<br>
+
 ### Pickups
 
 As previously mentioned, pickups are non-persistent in that they are respawned every time the player re-enters the room. The naive solution of using `Entity.InitSeed` as an index does not work in this case because two or more pickups in the same room can share the same `InitSeed` (e.g. after using Diplopia, after using Crooked Penny). Furthermore, we cannot use `Entity.Position` as an index either, since pickups can be pushed around (e.g. a heart drop when the player is already at full health, or a bomb explosion pushing them around).
@@ -76,6 +101,8 @@ As previously mentioned, pickups are non-persistent in that they are respawned e
 For this case, the easiest solution is to revert to using `PtrHash` for per-room data (in the same way that we would index a non-persistent NPC).
 
 For the case of storing per-level data, you can use a 3-tuple of `RoomDescriptor.ListIndex`, `Entity.InitSeed`, and `Entity.Position`. However, for this to work, you must have code that runs on every frame to keep the data structure up-to-date by using a second data structure that maps pointer hashes to the reference tables. (Describing this in more detail is outside of the scope of this blog, as this method is non-trivial.)
+
+<br>
 
 ### Collectibles
 
@@ -104,25 +131,4 @@ In conclusion, for this case:
 - You need to use a key/index of `CollectibleIndex` (which is the output of the `getCollectibleIndex` function).
 - You need to use a value of a table/primitive containing your arbitrary data.
 
-### Players
-
-In naive mods, information will only be stored about the first player. However, in order to be robust, mods must handle up to 4 players playing at the same time. But finding an good index player is difficult:
-
-- We cannot use the index from `Isaac.GetPlayer(i)` since this fails in the case where there are two players and the first player leaves the run.
-- We cannot use `EntityPlayer.ControllerIndex` as an index because it fails in the case of Jacob & Esau or Tainted Forgotten. It also fails in the case of a player changing their controls mid-run.
-- We cannot use `EntityPlayer.GetData().index` because it does not persist across saving and continuing.
-- We cannot use `GetPtrHash()` as an index because it does not persist across exiting and relaunching the game.
-- We cannot use `EntityPlayer.InitSeed` because it is not consistent with additional players beyond the first.
-
-Instead, we can use the `EntityPlayer.GetCollectibleRNG` method with an arbitrary value of `CollectibleType.COLLECTIBLE_SAD_ONION` (1). This works even if the player does not have any Sad Onions.
-
-However, since the RNG value is the same for both Tainted Lazarus and Dead Tainted Lazarus, we need to revert to using the RNG of `CollectibleType.COLLECTIBLE_INNER_EYE` (2) for Dead Tainted Lazarus.
-
-Note that since The Forgotten and The Soul also share the same RNG, they will also result in the same index. This is usually what is desired, since they share the same items. However, if it isn't the case, then you can use the RNG for `CollectibleType.COLLECTIBLE_SPOON_BENDER` (3) for The Soul.
-
-All of this should be abstracted into a `getPlayerIndex` function. (In IsaacScript, this is included in the standard library.)
-
-In conclusion, for this case:
-- You need to store variables on a table that is reset per run.
-- You need to use a key/index of `PlayerIndex` (which is the output of the `getPlayerIndex` function).
-- You need to use a value of a table/primitive containing your arbitrary data.
+<br>
