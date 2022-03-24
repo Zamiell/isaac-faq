@@ -100,7 +100,7 @@ In conclusion, for this case:
 
 ### Pickups
 
-As previously mentioned, pickups are non-persistent in that they are respawned every time the player re-enters the room. The naive solution of using `Entity.InitSeed` as an index does not work in this case because two or more pickups in the same room can share the same `InitSeed` (e.g. after using Diplopia, after using Crooked Penny). Furthermore, we cannot use `Entity.Position` as an index either, since pickups can be pushed around (e.g. a heart drop when the player is already at full health, or a bomb explosion pushing them around).
+As previously mentioned, pickups are non-persistent in that they are respawned every time the player re-enters the room. The naive solution of using `Entity.InitSeed` as an index does not work in this case because two or more pickups in the same room can share the same `InitSeed` (e.g. after using Diplopia, after using Crooked Penny). Furthermore, we cannot use `Entity.Position` as an index either, since pickups can move (e.g. a player pushing a heart drop when the player is already at full health, or a bomb explosion making the pickup move away from the explosion).
 
 For this case, the easiest solution is to revert to using `PtrHash` for per-room data (in the same way that we would index a non-persistent NPC).
 
