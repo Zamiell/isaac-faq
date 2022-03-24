@@ -39,7 +39,7 @@ Note that:
 
 ### Familiars
 
-By default, familiars are per persistent, meaning that they will not despawn when the player leaves the room. Since `PtrHash` will not persist between saving and continuing, we can instead use `Entity.InitSeed`.
+By default, familiars are persistent, meaning that they will not despawn when the player leaves the room. Since `PtrHash` will not persist between saving and continuing, we can instead use `Entity.InitSeed`.
 
 - In vanilla, no two familiars should ever have the same `InitSeed`, so this is a relatively safe index. (Using Box of Friends will result in familiars with brand-new seeds.)
 - In mods, properly coded mods should also never have two familiars ever having the same `InitSeed`. However, due to bugs with the `EntityPlayer.CheckFamiliar` function, it is relatively common for mods to be poorly programed and spawn each of their familiars with the same `InitSeed`, which will break this indexing scheme. With that said, this probably remains the best indexing scheme, and the poorly-programmed-mods in question should update their code to fix the problem.
