@@ -32,7 +32,7 @@ item1.init(mod);
 // item1.ts
 
 export function init(mod: Mod): void {
-  mod.AddCallback(ModCallbacks.MC_UPDATE, postUpdate);  
+  mod.AddCallback(ModCallbacks.MC_UPDATE, postUpdate);
 }
 
 function postUpdate() {
