@@ -31,7 +31,7 @@ C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\resou
 - The "packed" directory contains all kinds of game resources, like the sound effects and the graphics. (They are all packed into ".a" files.)
 - The "scripts" directory contains some Lua scripts that are needed by the game in order to make mods work properly.
 - You can put a "config.ini" file in the resources directory to set certain graphic options that are not available from the in-game options menu. For more information, see this thread: https://steamcommunity.com/app/250900/discussions/0/613941122558099449/
-- Afterbirth+ and Repentance come with an unpacker program that will unpack all of the files in the "packed" directory. If you want, you can run it and your resources directory will fill up with all kinds of stuff. Afterwards, you can examine and replace individual game assets. By default, the unpacker is located at:
+- Afterbirth+ and Repentance come with an unpacker program that will unpack all of the files in the "packed" directory. This is called the "Resource Extractor". If you want, you can run it and your resources directory will fill up with all kinds of stuff. Afterwards, you can examine and replace individual game assets. By default, the unpacker is located at:
 
 ```
 C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\ResourceExtractor\ResourceExtractor.exe
