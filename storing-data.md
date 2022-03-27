@@ -104,7 +104,7 @@ As previously mentioned, pickups are non-persistent in that they are respawned e
 
 For this case, the easiest solution is to revert to using `PtrHash` for per-room data (in the same way that we would index a non-persistent NPC).
 
-For the case of storing per-level data, you can use a 3-tuple of `RoomDescriptor.ListIndex`, `Entity.InitSeed`, and `Entity.Position`. However, for this to work, you must have code that runs on every frame to keep the data structure up-to-date by using a second data structure that maps pointer hashes to the reference tables. (Describing this in more detail is outside of the scope of this blog, as this method is non-trivial.)
+For the case of storing per-level data, you can use a 3-tuple of `RoomDescriptor.ListIndex`, `Entity.InitSeed`, and `Entity.Position`. However, for this to work, you must have code that runs on the `MC_POST_PICKUP_INIT` and `MC_POST_ENTITY_REMOVE` callbacks to keep the data structure up-to-date. (You can use a second data structure that maps pointer hashes to the reference tables. Describing this in more detail is outside of the scope of this blog, as this method is non-trivial.)
 
 <br>
 
