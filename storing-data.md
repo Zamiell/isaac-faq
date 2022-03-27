@@ -168,7 +168,7 @@ Thus, you can create a "save data manager" library that allows you to register a
 
 Mods will contain a bunch of mod features, and each of these features may store stateful data. When the `MC_PRE_GAME_EXIT` callback fires, all of this data needs to be combined and written to disk. And when the `MC_POST_GAME_STARTED` callback fires, we need to restore all of the data from disk.
 
-The Isaac API offers a `Mod.SaveData` method to store data into a "save#.dat" file. Since this method takes a string, you must first convert all of your data to a string. The naive way to accomplish to have every variable in the mod live on a shared table, and then use `json.encode` to store it. And then you can use `json.decode` to restore it. Easy!
+The Isaac API offers a `Mod.SaveData` method to store data into a "save#.dat" file. Since this method takes a string, you must first convert all of your data to a string. The naive way to accomplish this is to have every variable in the mod live on a shared table, and then use `json.encode` to store it. And then you can use `json.decode` to restore it. Easy!
 
 However, this strategy has a few gotchas:
 - Anything that is a type of `userdata` won't be serialized properly, such as a `Color`, `RNG`, or `Vector`. So, with this strategy, you should avoid storing these objects directly in your saved data structures. However, this is kind of a pain, as working with vectors is extremely common, and it is easier to use `RNG` objects than seeds (since you don't have to `Next` them every time you use them).
