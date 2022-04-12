@@ -493,3 +493,9 @@ end
 ```
 
 <br>
+
+## How do you change the HUD / UI? How do you add a HUD or UI element?
+
+The Isaac API has a [HUD class](https://wofsauge.github.io/IsaacDocs/rep/HUD.html), but not very many things are exposed. For example, it allows disabling the entire HUD, but not disabling individual elements. Thus, you cannot modify or remove a specific HUD element (outside of blowing away the vanilla sprites). If you want to add an additional HUD element, you have to manually draw a sprite in the proper location. If you do this, make sure to account for the HUD offset by using `Options.HUDOffset`.
+
+<br>
