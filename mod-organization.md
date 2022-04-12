@@ -186,10 +186,10 @@ By looking at this file, we can immediately tell that this code is invoked from 
 If the same function is used in multiple callbacks, you might be tempted to write code like this:
 
 ```lua
--- in file: postUpdate.lua
+--[[ in file: postUpdate.lua ]]--
 item1:doThing()
 
--- in file: postEntityKill.lua
+--[[ in file: postEntityKill.lua ]]--
 item1:doThing()
 ```
 
