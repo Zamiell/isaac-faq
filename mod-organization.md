@@ -350,7 +350,7 @@ If item 2 has a synergy with item 1, then it is natural for item 2 to reach into
 
 But now, when item 1 has a bug, how do we figure out what is wrong? The variables are being modified throughout our entire code base, so it is very difficult to keep track of the lifecycle of the variable. Instead of knowing that the bug *must* be somewhere in the `item1.lua` file, now we are off on a scavenger hunt throughout the entire codebase.
 
-In this example, the *scope* of these variables is global - everything can touch them. This is what the term "spaghetti code" is talking about: everything connects to everything else. As coders, we should strive to not let things get this bad. We should aim to provide compartmentalized abstractions that make it easy to diagnose problems and manage complexity.
+In this example, the *scope* of these variables is global - everything can touch them. This is what the term "spaghetti code" is referring to: everything connects to everything else. As coders, we should strive to not let things get this bad. We should aim to provide compartmentalized abstractions that make it easy to diagnose problems and manage complexity.
 
 <br>
 
