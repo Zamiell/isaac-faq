@@ -502,6 +502,6 @@ The Isaac API has a [HUD class](https://wofsauge.github.io/IsaacDocs/rep/HUD.htm
 
 ## Who can I hire/comission to program an Isaac mod for me?
 
-You can try AgentCucco#6086 or Sanio#5230 on Discord.
+You can try AgentCucco#6086 or Sanio#5230 on Discord, who have both done plenty of previous work and have been active in the community for a few years.
 
 <br>
