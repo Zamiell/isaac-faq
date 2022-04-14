@@ -185,6 +185,6 @@ For more advanced users, you will want to do better than this:
 
 Your end goal should try to be something that accomplishes all of the things that DeadInfinity outlines in [this GitHub issue](https://github.com/Meowlala/RepentanceAPIIssueTracker/issues/168).
 
-It's worth noting that if you are use IsaacScript, you can avoid dealing with any of this since you can simply use the well-tested save data manager this is included in the standard library.
+It's worth noting that if you are use [IsaacScript](https://isaacscript.github.io/), you can avoid dealing with any of this since you can easily leverage the well-tested save data manager this is included in the standard library.
 
 <br>
