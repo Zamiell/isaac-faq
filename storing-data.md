@@ -179,7 +179,7 @@ For more advanced users, you will want to do better than this:
 - We want to abstract serialization away into a library so that we don't have to copy-paste the same code into all of the mods that we write.
 - Building on the previous section, once we have a save data manager that accomplishes automatic resetting, we already have the building blocks for a system that can just automatically dump everything that it manages into the "save#.dat" file at the appropriate times.
 - The "deep-cloner" responsible for saving a copy of all of the default values can be extended to handle special cases of `Color`, `RNG`, and `Vector`, and serialize them appropriately.
-- The "deep-cloner" can also properly handle converting maps with number keys to strings, which completely abstracts away the foot-gun.
+- The "deep-cloner" can also properly handle converting maps with number keys to strings, which abstracts away the foot-gun.
 - We can "brand" Lua tables with specific keys to denote situations where specific kinds of serialization has occurred, such as `__VECTOR` or `__MAP_WITH_NUMBER_KEYS`. During deserialization, we can use the brands to properly instantiate the respective object.
 - We can throw a helpful runtime error if a mod feature tries to serialize an unserializable thing, like an `EntityPtr`.
 
