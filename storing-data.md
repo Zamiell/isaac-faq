@@ -131,7 +131,7 @@ Also note that:
 All of this should be abstracted into a `getCollectibleIndex` function. (In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
 
 In conclusion, for this case:
-- You need to store variables on a table that is reset per run. (You can also reset it per level if do you want data to persist into a post-Ascent Treasure Room.)
+- You need to store variables on a table that is reset per run. (You can also reset it per level if don't care about data persisting to a post-Ascent Treasure Room.)
 - You need to use a key/index of `CollectibleIndex` (which is the output of the `getCollectibleIndex` function).
 - You need to use a value of a table/primitive containing your arbitrary data.
 
