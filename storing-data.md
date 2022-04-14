@@ -18,7 +18,7 @@ Some mods attempt to work around problem #3 above by manually copying the `GetDa
 
 ## Indexing
 
-Once you realize that you need to create your own data structures to store data about entities, the immediate next question is: what key/index do I use? The answer depends on the type of entity. Below, I'll enumerate some cases, starting from the least complex, to most complex.
+Once you realize that you need to create your own data structures to store data about entities, the immediate next question is: what index/key do I use? The answer depends on the type of entity. Below, I'll enumerate some cases, starting from the least complex, to most complex.
 
 <br>
 
