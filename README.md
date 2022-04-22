@@ -508,7 +508,7 @@ You can try AgentCucco#6086 or Sanio#5230 on Discord, who have both done plenty 
 
 ## What does the colon operator in Lua do?
 
-In Lua, you can invoke module functions in two ways:
+In Lua, you can invoke module functions (i.e. functions that are attached to a table) in two different ways:
 
 ```lua
 foo.bar()
