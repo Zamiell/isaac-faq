@@ -505,3 +505,30 @@ The Isaac API has a [HUD class](https://wofsauge.github.io/IsaacDocs/rep/HUD.htm
 You can try AgentCucco#6086 or Sanio#5230 on Discord, who have both done plenty of previous work and have been active in the community for a few years.
 
 <br>
+
+## What does the colon operator in Lua do?
+
+In Lua, you can invoke module functions in two ways:
+
+```lua
+foo.bar()
+foo:bar()
+```
+
+A period invokes the function in the "normal" way. A colon invokes the function in a special way that is equivalent to passing the module itself as the first argument. For example, the following two function calls are equivalent:
+
+```lua
+foo.bar(arg1, arg2)
+foo:bar(foo, arg1, arg)
+```
+
+In general, it is idiomatic in Lua to invoke any function that is part of a module with a colon, and you should follow this convention when writing your own code. Additionally, most API class methods should be invoked with a colon. However, the `Isaac` class is an exception:
+
+```lua
+Isaac.DebugString("foo") -- Works fine
+Isaac:DebugStirng("foo") -- Fails because the method does not expect the class as the first argument
+```
+
+In general, it is pretty annoying to swap back and forth between using periods and colons. If this part of Lua bothers you, I recommend using programming mods in TypeScript using the [IsaacScript](https://isaacscript.github.io/) framework. In TypeScript, you invoke every function with a period, which is nice and consistent.
+
+<br>
