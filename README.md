@@ -531,6 +531,6 @@ Isaac.DebugString("foo") -- Works fine
 Isaac:DebugStirng("foo") -- Fails because the method does not expect the class as the first argument
 ```
 
-In general, it is pretty annoying to swap back and forth between using periods and colons. If this part of Lua bothers you, I recommend using programming mods in TypeScript using the [IsaacScript](https://isaacscript.github.io/) framework. In TypeScript, you invoke every function with a period, which is nice and consistent.
+In general, it can be pretty annoying to swap back and forth between using periods and colons. If this part of Lua bothers you, I recommend programming mods in TypeScript using the [IsaacScript](https://isaacscript.github.io/) framework. In TypeScript, you invoke every function with a period, which is nice and consistent.
 
 <br>
