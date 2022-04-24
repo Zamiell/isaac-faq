@@ -69,9 +69,9 @@ Here's a link to my code: <https://github.com/IsaacScript/isaacscript-common/blo
 
 ## How do I get started modding Isaac? (getting started)
 
-We generally recommend that people watch the Lytebringr's series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF). These were made for Afterbirth+, but not much has changed now that Repentance is out, so they are still your best bet for learning the ropes.
+We generally recommend that people watch the Lytebringr's series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF). These videos were made for Afterbirth+, but not much has changed now that Repentance DLC is out, so they are still your best bet for learning the ropes.
 
-The main difference is that the location of [the mods directory changed](#where-is-the-directoryfolder-for-mods-located).
+The main difference is that the location of [the mods directory has changed](#where-is-the-directoryfolder-for-mods-located).
 
 Other resources:
 
