@@ -2,6 +2,47 @@
 
 <br>
 
+## How do I get started modding Isaac? (getting started)
+
+We generally recommend that people watch the Lytebringr's series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF). These videos were made for Afterbirth+, but not much has changed now that Repentance DLC is out, so they are still your best bet for learning the ropes.
+
+The main difference is that the location of [the mods directory has changed](#where-is-the-directoryfolder-for-mods-located).
+
+Other resources:
+
+- Cucco has also made a series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLUYzSIp7NO8cEer2FmtxSXlXoMFirvYDN).
+- The IsaacScript website has a good [text tutorial](https://isaacscript.github.io/docs/example-mod) on how to build an example mod using [IsaacScript](https://isaacscript.github.io/).
+
+<br>
+
+## Where is the directory/folder for mods located?
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\mods
+```
+
+<br>
+
+## How do I use the resource extractor? How do I unpack the game files?
+
+By default, the game's resources are located here:
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\resources
+```
+
+However, this directory will be mostly empty unless you run the provided resource extractor. It is located here:
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\ResourceExtractor\ResourceExtractor.exe
+```
+
+Once you run the extractor, the resources directory will fill up with all of the XML files, ANM2 files, images, and other various files that the game uses.
+
+Note that you also have to re-run the resource extractor every time that there is a vanilla patch.
+
+<br>
+
 ## Read the Docs
 
 Search [Wofsuage's API documentation](https://wofsauge.github.io/IsaacDocs/rep/) before you ask a question.
@@ -64,47 +105,6 @@ For example:
 ```
 Here's a link to my code: <https://github.com/IsaacScript/isaacscript-common/blob/main/src/functions/array.ts#L3-L16>
 ```
-
-<br>
-
-## How do I get started modding Isaac? (getting started)
-
-We generally recommend that people watch the Lytebringr's series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF). These videos were made for Afterbirth+, but not much has changed now that Repentance DLC is out, so they are still your best bet for learning the ropes.
-
-The main difference is that the location of [the mods directory has changed](#where-is-the-directoryfolder-for-mods-located).
-
-Other resources:
-
-- Cucco has also made a series of [video tutorials on YouTube](https://www.youtube.com/playlist?list=PLUYzSIp7NO8cEer2FmtxSXlXoMFirvYDN).
-- The IsaacScript website has a good [text tutorial](https://isaacscript.github.io/docs/example-mod) on how to build an example mod using [IsaacScript](https://isaacscript.github.io/).
-
-<br>
-
-## Where is the directory/folder for mods located?
-
-```
-C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\mods
-```
-
-<br>
-
-## How do I use the resource extractor? How do I unpack the game files?
-
-By default, the game's resources are located here:
-
-```
-C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\resources
-```
-
-However, this directory will be mostly empty unless you run the provided resource extractor. It is located here:
-
-```
-C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\ResourceExtractor\ResourceExtractor.exe
-```
-
-Once you run the extractor, the resources directory will fill up with all of the XML files, ANM2 files, images, and other various files that the game uses.
-
-Note that you also have to re-run the resource extractor every time that there is a vanilla patch.
 
 <br>
 
