@@ -45,7 +45,7 @@ Note that you also have to re-run the resource extractor every time that there i
 
 ## Read the Docs
 
-Search [Wofsuage's API documentation](https://wofsauge.github.io/IsaacDocs/rep/) before you ask a question.
+Search [Wofsuage's API documentation](https://wofsauge.github.io/IsaacDocs/rep/) before you ask a question to other modders.
 
 <br>
 
