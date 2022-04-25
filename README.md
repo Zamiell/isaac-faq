@@ -176,7 +176,7 @@ If you are programming your mod in TypeScript using the [IsaacScript framework](
 
 <br>
 
-## What is the ID of [the sound that I care about]?
+## What is the ID of [the sound effect that I care about]?
 
 Use [this mod](misc/sounds-display.lua), which will tell you what the ID of any currently playing sound effect is.
 
