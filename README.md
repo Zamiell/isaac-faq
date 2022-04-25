@@ -162,7 +162,7 @@ Another helpful troubleshooting tool is validators like [xmlvalidation.com](http
 
 You can try looking through the log.txt file to see if anything interesting is there. However, in the vast majority of cases, the log will not show any helpful information when the game crashes.
 
-Instead, you can find the problem by simply disabling your mods one by one until you find the exact mod that is causing the crash. Then, you can report it to the developer of the mod, or try to manually fix the code yourself.
+Instead, you can find the problem by disabling your mods one by one until you find the exact mod that is causing the crash. Then, you can report it to the developer of the mod, or try to manually fix the code yourself.
 
 <br>
 
@@ -170,7 +170,7 @@ Instead, you can find the problem by simply disabling your mods one by one until
 
 First, check out the log.txt file for clues as to why the game is crashing. However, in the vast majority of cases, the log will not show any helpful information when the game crashes.
 
-If you are programming your mod in Lua, then your only option is to simply insert a lot of print statements to try and narrow down where the crash is occurring.
+If you are programming your mod in Lua, then your only option is to insert a lot of print statements to try and narrow down where the crash is occurring.
 
 If you are programming your mod in TypeScript using the [IsaacScript framework](https://isaacscript.github.io/), then you can use [this crash debug plugin](https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts) that will put the exact line that the mod is crashing at in the log.txt, which is extremely handy.
 
@@ -178,7 +178,7 @@ If you are programming your mod in TypeScript using the [IsaacScript framework](
 
 ## What is the ID of [the sound that I care about]?
 
-Simply use [this mod](misc/sounds-display.lua), which will tell you what the ID of any currently playing sound effect is.
+Use [this mod](misc/sounds-display.lua), which will tell you what the ID of any currently playing sound effect is.
 
 <br>
 
@@ -190,7 +190,7 @@ When writing code, put some effort into making it look nice and be easy to read 
 
 ## How do I code X?
 
-The fastest way to figure out how to do something is to simply download a few mods that provide similar functionality to what you want to do, and then study the code.
+The fastest way to figure out how to do something is to download a few mods that provide similar functionality to what you want to do, and then study the code.
 
 <br>
 
@@ -268,7 +268,7 @@ There is no built-in way to do this, so you will have to get inventive. For the 
 
 ## How do I make the costume on my custom character persistent?
 
-Simply use [Sanio's library](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255) for this, or study the source code and re-implement it yourself.
+Use [Sanio's library](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255) for this, or study the source code and re-implement it yourself.
 
 For a reference implementation, see [Andrew the Bunny Knight](https://steamcommunity.com/sharedfiles/filedetails/?id=2531089854).
 
@@ -288,7 +288,7 @@ If you are creating a new library, please use the correct terminology to name yo
 
 ## How do I overwrite vanilla music?
 
-- For normal music replacement, you can simply blow away the respective vanilla resource files.
+- For normal music replacement, you can blow away the respective vanilla resource files.
 - For dynamic replacement, use Taz's [Music Mod Callback](https://steamcommunity.com/sharedfiles/filedetails/?id=2491006386).
 
 <br>
@@ -354,7 +354,7 @@ function postFamiliarUpdateMyFamiliar(familiar: EntityFamiliar) {
 - In Isaac, animations are represented by anm2 files in the `resources/gfx` folder.
 - Each entity in the game has an associated anm2 file.
 - Additionally, UI elements are rendered using various anm2 files (in the `resources/gfx/ui` folder).
-- anm2 files are simply XML files with a different file extension.
+- anm2 files are XML files with a different file extension.
 - To edit the vanilla animations or add new animations, you can:
   - Edit the files directly using a text editor. (Kilburn does this.)
   - Edit the files using the provided Isaac Animation Editor, which is located at: `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\tools\IsaacAnimationEditor\IsaacAnimationEditor.exe`
@@ -382,7 +382,7 @@ This was the tool that Edmund used to create all of the rooms for Rebirth and Af
 
 In 2014, Chronometrics made a 3rd party room editor called [Basement Renovator](https://github.com/Basement-Renovator/Basement-Renovator) to improve upon the official editor. It is open-source and is located on GitHub. Since Basement Renovator is so much better than the official room editor, even the official developers now use Basement Renovator. (This is why none of the Repentance rooms will work in the official editor.)
 
-Basement Renovator is written in Python, so you can either run it from source or simply download a pre-bundled exe file from the [releases page](https://github.com/Basement-Renovator/Basement-Renovator/releases).
+Basement Renovator is written in Python, so you can either run it from source or download a pre-bundled exe file from the [releases page](https://github.com/Basement-Renovator/Basement-Renovator/releases).
 
 <br>
 
@@ -400,7 +400,7 @@ This also means that if you want to change the way a vanilla item works, you wil
 
 There is no vanilla callback for this. As a workaround, you can check `EntityPlayer.IsItemQueueEmpty()` on every PostUpdate frame, and then check `EntityPlayer.QueuedItem` when it is not empty. Obviously, this will not work for items that never get queued.
 
-For IsaacScript users, you can simply use the provided `[MC_POST_ITEM_PICKUP](https://isaacscript.github.io/docs/function-signatures-custom#mc_post_item_pickup)` callback.
+For IsaacScript users, you can use the provided `[MC_POST_ITEM_PICKUP](https://isaacscript.github.io/docs/function-signatures-custom#mc_post_item_pickup)` callback.
 
 If you want to implement this callback yourself, the source code / algorithm is provided [here](https://github.com/IsaacScript/isaacscript-common/blob/main/src/callbacks/itemPickup.ts).
 
