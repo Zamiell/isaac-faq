@@ -188,11 +188,9 @@ When writing code, put some effort into making it look nice and be easy to read 
 
 <br>
 
-## How do I code X?
+## How do I do X? How do I code X?
 
 The fastest way to figure out how to do something is to download a few mods that provide similar functionality to what you want to do, and then study the code.
-
-<br>
 
 <br>
 
