@@ -152,7 +152,7 @@ end
 return item1
 ```
 
-In this way, we only register one callback function per callback.
+In this way, we only invoke the `AddCallback` method inside of a specific callback file. (Usually, this means that there is only one callback registration per callback, but there can be more than one if the callback supports tertiary arguments. But there would never be more than one callback + tertiary argument pair.)
 
 One advantage of having an extra degree of hierarchy is that you can more easily control the *order* of feature execution. This can be important for bigger mods. As a toy example, say that one item/feature takes away all items from a player at the beginning of a run, and another item/feature adds items to a player at the beginning of a run. In this case, you would need to ensure that the former feature is executed last. It's easy to accomplish this in a callback file.
 
