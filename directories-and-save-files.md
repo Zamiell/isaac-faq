@@ -166,3 +166,17 @@ Unpacked resources directory (for Afterbirth+):
 ```
 
 <br>
+
+## Linux File Locations (with Proton)
+
+Save path for enabled Steam Cloud:
+
+```
+/home/deck/.local/share/Steam/userdata/steamid/250900/remote/
+```
+
+Save path for disabled Steam Cloud:
+
+```
+/home/deck/.local/share/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents/My Games/Binding of Isaac Repentance/
+```
