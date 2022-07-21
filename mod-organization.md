@@ -340,7 +340,7 @@ function item1:activate()
 end
 ```
 
-This works well, but it does not address the more concerning problem: the variables are *scoped* incorrectly. What does that mean exactly?
+Here, "v" is shorthand for "the variables relating to this file". This strategy works well, but it does not address the more concerning problem: the variables are *scoped* incorrectly. What does that mean exactly?
 
 <br>
 
