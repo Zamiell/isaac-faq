@@ -299,7 +299,7 @@ In this way, you can avoid passing the mod object into a function, which reduces
 
 Let's talk about variables. Each variable has a lifecycle. It is initialized at a certain point, modified at other points, and (sometimes) reset back to the initialized state at the end of its lifecycle (like at the beginning of a new run).
 
-A small mod might have ten or twenty different variables. And keeping track of them in your head might be easy. You have memorized where each variables is used. And you know that certain variables get reset in some places, and other variables can get reset in other places.
+A small mod might have ten or twenty different variables. And keeping track of them in your head might be easy. You might have memorized where each variables is used. And you know that certain variables get reset in some places, and other variables can get reset in other places.
 
 As you might have guessed, keeping track of variables in your head does not scale very well. In a big mod with thousands of variables, it is impossible to keep track. Just by looking at the name of a variable, you will have no idea where it is initialized, where it is used, and where it is reset. You need a segmentation strategy to stay organized.
 
