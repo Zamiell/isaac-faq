@@ -85,9 +85,7 @@ In naive mods, information will only be stored about the first player. However, 
 
 Instead, we can use the `EntityPlayer.GetCollectibleRNG` method with an arbitrary value of `CollectibleType.COLLECTIBLE_SAD_ONION` (1). This works even if the player does not have any Sad Onions.
 
-However, since the RNG value is the same for both Tainted Lazarus and Dead Tainted Lazarus, we need to revert to using the RNG of `CollectibleType.COLLECTIBLE_INNER_EYE` (2) for Dead Tainted Lazarus.
-
-Note that since The Forgotten and The Soul also share the same RNG, they will have the same index. This is usually what is desired, since they share the same collectibles. However, if this is not desired, then you can use the RNG for `CollectibleType.COLLECTIBLE_SPOON_BENDER` (3) for The Soul.
+Note that since The Forgotten and The Soul also share the same RNG, they will have the same index. This is usually what is desired, since they share the same collectibles. However, if this is not desired, then you can use the RNG for `CollectibleType.COLLECTIBLE_INNER_EYE` (2) for The Soul.
 
 All of this should be abstracted into a `getPlayerIndex` function. (In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
 
@@ -100,40 +98,19 @@ In conclusion, for this case:
 
 ### Pickups
 
-As previously mentioned, pickups are non-persistent in that they are respawned every time the player re-enters the room. The naive solution of using `Entity.InitSeed` as an index does not work in this case because two or more pickups in the same room can share the same `InitSeed` (e.g. after using Diplopia, after using Crooked Penny). Furthermore, we cannot use `Entity.Position` as an index either, since pickups can move (e.g. a player pushing a heart drop when the player is already at full health, or a bomb explosion making the pickup move away from the explosion).
+As previously mentioned, pickups are non-persistent in that they are respawned every time the player re-enters the room. The naive solution of using `Entity.InitSeed` as an index does not work in this case because two or more pickups in the same room can share the same `InitSeed` (e.g. after using Diplopia, after using Crooked Penny).
 
-For this case, the easiest solution is to revert to using `PtrHash` for per-room data (in the same way that we would index a non-persistent NPC).
+Furthermore, we cannot use `Entity.Position` as an index either, since pickups can move (e.g. a player pushing a heart drop when the player is already at full health, or a bomb explosion making the pickup move away from the explosion). Pickups can also exist on the same position; this is the case for e.g. Mega Chest.
 
-For the case of storing per-level data, you can use a 3-tuple of `RoomDescriptor.ListIndex`, `Entity.InitSeed`, and `Entity.Position`. However, for this to work, you must have code that runs on the `MC_POST_PICKUP_INIT` and `MC_POST_ENTITY_REMOVE` callbacks to keep the data structure up-to-date. (You can use a second data structure that maps pointer hashes to the reference tables. Describing this in more detail is outside of the scope of this blog, as this method is non-trivial.)
+The solution is to create an arbitrary index for each pickup seen on the run, tracking information about each pickup index that has been created. This is the most complicated case, as unlike other indexing schems, it requres stateful tracking per run.
 
-<br>
+The main data structure needed is a map of `PtrHash` to `PickupIndex` for the current room. This map is populated in the `POST_PICKUP_INIT` callback for brand new pickups. (`PickupIndex` assignment is arbitrary; I use a counter that represents the run order of the pickup.)
 
-### Collectibles
+A secondary data structure with a type of `Map<RoomListIndex, Map<PickupIndex, PickupDescription>>` is also needed. This is populated in the `POST_ENTITY_REMOVE` callback when a player is leaving a room. `PickupDescription` is a tuple of `Position` and `InitSeed`. The point of this data structure is to store metadata about the pickup so that it can be re-identified if the player returns to the room.
 
-Collectibles are a special case of pickups in that they are (somewhat) stationary. Thus, we can index them by using a 4-tuple of `RoomDescriptor.ListIndex`, `GridIndex` (of the collectible inside of the room), `Entity.SubType`, and `Entity.InitSeed`.
+To make things worse, there is also the special case of a post-Ascent Treasure Room or Boss Room to handle. In these rooms, the player will see pickups from previous floors, which means that extra information must be stored to handle this case. I use two extra maps that are indexed by the `PickupDescription` tuple. (This assumes that there will not be more than one pickup per run per room type with the same `Position` and `InitSeed`.)
 
-The grid index is a necessary part of the tuple because Diplopia and Crooked Penny can cause two or more collectibles with the same `SubType` and `InitSeed` to exist in the same room. Unfortunately, this also means that this indexing scheme will fail in the case where the player uses Diplopia or a successful Crooked Penny seven or more times in the same room, since that will cause two or more collectibles with the same `GridIndex`, `SubType`, and `InitSeed` to exist.
-
-The `SubType` is a necessary part of the collectible index because Tainted Isaac will continuously cause collectibles to morph into new sub-types with the same `InitSeed`.
-
-Using `Entity.Position` as part of the index is problematic, since players can push a pedestal. (Even using the grid index does not solve this problem, since it is possible in certain cases for collectibles to be spawned at a position that is not aligned with the grid, and the pedestal can be pushed to an adjacent tile. But this case should be extremely rare.)
-
-Mega Chests spawn two collectibles on the exact same position. However, both of them will have different `InitSeeds`, so this is not a problem for this indexing scheme.
-
-If the collectible is inside of a Treasure Room, a different indexing scheme should be used in order to handle the case of the player seeing the same collectible again in a post-Ascent Treasure Room. For this case, you can use a 5-tuple of stage, stage type, `GridIndex`, `Entity.SubType`, and `Entity.InitSeed`. Note that:
-- Using the `RoomDescriptor.ListIndex` or the `RoomDescriptor.GridIndex` is not suitable for this purpose, since both of these values can change in the post-Ascent Treasure Room.)
-- Even though there can be two Treasure Rooms on an XL floor, both Treasure Rooms should not have collectibles with the same `GridIndex`, `Entity.SubType`, and `Entity.InitSeed`.
-
-Also note that:
-- Collectibles that are shifted by Tainted Isaac's mechanic will have unique collectible indexes because the `SubType` is different. (The collectible entities share the same `InitSeed`.)
-- Collectibles that are rolled (with e.g. a D6) will have unique collectible indexes because both the `SubType` and `InitSeed` are different. If you want to track collectibles independently of any rerolls, then you can use the `PtrHash` as an index instead. (The `PtrHash` will not persist between rooms, however.)
-
-All of this should be abstracted into a `getCollectibleIndex` function. (In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
-
-In conclusion, for this case:
-- You need to store variables on a table that is reset per run. (You can also reset it per level if don't care about data persisting to a post-Ascent Treasure Room.)
-- You need to use a key/index of `CollectibleIndex` (which is the output of the `getCollectibleIndex` function).
-- You need to use a value of a table/primitive containing your arbitrary data.
+(In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
 
 <br>
 
