@@ -102,7 +102,7 @@ As previously mentioned, pickups are non-persistent in that they are respawned e
 
 Furthermore, we cannot use `Entity.Position` as an index either, since pickups can move (e.g. a player pushing a heart drop when the player is already at full health, or a bomb explosion making the pickup move away from the explosion). Pickups can also exist on the same position; this is the case for e.g. Mega Chest.
 
-The solution is to create an arbitrary index for each pickup seen on the run, tracking information about each pickup index that has been created. This is the most complicated case, as unlike other indexing schems, it requres stateful tracking per run.
+The solution is to create an arbitrary index for each pickup seen on the run, tracking information about each pickup index that has been created. This is the most complicated case, as unlike other indexing schemes, it requres stateful tracking per run.
 
 The main data structure needed is a map of `PtrHash` to `PickupIndex` for the current room. This map is populated in the `POST_PICKUP_INIT` callback for brand new pickups. (`PickupIndex` assignment is arbitrary; I use a counter that represents the run order of the pickup.)
 
