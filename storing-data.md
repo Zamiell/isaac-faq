@@ -108,9 +108,9 @@ The main data structure needed is a map of `PtrHash` to `PickupIndex` for the cu
 
 A secondary data structure with a type of `Map<RoomListIndex, Map<PickupIndex, PickupDescription>>` is also needed. This is populated in the `POST_ENTITY_REMOVE` callback when a player is leaving a room. `PickupDescription` is a tuple of `Position` and `InitSeed`. The point of this data structure is to store metadata about the pickup so that it can be re-identified if the player returns to the room.
 
-To make things worse, there is also the special case of a post-Ascent Treasure Room or Boss Room to handle. In these rooms, the player will see pickups from previous floors, which means that extra information must be stored to handle this case. I use two extra maps that are indexed by the `PickupDescription` tuple. (This assumes that there will not be more than one pickup per run per room type with the same `Position` and `InitSeed`.)
+To make things worse, there is also the special case of a post-Ascent Treasure Room or Boss Room to handle. In these rooms, the player will see pickups from previous floors, which means that extra information must be stored to handle this case. I use two extra maps (for Treasure Rooms and Boss Rooms, respectively) that are indexed by the `PickupDescription` tuple. (This assumes that there will not be more than one pickup per run per room type with the same `Position` and `InitSeed`.)
 
-(In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
+All of this should be abstracted into a `getPickupIndex` function. (In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
 
 <br>
 
