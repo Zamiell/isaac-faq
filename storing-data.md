@@ -159,7 +159,7 @@ Instead, you want to load data in `MC_POST_PLAYER_INIT`, which is the [earliest 
 
 ## Serialization Into the "save#.Dat" Files
 
-Mods will contain a bunch of mod features, and each of these features may store stateful data. When the `MC_PRE_GAME_EXIT` callback fires, all of this data needs to be combined and written to disk. And when the `MC_POST_GAME_STARTED` callback fires, we need to restore all of the data from disk.
+Mods will contain a bunch of mod features, and each of these features may store stateful data. When saving, all of this data needs to be combined and written to disk. And when loading, we need to restore all of the data from disk.
 
 The Isaac API offers a `Mod.SaveData` method to store data into a "save#.dat" file. Since this method takes a string, you must first convert all of your data to a string. The naive way to accomplish this is to have every variable in the mod live on a shared table, and then use `json.encode` to store it. And then you can use `json.decode` to restore it. Easy!
 
