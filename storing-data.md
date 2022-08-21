@@ -16,22 +16,6 @@ Some mods attempt to work around problem #3 above by manually copying the `GetDa
 
 <br>
 
-## When to Save Data
-
-Data should be saved in the `MC_PRE_GAME_EXIT` callback. (You want to unconditionally save data, in order to handle the case of e.g. saving and quitting.)
-
-Additionally, as an extra safety precaution, you can also save to disk at the beginning of each floor, which mimics what the game does internally (for the purposes of mitigating data loss from crashes). If you do this, remember to only do it on the second floor and onwards, as saving is expensive, and we definately don't need to save all the data back to disk immediately after reading it.
-
-<br>
-
-## When to Load Data
-
-You will want to load data at the beginning of every run. The naive place to do that would be `MC_POST_GAME_STARTED`, but that won't work properly, as it runs after other callbacks have already executed, and you might have logic that relies on stateful tracking in those other callbacks.
-
-Instead, you want to load data in `MC_POST_PLAYER_INIT`, which is the [earliest possible callback](https://wofsauge.github.io/IsaacDocs/rep/images/infographics/Isaac%20Callbacks.svg). Remember to use `pcall`, as reading disk can randomly fail, and you don't want to stop the execution of logic for the rest of the callback. Additionally, end-user data can be garbage, so you want to fall back to sane defaults if so (e.g. `{}`).
-
-<br>
-
 ## Indexing
 
 Once you realize that you need to create your own data structures to store data about entities, the immediate next question is: what key/index do I use? The answer depends on the type of entity. Below, I'll enumerate some cases, starting from the least complex, to most complex.
@@ -130,7 +114,7 @@ All of this should be abstracted into a `getPickupIndex` function so that you ha
 
 <br>
 
-### Indexing Summary
+## Indexing Summary
 
 There is no universal scheme for indexing entities. In general, you should use `PtrHash` as an index, but specific kinds of entities require specific indexing schemes. Some indexing schemes are persistent, and some are not, so you must understand the trade-offs involved.
 
@@ -154,6 +138,22 @@ For more advanced users, you will want to do better than this:
 - The resetting functionality is per-mod. You have to re-implement the system in every new mod you create. And we know that when [we are repeating ourselves](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), we need a better solution. This kind of functionality should be abstracted away into a library that any arbitrary mod can consume.
 
 Thus, you can create a "save data manager" library that allows you to register arbitrary data, with sub-tables of `persistent`, `run`, `level`, or `room`. When the data comes into the manager, a deep-copy of the input is made, which serves as the default values. With the "default copy", the save data manager can automatically reset the variables at the appropriate times. Armed with this abstraction, writing mods becomes a lot easier. (But this is only the first half; also see the subsequent section.)
+
+<br>
+
+## When to Save Data
+
+Data should be saved in the `MC_PRE_GAME_EXIT` callback. (You want to unconditionally save data, in order to handle the case of e.g. saving and quitting.)
+
+Additionally, as an extra safety precaution, you can also save to disk at the beginning of each floor, which mimics what the game does internally (for the purposes of mitigating data loss from crashes). If you do this, remember to only do it on the second floor and onwards, as saving is expensive, and we definately don't need to save all the data back to disk immediately after reading it.
+
+<br>
+
+## When to Load Data
+
+You will want to load data at the beginning of every run. The naive place to do that would be `MC_POST_GAME_STARTED`, but that won't work properly, as it runs after other callbacks have already executed, and you might have logic that relies on stateful tracking in those other callbacks.
+
+Instead, you want to load data in `MC_POST_PLAYER_INIT`, which is the [earliest possible callback](https://wofsauge.github.io/IsaacDocs/rep/images/infographics/Isaac%20Callbacks.svg). Remember to use `pcall`, as reading disk can randomly fail, and you don't want to stop the execution of logic for the rest of the callback. Additionally, end-user data can be garbage, so you want to fall back to sane defaults if so (e.g. `{}`).
 
 <br>
 
