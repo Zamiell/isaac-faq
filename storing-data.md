@@ -16,6 +16,22 @@ Some mods attempt to work around problem #3 above by manually copying the `GetDa
 
 <br>
 
+## When to Save Data
+
+Data should be saved in the `MC_PRE_GAME_EXIT` callback. (You want to unconditionally save data, in order to handle the case of e.g. saving and quitting.)
+
+Additionally, as an extra safety precaution, you can also save to disk at the beginning of each floor, which mimics what the game does internally (for the purposes of mitigating crashes). If you do this, remember to only do it on the second floor and onwards, as saving is expensive, and we definately don't need to save all the data back to disk immediately after reading it.
+
+<br>
+
+## When to Load Data
+
+You will want to load data at the beginning of every run. The naive place to do that would be `MC_POST_GAME_STARTED`, but that won't work properly, as it runs after other callbacks have already executed, and you might have logic that relies on stateful tracking in those other callbacks.
+
+Instead, you want to load data in `MC_POST_PLAYER_INIT`, which is the [earliest possible callback](https://wofsauge.github.io/IsaacDocs/rep/images/infographics/Isaac%20Callbacks.svg). Remember to use `pcall`, as reading disk can randomly fail, and you don't want to stop the execution of logic for the rest of the callback. Additionally, end-user data can be garbage, so you want to fall back to sane defaults if so (e.g. `{}`).
+
+<br>
+
 ## Indexing
 
 Once you realize that you need to create your own data structures to store data about entities, the immediate next question is: what key/index do I use? The answer depends on the type of entity. Below, I'll enumerate some cases, starting from the least complex, to most complex.
@@ -87,7 +103,7 @@ Instead, we can use the `EntityPlayer.GetCollectibleRNG` method with an arbitrar
 
 Note that since The Forgotten and The Soul also share the same RNG, they will have the same index. This is usually what is desired, since they share the same collectibles. However, if this is not desired, then you can use the RNG for `CollectibleType.COLLECTIBLE_INNER_EYE` (2) for The Soul.
 
-All of this should be abstracted into a `getPlayerIndex` function. (In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
+All of this should be abstracted into a `getPlayerIndex` function so that you have a nice high-level API to work with. (In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
 
 In conclusion, for this case:
 - You need to store variables on a table that is reset per run.
@@ -110,7 +126,7 @@ A secondary data structure with a type of `Map<RoomListIndex, Map<PickupIndex, P
 
 To make things worse, there is also the special case of a post-Ascent Treasure Room or Boss Room to handle. In these rooms, the player will see pickups from previous floors, which means that extra information must be stored to handle this case. I use two extra maps (for Treasure Rooms and Boss Rooms, respectively) that are indexed by the `PickupDescription` tuple. These maps are only used in the specific fallback case where a normal pickup index was not found. (This scheme assumes that there will not be more than one pickup per run per room type with the same `Position` and `InitSeed`.)
 
-All of this should be abstracted into a `getPickupIndex` function. (In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
+All of this should be abstracted into a `getPickupIndex` function so that you have a nice high-level API to work with. (In [IsaacScript](https://isaacscript.github.io/), this is included in the standard library.)
 
 <br>
 
