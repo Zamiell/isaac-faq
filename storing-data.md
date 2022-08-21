@@ -141,7 +141,11 @@ Thus, you can create a "save data manager" library that allows you to register a
 
 <br>
 
-## When to Save Data
+## Serialization Into the "save#.Dat" Files
+
+Mods will contain a bunch of mod features, and each of these features may store stateful data. When saving, all of this data needs to be combined and written to disk. And when loading, we need to restore all of the data from disk.
+
+### When to Save Data
 
 Data should be saved in the `MC_PRE_GAME_EXIT` callback. (You want to unconditionally save data, in order to handle the case of e.g. saving and quitting.)
 
@@ -149,17 +153,13 @@ Additionally, as an extra safety precaution, you can also save to disk at the be
 
 <br>
 
-## When to Load Data
+### When to Load Data
 
 You will want to load data at the beginning of every run. The naive place to do that would be `MC_POST_GAME_STARTED`, but that won't work properly, as it runs after other callbacks have already executed, and you might have logic that relies on stateful tracking in those other callbacks.
 
-Instead, you want to load data in `MC_POST_PLAYER_INIT`, which is the [earliest possible callback](https://wofsauge.github.io/IsaacDocs/rep/images/infographics/Isaac%20Callbacks.svg). Remember to use `pcall`, as reading disk can randomly fail, and you don't want to stop the execution of logic for the rest of the callback. Additionally, end-user data can be garbage, so you want to fall back to sane defaults if so (e.g. `{}`).
+Instead, you want to load data in `MC_POST_PLAYER_INIT`, which is the [earliest possible callback](https://wofsauge.github.io/IsaacDocs/rep/images/infographics/Isaac%20Callbacks.svg). Use a variable so that you do this at most once per run (since e.g. it will fire in a Genesis room, it will fire when another player joins the run). Remember to use `pcall`, as reading disk can randomly fail, and you don't want to stop the execution of logic for the rest of the callback. Additionally, end-user data can be garbage, so you want to fall back to sane defaults if so (e.g. `{}`).
 
-<br>
-
-## Serialization Into the "save#.Dat" Files
-
-Mods will contain a bunch of mod features, and each of these features may store stateful data. When saving, all of this data needs to be combined and written to disk. And when loading, we need to restore all of the data from disk.
+### How to Save Data
 
 The Isaac API offers a `Mod.SaveData` method to store data into a "save#.dat" file. Since this method takes a string, you must first convert all of your data to a string. The naive way to accomplish this is to have every variable in the mod live on a shared table, and then use `json.encode` to store it. And then you can use `json.decode` to restore it. Easy!
 
@@ -175,6 +175,7 @@ For more advanced users, you will want to do better than this:
 - The "deep-cloner" can also properly handle converting maps with number keys to strings, which abstracts away the foot-gun.
 - We can "brand" Lua tables with specific keys to denote situations where specific kinds of serialization has occurred, such as `__VECTOR` or `__MAP_WITH_NUMBER_KEYS`. During deserialization, we can use the brands to properly instantiate the respective object.
 - We can throw a helpful runtime error if a mod feature tries to serialize an unserializable thing, like an `EntityPtr`.
+- We can use the [json.lua](https://github.com/rxi/json.lua) library to get a speed up of around 11.8x.
 
 Your end goal should try to be something that accomplishes all of the things that DeadInfinity outlines in [this GitHub issue](https://github.com/Meowlala/RepentanceAPIIssueTracker/issues/168).
 
