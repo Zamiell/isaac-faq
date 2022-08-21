@@ -145,6 +145,8 @@ Thus, you can create a "save data manager" library that allows you to register a
 
 Mods will contain a bunch of mod features, and each of these features may store stateful data. When saving, all of this data needs to be combined and written to disk. And when loading, we need to restore all of the data from disk.
 
+<br>
+
 ### When to Save Data
 
 Data should be saved in the `MC_PRE_GAME_EXIT` callback. (You want to unconditionally save data, in order to handle the case of e.g. saving and quitting.)
@@ -158,6 +160,8 @@ Additionally, as an extra safety precaution, you can also save to disk at the be
 You will want to load data at the beginning of every run. The naive place to do that would be `MC_POST_GAME_STARTED`, but that won't work properly, as it runs after other callbacks have already executed, and you might have logic that relies on stateful tracking in those other callbacks.
 
 Instead, you want to load data in `MC_POST_PLAYER_INIT`, which is the [earliest possible callback](https://wofsauge.github.io/IsaacDocs/rep/images/infographics/Isaac%20Callbacks.svg). Use a variable so that you do this at most once per run (since e.g. it will fire in a Genesis room, it will fire when another player joins the run). Remember to use `pcall`, as reading disk can randomly fail, and you don't want to stop the execution of logic for the rest of the callback. Additionally, end-user data can be garbage, so you want to fall back to sane defaults if so (e.g. `{}`).
+
+<br>
 
 ### How to Save Data
 
