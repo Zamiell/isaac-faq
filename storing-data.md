@@ -20,7 +20,7 @@ Some mods attempt to work around problem #3 above by manually copying the `GetDa
 
 Data should be saved in the `MC_PRE_GAME_EXIT` callback. (You want to unconditionally save data, in order to handle the case of e.g. saving and quitting.)
 
-Additionally, as an extra safety precaution, you can also save to disk at the beginning of each floor, which mimics what the game does internally (for the purposes of mitigating crashes). If you do this, remember to only do it on the second floor and onwards, as saving is expensive, and we definately don't need to save all the data back to disk immediately after reading it.
+Additionally, as an extra safety precaution, you can also save to disk at the beginning of each floor, which mimics what the game does internally (for the purposes of mitigating data loss from crashes). If you do this, remember to only do it on the second floor and onwards, as saving is expensive, and we definately don't need to save all the data back to disk immediately after reading it.
 
 <br>
 
