@@ -141,7 +141,7 @@ Thus, you can create a "save data manager" library that allows you to register a
 
 <br>
 
-## Serialization Into the "save#.Dat" Files
+## Serialization Into the "save#.dat" Files
 
 Mods will contain a bunch of mod features, and each of these features may store stateful data. When saving, all of this data needs to be combined and written to disk. And when loading, we need to restore all of the data from disk.
 
