@@ -1,6 +1,6 @@
 # The Binding of Isaac: Repentance - Directories & Save Files Explanation
 
-The Isaac directory structure is rather complicated. Not to worry - I'll explain it all for you!
+The Isaac directory structure is rather complicated. This guide explains everything for you.
 
 This guide assumes you are on Windows.
 
