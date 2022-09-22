@@ -17,6 +17,8 @@ Isaac does not come with a save data manager, so I wrote my own and put it in th
 - In TypeScript, it's built-in: just start typing `saveDataManager` and it will auto-import.
 - In Lua, it's as simple as [copy-pasting ISC into your project](https://isaacscript.github.io/main/isaacscript-in-lua) and calling `isc:saveDataManager()`.
 
+Keep reading for more information.
+
 <br>
 
 ## Why do I need the save data manager?
