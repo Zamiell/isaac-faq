@@ -2,7 +2,7 @@
 
 <br>
 
-## What is the Save Data Manager?
+## What is the save data manager?
 
 A save data manager is defined as a system that has the following two features:
 - automatic resetting of variables on a new run, on a new level, or on a new room (as desired)
@@ -16,7 +16,7 @@ Isaac does not come with a save data manager, so I wrote my own and put it in th
 
 Yes. It can be used in both TypeScript and [Lua](https://isaacscript.github.io/main/isaacscript-in-lua).
 
-## Why do I need the Save Data Manager?
+## Why do I need the save data manager?
 
 It is extremely common to have variables that need to be reset at the beginning of a new run, a new level, or a new room. For example, if you had a modded item that granted a damage up every time the player killed an enemey, then that variable would need to be reset at the beginning of every new run. The save data manager handles this for you automatically.
 
@@ -74,70 +74,46 @@ mod.AddCallback(ModCallbacks.MC_POST_UPDATE, function()
 end)
 ```
 
-Let's break this down.
+Now, try running this simple mod. First, notice that the counters increase on every frame. (You can check the console to see the results of the `print` function.) Next, close the game and reopen it - the counters will resume right where they left off. It's really just as easy as that.
 
-The object name of `v` is conventionally used to denote "variables". In this example, we have a `v` object for the entire mod.
+<br>
 
-(In a real mod, you would have a separate `v` for each file or mod feature. The save data manager solves the scoping problem of having variables shared between your mod features.)
+## What is the "v" object in the above example?
 
-`v` is composed of sub-objects. By specifying a room sub-object, that tells the save data manager to automatically wipe the data in that sub-object when a new room is entered. This is what we want, because in this example, enemy NPCs will only exist in the context of the current room, and we don't care about keeping data for NPCs that have already despawned.
+The object name of `v` is conventionally used to denote "variables". We abbreviate it to "v" so that it is nice and easy to type - we will be using this object a lot throughout our mod. We stick all of the state-related variables in our mod on "v", and the save data manager will manage them. (By "manage", we mean "automatically reset them and automatically save them to disk".)
 
-Finally, inside of the room sub-object, we define the fooData map. (If you don't know what a Map is, read the JavaScript/TypeScript tutorial, as understanding maps is essential for this section.) The fooData map is two-dimensional in that it will contain the data for every NPC in the room.
+(Note that in a real mod, you would have a separate `v` for each file or mod feature. The save data manager solves the scoping problem of having variables shared between your mod features. It will never share or expose the variables, so they can remain truly local to the file.)
 
-So, we need a way to identify each NPC in the room, and then use this identifier as the index in our map. The solution is to use the pointer hash, which a unique string that can be retrieved with the global function GetPtrHash:
+`v` is composed of four different sub-objects, all of which are optional:
+- `persistent`
+- `run`
+- `level`
+- `room`
 
+In the above example, we stuck the `myCounters` variable on a sub-object of `run`, meaning that the lifetime of the `myCounters` should be that of a run. When the player starts a new run, `myCounters` is automatically reset to the starting value (which we defined as 0).
 
+If we had instead put it on a `level` object, then it would be wiped at the beginning of a new floor. And if we had instead put it on a `room` object, then it would be wiped at the beginning of a new room. And if we had instead put it on a `persistent` object, then it would never be reset at all.
 
-Here is a more full example of a mod feature that uses RNG in a local variable that is automatically saved to disk when the player saves and quits the game:
+<br>
 
-```lua
-local foo = {}
+## What does the `saveDataManager` function do?
 
-local v = {
-  run = {
-    rng = RNG(),
-  },
-}
+For the save data manager to manage your variables, you need to give it your variables. The `saveDataManager` function will initialize the save data manager.
 
-function foo:init()
-  isc:saveDataManager("foo", v)
-end
+The first argument is the key. In the above example, we used "foo", which is the name of the mod. If you are storing variables for your entire mod in a single object, then use the name of your mod. (However, this is really bad, so for medium to large scale mods you should never do this and instead have many different `v` objects per file.)
 
-function foo:postGameStarted()
-  local seeds = isc.game:GetSeeds()
-  local gameStartSeed = seeds:GetStartSeed()
-  v.run.rng:SetSeed(gameStartSeed)
-end
+The second argument is the save data object to manager, which will conventionally be called `v`, but can technically be called anything you want.
 
-function foo:someCallback()
-  local randomInt = isc:getRandomInt(2, 4, v.run.rng)
-  -- TODO: use the random number
-end
+<br>
 
-return foo
-```
+## What kinds of data can I put on my save data?
 
-Or, here's the same code in TypeScript, which is mostly the same but is slightly shorter and more elegant:
+The save data manager supports most of what you will throw at it, but some things are not serializable, like `EntityPtr`. For a full list of supported data, see the [documentation for the `deepCopy` function](https://isaacscript.github.io/isaacscript-common/functions/deepCopy/#deepcopy).
 
-```ts
-const v = {
-  run: {
-    rng: RNG(),
-  },
-};
+<br>
 
-export function init() {
-  saveDataManager("foo", v);
-}
+## Where can I read more about the save data manager?
 
-export function postGameStarted() {
-  const seeds = game.GetSeeds();
-  const gameStartSeed = seeds.GetStartSeed();
-  v.run.rng.SetSeed(gameStartSeed);
-}
+See the [official documentation](https://isaacscript.github.io/isaacscript-common/features/saveDataManager_exports/#savedatamanager) on the IsaacScript website.
 
-export function someCallback() {
-  const randomInt = getRandomInt(2, 4, v.run.rng);
-  // TODO: use the random number
-}
-```
+<br>
