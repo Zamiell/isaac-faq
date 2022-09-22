@@ -32,7 +32,7 @@ Even if you have already implemented your own save data system, you will probabl
 - You don't want to have to copy-paste your own boilerplate code into every single mod you write. This is the kind of thing that needs to be abstracted away into a library.
 - The code in the standard library will almost certainly be better tested, handle more edge cases, and be more bug-free than anything you will write. (Does your system support serialization of BitSet128?)
 
-Using the save data maanger is easy, as the rest of this document will show.
+Using the IsaacScript save data maanger is easy, as the rest of this document will show.
 
 <br>
 
