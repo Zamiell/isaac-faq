@@ -16,6 +16,8 @@ Isaac does not come with a save data manager, so I wrote my own and put it in th
 
 Yes. It can be used in both TypeScript and [Lua](https://isaacscript.github.io/main/isaacscript-in-lua).
 
+<br>
+
 ## Why do I need the save data manager?
 
 It is extremely common to have variables that need to be reset at the beginning of a new run, a new level, or a new room. For example, if you had a modded item that granted a damage up every time the player killed an enemey, then that variable would need to be reset at the beginning of every new run. The save data manager handles this for you automatically.
