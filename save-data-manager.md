@@ -44,7 +44,7 @@ const mod = upgradeMod(modVanilla);
 
 const v = {
   run: {
-    myCounters: 0,
+    myCounters = 0,
   },
 }
 
