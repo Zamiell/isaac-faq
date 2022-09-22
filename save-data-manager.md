@@ -44,7 +44,7 @@ const mod = upgradeMod(modVanilla);
 
 const v = {
   run: {
-    myCounters = 0,
+    myCounters: 0,
   },
 }
 
@@ -66,7 +66,7 @@ local mod = isc:upgradeMod(modVanilla)
 
 local v = {
   run = {
-    myCounters: 0,
+    myCounters = 0,
   },
 }
 
