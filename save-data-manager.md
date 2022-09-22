@@ -28,7 +28,7 @@ Furthermore, in Isaac, players have the ability to save and quit out of a run. I
 
 ## Should I use the save data manager over other solutions?
 
-Even if you have already implemented your own save data system, you will still probably want to drop it and use the one in the IsaacScript standard library:
+Even if you have already implemented your own save data system, you will probably want to drop it and use the one in the IsaacScript standard library:
 - You don't want to have to copy-paste your own boilerplate code into every single mod you write. This is the kind of thing that needs to be abstracted away into a library.
 - The code in the standard library will almost certainly be better tested, handle more edge cases, and be more bug-free than anything you will write. (Does your system support serialization of BitSet128?)
 
