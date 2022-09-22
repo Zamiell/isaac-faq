@@ -115,7 +115,7 @@ For the save data manager to manage your variables, you need to give it your var
 
 The first argument is the key. In the above example, we used "foo", which is the name of the mod. If you are storing variables for your entire mod in a single object, then use the name of your mod. (However, for medium to large scale mods, this is really bad, as you should instead have one `v` object per file/feature, and then call the `saveDataManager` function once for each `v` object, using the key of the individual mod feature name.)
 
-The second argument is the save data object to manage, which will conventionally be called `v`. (But it can technically be called anything you want.)
+The second argument is the variables, which will conventionally be called `v`. (But it can technically be called anything you want.)
 
 <br>
 
