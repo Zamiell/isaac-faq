@@ -37,7 +37,8 @@ In TypeScript:
 ```ts
 import { saveDataManager } from "isaacscript-common";
 
-const mod = RegisterMod("foo", 1);
+const modVanilla = RegisterMod("foo", 1);
+const mod = upgradeMod(modVanilla);
 
 const v = {
   run: {
@@ -58,7 +59,8 @@ In Lua (almost exactly the same, sans the minor syntax differences):
 ```lua
 local isc = require("foo.lib.isaacscript-common")
 
-local mod = RegisterMod("foo", 1)
+local modVanilla = RegisterMod("foo", 1)
+local mod = isc:upgradeMod(modVanilla)
 
 local v = {
   run = {
