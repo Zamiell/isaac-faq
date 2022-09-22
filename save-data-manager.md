@@ -78,7 +78,7 @@ mod.AddCallback(ModCallbacks.MC_POST_UPDATE, function()
 end)
 ```
 
-Now, try running this simple mod. First, notice that the counters increase on every frame. (You can check the console to see the results of the `print` function.) Next, close the game and reopen it - the counters will resume right where they left off. It's really just as easy as that.
+Now, try running this simple mod. First, notice that the counters increase on every frame. (You can check the console to see the results of the `print` function.) Next, close the game and reopen it - the counters will resume right where they left off. Using the save data manager is really just as easy as that.
 
 <br>
 
