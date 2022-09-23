@@ -98,7 +98,7 @@ Using the save data manager is really just as easy as that.
 
 The object name of `v` is conventionally used to denote "variables". We abbreviate it to "v" so that it is nice and easy to type - we will be using this object a lot throughout our mod. We stick all of the state-related variables in our mod on "v", and the save data manager will manage them. (By "manage", we mean "automatically reset them and automatically save them to disk".)
 
-(Note that in a real mod, you would have a separate `v` for each file or mod feature. The save data manager solves the scoping problem of having variables shared between your mod features. It will never share or expose the variables, so they can remain truly local to the file.)
+(Note that in a real mod, you would have a separate `v` for each file or mod feature. The save data manager solves the scoping problem of having mod-wide (i.e. psuedo-global) variables. It will never share or expose the variables, so they can remain truly local to the file.)
 
 `v` is composed of four different sub-objects, all of which are optional:
 - `persistent`
