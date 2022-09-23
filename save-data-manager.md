@@ -8,7 +8,7 @@ A save data manager is defined as a system that has the following two features:
 - automatic resetting of variables on a new run, on a new level, or on a new room (as desired)
 - automatic saving and loading of all tracked data to the "save#.dat" file
 
-Isaac does not come with a save data manager, so I wrote my own and put it in the IsaacScript standard library. The IsaacScript save data manager also has some minor features, like automatic rewinding of variables when the Glowing Hour Glass is used, proper serialization of tables/maps with number keys, and proper serialization of the various Isaac userdata classes.
+Isaac does not come with a save data manager, so I wrote my own and put it in the IsaacScript standard library. It also has some other features, like automatic rewinding of variables when the Glowing Hour Glass is used, proper serialization of tables/maps with number keys, and proper serialization of the various Isaac userdata classes.
 
 <br>
 
