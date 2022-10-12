@@ -14,10 +14,10 @@ Isaac does not come with a save data manager, so I wrote my own and put it in th
 
 ## How do I use the IsaacScript save data manager?
 
-- In TypeScript, it's built-in. See below for a basic usage example.
-- In Lua, you need to [put the ISC library into your mod](https://isaacscript.github.io/main/isaacscript-in-lua). See below for a basic usage example.
+- In TypeScript, it's built-in.
+- In Lua, you need to [put the ISC library into your mod](https://isaacscript.github.io/main/isaacscript-in-lua).
 
-Keep reading for more information.
+See below for more information and a basic usage example.
 
 <br>
 
