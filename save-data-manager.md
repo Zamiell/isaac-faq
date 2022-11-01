@@ -132,6 +132,6 @@ The save data manager supports most of what you will throw at it, but some thing
 
 ## Where can I read more about the save data manager?
 
-See the [official documentation](https://isaacscript.github.io/isaacscript-common/features/saveDataManager_exports/#savedatamanager) on the IsaacScript website.
+See the [official documentation](https://isaacscript.github.io/isaacscript-common/features/SaveDataManager) on the IsaacScript website.
 
 <br>
