@@ -44,7 +44,7 @@ Using the IsaacScript save data maanger is easy, as the rest of this document wi
 In TypeScript:
 
 ```ts
-import { saveDataManager } from "isaacscript-common";
+import { upgradeMod } from "isaacscript-common";
 
 const modVanilla = RegisterMod("foo", 1);
 const features = [ISCFeature.SAVE_DATA_MANAGER] as const;
@@ -56,7 +56,7 @@ const v = {
   },
 }
 
-saveDataManager("foo", v);
+mod.saveDataManager("foo", v);
 
 mod.AddCallback(ModCallback.POST_UPDATE, () => {
   v.run.myCounters++;
@@ -79,7 +79,7 @@ local v = {
   },
 }
 
-isc:saveDataManager("foo", v)
+mod:saveDataManager("foo", v)
 
 mod.AddCallback(ModCallbacks.MC_POST_UPDATE, function()
   v.run.myCounters = v.run.myCounters + 1
