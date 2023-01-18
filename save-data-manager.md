@@ -110,7 +110,7 @@ The object name of `v` is conventionally used to denote "variables". We abbrevia
 
 In the above example, we stuck the `myCounters` variable on a sub-object of `run`, meaning that the lifetime of the `myCounters` should be that of a run. When the player starts a new run, `myCounters` is automatically reset to the starting value (which we defined as 0).
 
-If we had instead put it on a `level` object, then it would be wiped at the beginning of a new floor. And if we had instead put it on a `room` object, then it would be wiped at the beginning of a new room. And if we had instead put it on a `persistent` object, then it would never be reset at all (but still saved to disk).
+If we had instead put it on a `level` object, then it would be reset at the beginning of a new floor. And if we had instead put it on a `room` object, then it would be reset at the beginning of a new room. And if we had instead put it on a `persistent` object, then it would never be reset at all (but still saved to disk).
 
 <br>
 
