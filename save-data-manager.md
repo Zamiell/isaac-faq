@@ -60,7 +60,7 @@ mod.saveDataManager("foo", v);
 
 mod.AddCallback(ModCallback.POST_UPDATE, () => {
   v.run.myCounters++;
-  print(myCounters);
+  print(v.run.myCounters);
 });
 ```
 
@@ -83,7 +83,7 @@ mod:saveDataManager("foo", v)
 
 mod:AddCallback(ModCallbacks.MC_POST_UPDATE, function()
   v.run.myCounters = v.run.myCounters + 1
-  print(myCounters)
+  print(v.run.myCounters)
 end)
 ```
 
