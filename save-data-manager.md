@@ -81,7 +81,7 @@ local v = {
 
 mod:saveDataManager("foo", v)
 
-mod.AddCallback(ModCallbacks.MC_POST_UPDATE, function()
+mod:AddCallback(ModCallbacks.MC_POST_UPDATE, function()
   v.run.myCounters = v.run.myCounters + 1
   print(myCounters)
 end)
