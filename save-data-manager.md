@@ -92,7 +92,7 @@ Now, try running this simple mod:
 - Next, reset the run, and notice that the counters are reset to 0.
 - Next, close the game and reopen it. Notice that the counters will resume right where they left off.
 
-Using the save data manager is really just as easy as that.
+Magic! Using the save data manager is really just as easy as that.
 
 <br>
 
