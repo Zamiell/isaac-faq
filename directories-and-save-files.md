@@ -112,7 +112,7 @@ C:\Program Files (x86)\Steam\steamapps\workshop\content\250900
 
 <br>
 
-## Should I have "SteamCloud" on or off?
+## Should I have `SteamCloud` on or off?
 
 - Either way is fine, but but I recommend that you turn it off, since it will prevent your save files from accidentally being deleted in case Steam messes up. Also, it becomes easier to manage your save files, since they will just exist in the same directory as everything else (options.ini, log.txt, and so on).
 
@@ -120,11 +120,11 @@ C:\Program Files (x86)\Steam\steamapps\workshop\content\250900
 
 ## What are the save files called?
 
-- If you do not use SteamCloud, folder #4 will contain the files:
+- If you do not use `SteamCloud`, folder #4 will contain the files:
   - persistentgamedata1.dat
   - persistentgamedata2.dat
   - persistentgamedata3.dat
-- If you use SteamCloud, folder #5 will contain the files:
+- If you use `SteamCloud`, folder #5 will contain the files:
   - rep_persistentgamedata1.dat
   - rep_persistentgamedata2.dat
   - rep_persistentgamedata3.dat
