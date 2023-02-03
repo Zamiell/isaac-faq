@@ -2,7 +2,7 @@
 
 The Isaac directory structure is rather complicated. This guide explains everything for you.
 
-This guide assumes you are on Windows.
+This guide assumes you are on Windows. If you are on macOS or Linux, see the sections at the bottom.
 
 <br>
 
