@@ -68,8 +68,8 @@ C:\Users\[username]\Documents\My Games\Binding of Isaac Repentance
 - This folder also contains the "inputconfigs.dat" file, which contains all your key bindings. (It is just a text file, so you can open it in Notepad to edit it if you want.)
 - This folder also contains the "options.ini" file, which contains some values that you can set using the in-game menus. (This is also just a text file, so you can open it in Notepad to edit it if you want.)
 - The "options.ini" file also contains some values that are NOT in the in-game menu. One such value is "SteamCloud". By default, it will have "SteamCloud=1".
+- If "SteamCloud" is set to 0, the game will look for save data from this directory, listed here as #4.
 - If "SteamCloud" is set to 1, the game will look for save data from the Steam save data directory, listed below as #5.
-- If "SteamCloud" is set to 0, the game will look for save data from the same directory that the "options.ini" file is in (the "Documents" save data directory).
 
 <br>
 
