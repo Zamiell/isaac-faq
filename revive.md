@@ -15,6 +15,7 @@ Below is a short example of implementing a revival item called Maggy's Tampon. T
 In TypeScript:
 
 ```ts
+import { PlayerType } from "isaac-typescript-definitions";
 import { ModCallbackCustom, upgradeMod } from "isaacscript-common";
 
 const CollectibleTypeCustom = {
