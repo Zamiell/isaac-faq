@@ -19,7 +19,7 @@ import { PlayerType } from "isaac-typescript-definitions";
 import { ModCallbackCustom, upgradeMod } from "isaacscript-common";
 
 const CollectibleTypeCustom = {
-  MAGGYS_TAMPON = Isaac.GetItemIdByName("Maggy's Tampon"),
+  MAGGYS_TAMPON: Isaac.GetItemIdByName("Maggy's Tampon"),
 } as const;
 
 enum RevivalType {
@@ -37,9 +37,7 @@ mod.AddCallbackCustom(
 );
 
 function preCustomRevive(player: EntityPlayer) {
-  const hasTampon = player.HasCollectible(
-    CollectibleTypeCustom.MAGGYS_TAMPON,
-  );
+  const hasTampon = player.HasCollectible(CollectibleTypeCustom.MAGGYS_TAMPON);
   return hasTampon ? RevivalType.MAGGYS_TAMPON : undefined;
 }
 
