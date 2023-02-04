@@ -37,15 +37,15 @@ mod.AddCallbackCustom(
 
 function preCustomRevive(player: EntityPlayer) {
   const hasTampon = player.HasCollectible(
-    CollectibleTypeCustom.COLLECTIBLE_MAGGYS_TAMPON,
+    CollectibleTypeCustom.MAGGYS_TAMPON,
   );
   return hasTampon ? RevivalType.MAGGYS_TAMPON : undefined;
 }
 
 function postCustomRevive(player: EntityPlayer) {
-  player.AnimateCollectible(CollectibleTypeCustom.COLLECTIBLE_MAGGYS_TAMPON);
+  player.AnimateCollectible(CollectibleTypeCustom.MAGGYS_TAMPON);
   player.ChangePlayerType(PlayerType.MAGDALENE);
-  player.RemoveCollectible(CollectibleTypeCustom.COLLECTIBLE_MAGGYS_TAMPON);
+  player.RemoveCollectible(CollectibleTypeCustom.MAGGYS_TAMPON);
 }
 ```
 
@@ -66,7 +66,7 @@ local modVanilla = RegisterMod("Maggy's Tampon", 1)
 local mod = isc:upgradeMod(modVanilla)
 
 local function preCustomRevive(player) {
-  local hasTampon = player:HasCollectible(CollectibleTypeCustom.COLLECTIBLE_MAGGYS_TAMPON)
+  local hasTampon = player:HasCollectible(CollectibleTypeCustom.MAGGYS_TAMPON)
   if hasTampon then
     return RevivalType.MAGGYS_TAMPON
   end
@@ -74,9 +74,9 @@ local function preCustomRevive(player) {
 }
 
 local function postCustomRevive(player) {
-  player:AnimateCollectible(CollectibleTypeCustom.COLLECTIBLE_MAGGYS_TAMPON)
+  player:AnimateCollectible(CollectibleTypeCustom.MAGGYS_TAMPON)
   player:ChangePlayerType(isc.PlayerType.MAGDALENE)
-  player:RemoveCollectible(CollectibleTypeCustom.COLLECTIBLE_MAGGYS_TAMPON)
+  player:RemoveCollectible(CollectibleTypeCustom.MAGGYS_TAMPON)
 }
 
 mod:AddCallbackCustom(isc.ModCallbackCustom.PRE_CUSTOM_REVIVE, preCustomRevive)
