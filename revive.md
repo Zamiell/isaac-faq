@@ -73,7 +73,7 @@ local function preCustomRevive(_, player)
   if hasTampon then
     return RevivalType.MAGGYS_TAMPON
   end
-  return nil;
+  return nil
 end
 
 local function postCustomRevive(_, player)
