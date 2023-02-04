@@ -28,9 +28,9 @@ enum RevivalType {
 const modVanilla = RegisterMod("Maggy's Tampon", 1);
 const mod = upgradeMod(modVanilla);
 
-mod.AddCallbackCustom(ModCallbacksCustom.MC_PRE_CUSTOM_REVIVE, preCustomRevive);
+mod.AddCallbackCustom(ModCallbacksCustom.PRE_CUSTOM_REVIVE, preCustomRevive);
 mod.AddCallbackCustom(
-  ModCallbacksCustom.MC_POST_CUSTOM_REVIVE,
+  ModCallbacksCustom.POST_CUSTOM_REVIVE,
   postCustomRevive,
   RevivalType.MAGGYS_TAMPON,
 );
@@ -79,6 +79,6 @@ local function postCustomRevive(player) {
   player:RemoveCollectible(CollectibleTypeCustom.COLLECTIBLE_MAGGYS_TAMPON)
 }
 
-mod:AddCallbackCustom(isc.ModCallbacksCustom.MC_PRE_CUSTOM_REVIVE, preCustomRevive)
-mod:AddCallbackCustom(isc.ModCallbacksCustom.MC_POST_CUSTOM_REVIVE, postCustomRevive, RevivalType.MAGGYS_TAMPON)
+mod:AddCallbackCustom(isc.ModCallbacksCustom.PRE_CUSTOM_REVIVE, preCustomRevive)
+mod:AddCallbackCustom(isc.ModCallbacksCustom.POST_CUSTOM_REVIVE, postCustomRevive, RevivalType.MAGGYS_TAMPON)
 ```
