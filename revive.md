@@ -12,7 +12,9 @@ If you don't know what a library is or you have never used a library before, the
 
 Below is a short example of implementing a revival item called Maggy's Tampon. The item will revive the player as Magdalene. Both TypeScript and Lua examples are provided.
 
-In TypeScript:
+<br>
+
+### TypeScript
 
 ```ts
 import { PlayerType } from "isaac-typescript-definitions";
@@ -48,7 +50,7 @@ function postCustomRevive(player: EntityPlayer) {
 }
 ```
 
-Or, in Lua:
+### Lua
 
 ```lua
 local isc = require("maggys-tampon.lib.isaacscript-common")
