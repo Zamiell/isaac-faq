@@ -15,7 +15,7 @@ Below is a short example of implementing a revival item called Maggy's Tampon. T
 In TypeScript:
 
 ```ts
-import { ModCallbacksCustom, upgradeMod } from "isaacscript-common";
+import { ModCallbackCustom, upgradeMod } from "isaacscript-common";
 
 const CollectibleTypeCustom = {
   MAGGYS_TAMPON = Isaac.GetItemIdByName("Maggy's Tampon"),
@@ -28,9 +28,9 @@ enum RevivalType {
 const modVanilla = RegisterMod("Maggy's Tampon", 1);
 const mod = upgradeMod(modVanilla);
 
-mod.AddCallbackCustom(ModCallbacksCustom.PRE_CUSTOM_REVIVE, preCustomRevive);
+mod.AddCallbackCustom(ModCallbackCustom.PRE_CUSTOM_REVIVE, preCustomRevive);
 mod.AddCallbackCustom(
-  ModCallbacksCustom.POST_CUSTOM_REVIVE,
+  ModCallbackCustom.POST_CUSTOM_REVIVE,
   postCustomRevive,
   RevivalType.MAGGYS_TAMPON,
 );
@@ -79,6 +79,6 @@ local function postCustomRevive(player) {
   player:RemoveCollectible(CollectibleTypeCustom.COLLECTIBLE_MAGGYS_TAMPON)
 }
 
-mod:AddCallbackCustom(isc.ModCallbacksCustom.PRE_CUSTOM_REVIVE, preCustomRevive)
-mod:AddCallbackCustom(isc.ModCallbacksCustom.POST_CUSTOM_REVIVE, postCustomRevive, RevivalType.MAGGYS_TAMPON)
+mod:AddCallbackCustom(isc.ModCallbackCustom.PRE_CUSTOM_REVIVE, preCustomRevive)
+mod:AddCallbackCustom(isc.ModCallbackCustom.POST_CUSTOM_REVIVE, postCustomRevive, RevivalType.MAGGYS_TAMPON)
 ```
