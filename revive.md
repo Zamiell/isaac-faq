@@ -50,6 +50,8 @@ function postCustomRevive(player: EntityPlayer) {
 }
 ```
 
+<br>
+
 ### Lua
 
 ```lua
@@ -83,3 +85,5 @@ end
 mod:AddCallbackCustom(isc.ModCallbackCustom.PRE_CUSTOM_REVIVE, preCustomRevive)
 mod:AddCallbackCustom(isc.ModCallbackCustom.POST_CUSTOM_REVIVE, postCustomRevive, RevivalType.MAGGYS_TAMPON)
 ```
+
+<br>
