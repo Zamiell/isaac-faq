@@ -64,19 +64,19 @@ local RevivalType = {
 local modVanilla = RegisterMod("Maggy's Tampon", 1)
 local mod = isc:upgradeMod(modVanilla)
 
-local function preCustomRevive(player) {
+local function preCustomRevive(player)
   local hasTampon = player:HasCollectible(CollectibleTypeCustom.MAGGYS_TAMPON)
   if hasTampon then
     return RevivalType.MAGGYS_TAMPON
   end
   return nil;
-}
+end
 
-local function postCustomRevive(player) {
+local function postCustomRevive(player)
   player:AnimateCollectible(CollectibleTypeCustom.MAGGYS_TAMPON)
   player:ChangePlayerType(isc.PlayerType.MAGDALENE)
   player:RemoveCollectible(CollectibleTypeCustom.MAGGYS_TAMPON)
-}
+end
 
 mod:AddCallbackCustom(isc.ModCallbackCustom.PRE_CUSTOM_REVIVE, preCustomRevive)
 mod:AddCallbackCustom(isc.ModCallbackCustom.POST_CUSTOM_REVIVE, postCustomRevive, RevivalType.MAGGYS_TAMPON)
