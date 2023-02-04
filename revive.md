@@ -54,7 +54,7 @@ Or, in Lua:
 local isc = require("maggys-tampon.lib.isaacscript-common")
 
 local CollectibleTypeCustom = {
-  MAGGYS_TAMPON: Isaac.GetItemIdByName("Maggy's Tampon"),
+  MAGGYS_TAMPON = Isaac.GetItemIdByName("Maggy's Tampon"),
 }
 
 local RevivalType = {
