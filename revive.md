@@ -80,9 +80,5 @@ local function postCustomRevive(player) {
 }
 
 mod:AddCallbackCustom(isc.ModCallbacksCustom.MC_PRE_CUSTOM_REVIVE, preCustomRevive)
-mod:AddCallbackCustom(
-  isc.ModCallbacksCustom.MC_POST_CUSTOM_REVIVE,
-  postCustomRevive,
-  RevivalType.MAGGYS_TAMPON,
-)
+mod:AddCallbackCustom(isc.ModCallbacksCustom.MC_POST_CUSTOM_REVIVE, postCustomRevive, RevivalType.MAGGYS_TAMPON)
 ```
