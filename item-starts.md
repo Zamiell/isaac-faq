@@ -45,9 +45,14 @@ S Class items are considered above and beyond anything else present in the game.
 - At the highest levels of play, Mom's Knife is considered the best item in the game.
 - Due to the mechanics of the movement involved with the item, you also have a higher propensity to take damage. If you combine this with all tears-up items being useless with a knife, it is recommended to take all health up items.
 
+#### Epic Fetus
+
+- Considered the second best item; you want to use the missiles to "bomb" out of every room.
+- It kills bosses slower than with other builds. However, it does have some powerful specific synergies, like 20/20, The Inner Eye, and Mutant Spider.
+
 #### Ipecac
 
-- Considered the second best item; you want to use the explosive tears to "bomb" out of every room.
+- Considered the third best item; you want to use the explosive tears to "bomb" out of every room.
 - It is more dangerous to use than nearly all other items. It also kills bosses much slower than with other builds. However, it does have some powerful specific synergies, like Dr. Fetus.
 - Much like Mom's Knife, it requires a bunch of dedicated practice to utilize most effectively.
 
