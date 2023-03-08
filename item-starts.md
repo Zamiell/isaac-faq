@@ -1,14 +1,8 @@
-+-----------------------------------------+
-|       Binding of Isaac: Repentance      |
-| Item Starts for Speedrunning and Racing |
-|          by Zamiel & Gamonymous         |
-+-----------------------------------------+
+# Binding of Isaac: Repentance - Item Starts for Speedrunning and Racing
 
-(last updated June 30th, 2021)
+By Zamiel & Gamonymous
 
-+----------+
-| The List |
-+----------+
+## The List
 
 Items are listed in order of power level. More detail about these items can be found below. Note that the ordering is somewhat subjective; other speedrunners may prefer the list be slightly shuffled in some way or another.
 
@@ -33,7 +27,6 @@ Items are listed in order of power level. More detail about these items can be f
 | 16   | Chocolate Milk     | D     | (probably don't start this) 
 | 17   | Sacrificial Dagger | D     | (probably don't start this)
 +------+--------------------+-------+
-
 
 
 +-------------+
