@@ -39,12 +39,12 @@ By Zamiel & Gamonymous
 
 S Class items are considered above and beyond anything else present in the game. If you have one of these items and your opponent doesn't, and most other factors are equal, you will probably win the race.
 
-1) Mom's Knife
+#### Mom's Knife (Rank 1)
 
 - At the highest levels of play, Mom's Knife is considered the best item in the game.
 - Due to the mechanics of the movement involved with the item, you also have a higher propensity to take damage. If you combine this with all tears-up items being useless with a knife, it is recommended to take all health up items.
 
-2) Ipecac
+#### Ipecac (Rank 2)
 
 - Considered the second best item; you want to use the explosive tears to "bomb" out of every room.
 - It is more dangerous to use than nearly all other items. It also kills bosses much slower than with other builds. However, it does have some powerful specific synergies, like Dr. Fetus.
@@ -54,11 +54,11 @@ S Class items are considered above and beyond anything else present in the game.
 
 ### A Class
 
-3) Dr. Fetus
+#### Dr. Fetus (Rank 3)
 
 - Requires some practice to be able to use effectively, but still easier to play than Ipecac.
 
-4) Proptosis
+#### Proptosis (Rank 4)
 
 - Triple damage but only if you are very close to the enemy. Good players will get close to (almost) every enemy in order to maximize DPS.
 
@@ -66,22 +66,24 @@ S Class items are considered above and beyond anything else present in the game.
 
 ### B Class
 
-5) 20/20
+#### 20/20 (Rank 5)
 
 - 75% damage up overall.
 
-6) Magic Mushroom
+#### Magic Mushroom (Rank 6)
 
 - Preferred to Cricket's Head since you also get a speed up.
 
-7) Cricket's Head
+#### Cricket's Head (Rank 7)
 
-8) Tech.5
+- n/a
+
+#### Tech.5 (Rank 8)
 
 - You always want to take coal with this item, since it acts as a damage multiplier.
 - Eve's Mascara is a great synergy.
 
-9) Polyphemus
+#### Polyphemus (Rank 9)
 
 - Generally not worth trading the D6 for Guppy's Head unless your build is completely carried.
 
@@ -89,21 +91,21 @@ S Class items are considered above and beyond anything else present in the game.
 
 ### C Class
 
-10) Death's Touch
+#### Death's Touch (Rank 10)
 
 - It is not a damage multiplier, but the large tear size and piercing is multiplicative in that you will often hit many enemies with one shot.
 - This is the only item upon that changes the rolling strategy such that you may want to roll a speed up for a tears up (at base speed).
 - Tammy's Head becomes very strong with this.
 
-11) Dead Eye
+#### Dead Eye (Rank 11)
 
 - Don't be overly conservative with the amount of tears that you fire, especially after getting a tears up, as you will not lose the multiplier on every missed shot.
 
-12) Cricket's Body
+#### Cricket's Body (Rank 12)
 
 - Don't start this on Cain, because the low range becomes crippling.
 
-13) Tech X
+#### Tech X (Rank 13)
 
 - You need to fully charge the shot in order to deal the maximum amount of damage.
 
@@ -111,18 +113,18 @@ S Class items are considered above and beyond anything else present in the game.
 
 ### D Class
 
-14) Haemolacria
+#### Haemolacria (Rank 14)
 
 - Better than in Afterbirth+.
 
-15) Monstro's Lung
+#### Monstro's Lung (Rank 15)
 
 - Ipecac and Chocolate Milk are the strongest synergies.
 
-16) Chocolate Milk
+#### Chocolate Milk (Rank 16)
 
 - Considered to be one of the weakest starting items. If no power level increase from a devil deal is received, then the resulting long Caves 1 and Caves 2 can turn into an automatic loss.
 
-17) Sacrificial Dagger
+#### Sacrificial Dagger (Rank 17)
 
 - Rotates too quickly in order to use effectively. Also does not deal as much damage as it did in Afterbirth+ (less tick rate).
