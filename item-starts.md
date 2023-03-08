@@ -9,6 +9,7 @@ By Zamiel & Gamonymous
 Items are listed in order of power level. More detail about these items can be found below. Note that the ordering is somewhat subjective; other speedrunners may prefer the list be slightly shuffled in some way or another.
 
 | Rank | Item Name          | Class |
+| ---- | ------------------ | ----- |
 | 1    | Mom's Knife        | S     |
 | 2    | Ipecac             | S     |
 | 3    | Dr. Fetus          | A     |
