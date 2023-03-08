@@ -8,9 +8,7 @@ By Zamiel & Gamonymous
 
 Items are listed in order of power level. More detail about these items can be found below. Note that the ordering is somewhat subjective; other speedrunners may prefer the list be slightly shuffled in some way or another.
 
-+------+--------------------+-------+
 | Rank | Item Name          | Class |
-+------+--------------------+-------+
 | 1    | Mom's Knife        | S     |
 | 2    | Ipecac             | S     |
 | 3    | Dr. Fetus          | A     |
@@ -24,11 +22,12 @@ Items are listed in order of power level. More detail about these items can be f
 | 11   | Dead Eye           | C     |
 | 12   | Cricket's Body     | C     |
 | 13   | Tech X             | C     | 
-| 14   | Haemolacria        | D     | (probably don't start this)
-| 15   | Monstro's Lung     | D     | (probably don't start this)
-| 16   | Chocolate Milk     | D     | (probably don't start this) 
-| 17   | Sacrificial Dagger | D     | (probably don't start this)
-+------+--------------------+-------+
+| 14   | Haemolacria        | D     |
+| 15   | Monstro's Lung     | D     |
+| 16   | Chocolate Milk     | D     |
+| 17   | Sacrificial Dagger | D     |
+
+Probably do not start anything in D class.
 
 <br>
 
