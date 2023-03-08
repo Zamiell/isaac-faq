@@ -18,7 +18,7 @@ By Zamiel & Gamonymous
 | 3    | [Ipecac](#ipecac)                         | S     |
 | 4    | [Dr. Fetus](#dr-fetus)                    | A     |
 | 5    | [Proptosis](#proptosis)                   | A     |
-| 6    | [20/20](#20-20)                           | B     |
+| 6    | [20/20](#2020)                            | B     |
 | 7    | [Magic Mushroom](#magic-mushroom)         | B     |
 | 8    | [Cricket's Head](#crickets-head)          | B     |
 | 9    | [Tech.5](#tech5)                          | B     |
