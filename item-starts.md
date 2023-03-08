@@ -2,6 +2,8 @@
 
 By Zamiel & Gamonymous
 
+<br>
+
 ## The List
 
 Items are listed in order of power level. More detail about these items can be found below. Note that the ordering is somewhat subjective; other speedrunners may prefer the list be slightly shuffled in some way or another.
@@ -28,6 +30,11 @@ Items are listed in order of power level. More detail about these items can be f
 | 17   | Sacrificial Dagger | D     | (probably don't start this)
 +------+--------------------+-------+
 
+<br>
+
+## Explanations
+
+### 
 
 +-------------+
 |   S Class   |
@@ -45,6 +52,7 @@ S Class items are considered above and beyond anything else present in the game.
 - It is more dangerous to use than nearly all other items. It also kills bosses much slower than with other builds. However, it does have some powerful specific synergies, like Dr. Fetus.
 - Much like Mom's Knife, it requires a bunch of dedicated practice to utilize most effectively.
 
+## A Class
 
 
 +---------+
