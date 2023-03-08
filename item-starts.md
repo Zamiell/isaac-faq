@@ -11,25 +11,26 @@ By Zamiel & Gamonymous
 - More detail about these items can be found below in the [explanations section](#explanations).
 - The ordering is somewhat subjective; other speedrunners may prefer the list be slightly shuffled in some way or another.
 
-| Rank | Item Name          | Class |
-| ---- | ------------------ | ----- |
-| 1    | Mom's Knife        | S     |
-| 2    | Ipecac             | S     |
-| 3    | Dr. Fetus          | A     |
-| 4    | Proptosis          | A     |
-| 5    | 20/20              | B     |
-| 6    | Magic Mushroom     | B     |
-| 7    | Cricket's Head     | B     |
-| 8    | Tech.5             | B     |
-| 9    | Polyphemus         | B     |
-| 10   | Death's Touch      | C     |
-| 11   | Dead Eye           | C     |
-| 12   | Cricket's Body     | C     |
-| 13   | Tech X             | C     | 
-| 14   | Haemolacria        | D     |
-| 15   | Monstro's Lung     | D     |
-| 16   | Chocolate Milk     | D     |
-| 17   | Sacrificial Dagger | D     |
+| Rank | Item Name                                 | Class |
+| ---- | ----------------------------------------- | ----- |
+| 1    | [Mom's Knife](#moms-knife)                | S     |
+| 2    | [Epic Fetus](#epic-fetus)                 | S     |
+| 3    | [Ipecac](#ipecac)                         | S     |
+| 4    | [Dr. Fetus](#dr-fetus)                    | A     |
+| 5    | [Proptosis](#proptosis)                   | A     |
+| 6    | [20/20](#20-20)                           | B     |
+| 7    | [Magic Mushroom](#magic-mushroom)         | B     |
+| 8    | [Cricket's Head](#crickets-head)          | B     |
+| 9    | [Tech.5](#tech5)                          | B     |
+| 10   | [Polyphemus](#polyphemus)                 | B     |
+| 11   | [Death's Touch](#deaths-touch)            | C     |
+| 12   | [Dead Eye](#dead-eye)                     | C     |
+| 13   | [Cricket's Body](#crickets-body)          | C     |
+| 14   | [Tech X](#tech-x)                         | C     | 
+| 15   | [Haemolacria](#haemolacria)               | D     |
+| 16   | [Monstro's Lung](#monstros-lung)          | D     |
+| 17   | [Chocolate Milk](#chocolate-milk)         | D     |
+| 18   | [Sacrificial Dagger](#sacrificial-dagger) | D     |
 
 <br>
 
@@ -39,12 +40,12 @@ By Zamiel & Gamonymous
 
 S Class items are considered above and beyond anything else present in the game. If you have one of these items and your opponent doesn't, and most other factors are equal, you will probably win the race.
 
-#### Mom's Knife (Rank 1)
+#### Mom's Knife
 
 - At the highest levels of play, Mom's Knife is considered the best item in the game.
 - Due to the mechanics of the movement involved with the item, you also have a higher propensity to take damage. If you combine this with all tears-up items being useless with a knife, it is recommended to take all health up items.
 
-#### Ipecac (Rank 2)
+#### Ipecac
 
 - Considered the second best item; you want to use the explosive tears to "bomb" out of every room.
 - It is more dangerous to use than nearly all other items. It also kills bosses much slower than with other builds. However, it does have some powerful specific synergies, like Dr. Fetus.
@@ -54,11 +55,11 @@ S Class items are considered above and beyond anything else present in the game.
 
 ### A Class
 
-#### Dr. Fetus (Rank 3)
+#### Dr. Fetus
 
 - Requires some practice to be able to use effectively, but still easier to play than Ipecac.
 
-#### Proptosis (Rank 4)
+#### Proptosis
 
 - Triple damage but only if you are very close to the enemy. Good players will get close to (almost) every enemy in order to maximize DPS.
 
@@ -66,24 +67,24 @@ S Class items are considered above and beyond anything else present in the game.
 
 ### B Class
 
-#### 20/20 (Rank 5)
+#### 20/20
 
 - 75% damage up overall.
 
-#### Magic Mushroom (Rank 6)
+#### Magic Mushroom
 
 - Preferred to Cricket's Head since you also get a speed up.
 
-#### Cricket's Head (Rank 7)
+#### Cricket's Head
 
 - n/a
 
-#### Tech.5 (Rank 8)
+#### Tech.5
 
 - You always want to take coal with this item, since it acts as a damage multiplier.
 - Eve's Mascara is a great synergy.
 
-#### Polyphemus (Rank 9)
+#### Polyphemus
 
 - Generally not worth trading the D6 for Guppy's Head unless your build is completely carried.
 
@@ -91,21 +92,21 @@ S Class items are considered above and beyond anything else present in the game.
 
 ### C Class
 
-#### Death's Touch (Rank 10)
+#### Death's Touch
 
 - It is not a damage multiplier, but the large tear size and piercing is multiplicative in that you will often hit many enemies with one shot.
 - This is the only item upon that changes the rolling strategy such that you may want to roll a speed up for a tears up (at base speed).
 - Tammy's Head becomes very strong with this.
 
-#### Dead Eye (Rank 11)
+#### Dead Eye
 
 - Don't be overly conservative with the amount of tears that you fire, especially after getting a tears up, as you will not lose the multiplier on every missed shot.
 
-#### Cricket's Body (Rank 12)
+#### Cricket's Body
 
 - Don't start this on Cain, because the low range becomes crippling.
 
-#### Tech X (Rank 13)
+#### Tech X
 
 - You need to fully charge the shot in order to deal the maximum amount of damage.
 
@@ -113,18 +114,18 @@ S Class items are considered above and beyond anything else present in the game.
 
 ### D Class
 
-#### Haemolacria (Rank 14)
+#### Haemolacria
 
 - Better than in Afterbirth+.
 
-#### Monstro's Lung (Rank 15)
+#### Monstro's Lung
 
 - Ipecac and Chocolate Milk are the strongest synergies.
 
-#### Chocolate Milk (Rank 16)
+#### Chocolate Milk
 
 - Considered to be one of the weakest starting items. If no power level increase from a devil deal is received, then the resulting long Caves 1 and Caves 2 can turn into an automatic loss.
 
-#### Sacrificial Dagger (Rank 17)
+#### Sacrificial Dagger
 
 - Rotates too quickly in order to use effectively. Also does not deal as much damage as it did in Afterbirth+ (less tick rate).
