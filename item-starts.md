@@ -11,26 +11,26 @@ By Zamiel & Gamonymous
 - More detail about these items can be found below in the [explanations section](#explanations).
 - The ordering is somewhat subjective; other speedrunners may prefer the list be slightly shuffled in some way or another.
 
-| Rank | Item Name                                 | Class |
-| ---- | ----------------------------------------- | ----- |
-| 1    | [Mom's Knife](#moms-knife)                | S     |
-| 2    | [Epic Fetus](#epic-fetus)                 | S     |
-| 3    | [Ipecac](#ipecac)                         | S     |
-| 4    | [Dr. Fetus](#dr-fetus)                    | A     |
-| 5    | [Proptosis](#proptosis)                   | A     |
-| 6    | [20/20](#2020)                            | B     |
-| 7    | [Magic Mushroom](#magic-mushroom)         | B     |
-| 8    | [Cricket's Head](#crickets-head)          | B     |
-| 9    | [Tech.5](#tech5)                          | B     |
-| 10   | [Polyphemus](#polyphemus)                 | B     |
-| 11   | [Death's Touch](#deaths-touch)            | C     |
-| 12   | [Dead Eye](#dead-eye)                     | C     |
-| 13   | [Cricket's Body](#crickets-body)          | C     |
-| 14   | [Tech X](#tech-x)                         | C     | 
-| 15   | [Haemolacria](#haemolacria)               | D     |
-| 16   | [Monstro's Lung](#monstros-lung)          | D     |
-| 17   | [Chocolate Milk](#chocolate-milk)         | D     |
-| 18   | [Sacrificial Dagger](#sacrificial-dagger) | D     |
+| Rank | Item Name                                 | Class | Vanilla | Racing+
+| ---- | ----------------------------------------- | ----- | ------- | -------
+| 1    | [Mom's Knife](#moms-knife)                | S     | ✅     | ✅
+| 2    | [Epic Fetus](#epic-fetus)                 | S     | ✅     | ✅
+| 3    | [Ipecac](#ipecac)                         | S     | ✅     | ✅
+| 4    | [Dr. Fetus](#dr-fetus)                    | A     | ✅     | ✅
+| 5    | [Proptosis](#proptosis)                   | A     | ✅     | ✅
+| 6    | [20/20](#2020)                            | B     | ✅     | ✅
+| 7    | [Magic Mushroom](#magic-mushroom)         | B     | ✅     | ✅
+| 8    | [Cricket's Head](#crickets-head)          | B     | ✅     | ✅
+| 9    | [Tech.5](#tech5)                          | B     | ✅     | ✅
+| 10   | [Polyphemus](#polyphemus)                 | B     | ✅     | ✅
+| 11   | [Death's Touch](#deaths-touch)            | C     | ✅     | ✅
+| 12   | [Dead Eye](#dead-eye)                     | C     | ✅     | ✅
+| 13   | [Cricket's Body](#crickets-body)          | C     | ✅     | ✅
+| 14   | [Tech X](#tech-x)                         | C     | ✅     | ✅
+| 15   | [Haemolacria](#haemolacria)               | D     | ✅     | ✅
+| 16   | [Monstro's Lung](#monstros-lung)          | D     | ✅     | ✅
+| 17   | [Chocolate Milk](#chocolate-milk)         | D     | ✅     | ✅
+| 18   | [Sacrificial Dagger](#sacrificial-dagger) | D     | ✅     | ✅
 
 <br>
 
