@@ -17,10 +17,10 @@ By Zamiel & Gamonymous
 | 2    | [Epic Fetus](#epic-fetus)                 | S     | ✅      | ✅      |
 | 3    | [Ipecac](#ipecac)                         | S     | ✅      | ✅      |
 | 4    | [Sacred Heart](#sacred-heart)             | S     | ❌      | ✅      |
-| 5    | [Dr. Fetus](#dr-fetus)                    | A     | ✅      | ✅      |
+| 5    | [Maw of the Void](#maw-of-the-void)       | A     | ❌      | ✅      |
 | 6    | [Proptosis](#proptosis)                   | A     | ✅      | ✅      |
 | 7    | [Godhead](#godhead)                       | A     | ❌      | ✅      |
-| 8    | [Maw of the Void](#maw-of-the-void)       | A     | ❌      | ✅      |
+| 8    | [Dr. Fetus](#dr-fetus)                    | A     | ✅      | ✅      |
 | 9    | [20/20](#2020)                            | B     | ✅      | ✅      |
 | 10   | [Magic Mushroom](#magic-mushroom)         | B     | ✅      | ✅      |
 | 11   | [Cricket's Head](#crickets-head)          | B     | ✅      | ✅      |
@@ -34,9 +34,9 @@ By Zamiel & Gamonymous
 | 19   | [Tech X](#tech-x)                         | C     | ✅      | ✅      |
 | 20   | [Judas Shadow](#judas-shadow)             | C     | ❌      | ✅      |
 | 21   | [Incubus](#incubus)                       | C     | ❌      | ✅      |
-| 22   | [Twisted Pair](#twisted-pair)             | C     | ❌      | ✅      |
-| 23   | [Haemolacria](#haemolacria)               | D     | ✅      | ✅      |
-| 24   | [Monstro's Lung](#monstros-lung)          | D     | ✅      | ✅      |
+| 22   | [Haemolacria](#haemolacria)               | D     | ✅      | ✅      |
+| 23   | [Monstro's Lung](#monstros-lung)          | D     | ✅      | ✅      |
+| 24   | [Twisted Pair](#twisted-pair)             | C     | ❌      | ✅      |
 | 25   | [Chocolate Milk](#chocolate-milk)         | D     | ✅      | ✅      |
 | 26   | [Sacrificial Dagger](#sacrificial-dagger) | E     | ✅      | ✅      |
 
@@ -72,9 +72,9 @@ S Class items are considered above and beyond anything else present in the game.
 
 ### A Class
 
-#### Dr. Fetus
+#### Maw of the Void
 
-- Requires some practice to be able to use effectively, but still easier to play than Ipecac.
+- Not as good as it was in Afterbirth+ due to the nerfing of the damage, but still one of the best items in the game.
 
 #### Proptosis
 
@@ -84,9 +84,9 @@ S Class items are considered above and beyond anything else present in the game.
 
 - n/a
 
-#### Maw of the Void
+#### Dr. Fetus
 
-- Not as good as it was in Afterbirth+ due to the nerfing of the damage, but still one of the best items in the game.
+- Requires some practice to be able to use effectively, but still easier to play than Ipecac.
 
 <br>
 
@@ -151,10 +151,6 @@ S Class items are considered above and beyond anything else present in the game.
 
 - n/a
 
-#### Twisted Pair
-
-- n/a
-
 <br>
 
 ### D Class
@@ -166,6 +162,10 @@ S Class items are considered above and beyond anything else present in the game.
 #### Monstro's Lung
 
 - Ipecac and Chocolate Milk are the strongest synergies.
+
+#### Twisted Pair
+
+- Most of the extra tears usually end up missing, so the item is not very good.
 
 #### Chocolate Milk
 
