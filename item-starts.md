@@ -9,7 +9,7 @@ By Zamiel & Gamonymous
 - Items are listed in order of power level.
 - You should probably not start anything in D class.
 - More detail about these items can be found below in the [explanations section](#explanations).
-- The ordering is somewhat subjective; other speedrunners may prefer the list be slightly shuffled in some way or another.
+- The ordering is somewhat subjective; other speedrunners may prefer the list be shuffled in some way or another.
 
 | Rank | Item Name                                 | Class | Vanilla | Racing+ |
 | ---- | ----------------------------------------- | ----- | ------- | ------- |
