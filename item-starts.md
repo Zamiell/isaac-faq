@@ -26,18 +26,19 @@ By Zamiel & Gamonymous
 | 11   | [Cricket's Head](#crickets-head)          | B     | ✅      | ✅      |
 | 12   | [Tech.5](#tech5)                          | B     | ✅      | ✅      |
 | 13   | [Polyphemus](#polyphemus)                 | B     | ✅      | ✅      |
-| 14   | [Crown of Light](#crown-of-light)         | B     | ✅      | ✅      |
-| 15   | [Death's Touch](#deaths-touch)            | C     | ✅      | ✅      |
-| 16   | [Dead Eye](#dead-eye)                     | C     | ✅      | ✅      |
-| 17   | [Cricket's Body](#crickets-body)          | C     | ✅      | ✅      |
-| 18   | [Tech X](#tech-x)                         | C     | ✅      | ✅      |
-| 19   | [Judas Shadow](#judas-shadow)             | C     | ❌      | ✅      |
-| 20   | [Incubus](#incubus)                       | C     | ❌      | ✅      |
-| 21   | [Twisted Pair](#twisted-pair)             | C     | ❌      | ✅      |
-| 22   | [Haemolacria](#haemolacria)               | D     | ✅      | ✅      |
-| 23   | [Monstro's Lung](#monstros-lung)          | D     | ✅      | ✅      |
-| 24   | [Chocolate Milk](#chocolate-milk)         | D     | ✅      | ✅      |
-| 25   | [Sacrificial Dagger](#sacrificial-dagger) | E     | ✅      | ✅      |
+| 14   | [Crown of Light](#crown-of-light)         | B     | ❌      | ✅      |
+| 15   | [C Section](#c-section)                   | B     | ✅      | ✅      |
+| 16   | [Death's Touch](#deaths-touch)            | C     | ✅      | ✅      |
+| 17   | [Dead Eye](#dead-eye)                     | C     | ✅      | ✅      |
+| 18   | [Cricket's Body](#crickets-body)          | C     | ✅      | ✅      |
+| 19   | [Tech X](#tech-x)                         | C     | ✅      | ✅      |
+| 20   | [Judas Shadow](#judas-shadow)             | C     | ❌      | ✅      |
+| 21   | [Incubus](#incubus)                       | C     | ❌      | ✅      |
+| 22   | [Twisted Pair](#twisted-pair)             | C     | ❌      | ✅      |
+| 23   | [Haemolacria](#haemolacria)               | D     | ✅      | ✅      |
+| 24   | [Monstro's Lung](#monstros-lung)          | D     | ✅      | ✅      |
+| 25   | [Chocolate Milk](#chocolate-milk)         | D     | ✅      | ✅      |
+| 26   | [Sacrificial Dagger](#sacrificial-dagger) | E     | ✅      | ✅      |
 
 <br>
 
@@ -111,6 +112,14 @@ S Class items are considered above and beyond anything else present in the game.
 #### Polyphemus
 
 - Generally not worth trading the D6 for Guppy's Head unless your build is completely carried.
+
+#### Crown of Light
+
+- n/a
+
+#### C Section
+
+- n/a
 
 <br>
 
