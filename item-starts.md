@@ -63,6 +63,10 @@ S Class items are considered above and beyond anything else present in the game.
 - It is more dangerous to use than nearly all other items. It also kills bosses much slower than with other builds. However, it does have some powerful specific synergies, like Dr. Fetus.
 - Much like Mom's Knife, it requires a bunch of dedicated practice to utilize most effectively.
 
+#### Sacred Heart
+
+- Much better than it was in Afterbirth+ due to the new homing mechanic and removal of homing bombs.
+
 <br>
 
 ### A Class
@@ -74,6 +78,14 @@ S Class items are considered above and beyond anything else present in the game.
 #### Proptosis
 
 - Triple damage but only if you are very close to the enemy. Good players will get close to (almost) every enemy in order to maximize DPS.
+
+#### Godhead
+
+- n/a
+
+#### Maw of the Void
+
+- Not as good as it was in Afterbirth+ due to the nerfing of the damage, but still one of the best items in the game.
 
 <br>
 
