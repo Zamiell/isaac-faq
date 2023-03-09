@@ -28,15 +28,15 @@ By Zamiel & Gamonymous
 | 13   | [Polyphemus](#polyphemus)                 | B     | ✅      | ✅      |
 | 14   | [Crown of Light](#crown-of-light)         | B     | ❌      | ✅      |
 | 15   | [C Section](#c-section)                   | B     | ✅      | ✅      |
-| 16   | [Death's Touch](#deaths-touch)            | C     | ✅      | ✅      |
-| 17   | [Dead Eye](#dead-eye)                     | C     | ✅      | ✅      |
+| 16   | [Dead Eye](#dead-eye)                     | B     | ✅      | ✅      |
+| 17   | [Death's Touch](#deaths-touch)            | C     | ✅      | ✅      |
 | 18   | [Cricket's Body](#crickets-body)          | C     | ✅      | ✅      |
 | 19   | [Tech X](#tech-x)                         | C     | ✅      | ✅      |
 | 20   | [Judas Shadow](#judas-shadow)             | C     | ❌      | ✅      |
 | 21   | [Incubus](#incubus)                       | C     | ❌      | ✅      |
 | 22   | [Haemolacria](#haemolacria)               | D     | ✅      | ✅      |
 | 23   | [Monstro's Lung](#monstros-lung)          | D     | ✅      | ✅      |
-| 24   | [Twisted Pair](#twisted-pair)             | C     | ❌      | ✅      |
+| 24   | [Twisted Pair](#twisted-pair)             | D     | ❌      | ✅      |
 | 25   | [Chocolate Milk](#chocolate-milk)         | D     | ✅      | ✅      |
 | 26   | [Sacrificial Dagger](#sacrificial-dagger) | E     | ✅      | ✅      |
 
@@ -121,6 +121,10 @@ S Class items are considered above and beyond anything else present in the game.
 
 - n/a
 
+#### Dead Eye
+
+- Don't be overly conservative with the amount of tears that you fire, especially after getting a tears up, as you will not lose the multiplier on every missed shot.
+
 <br>
 
 ### C Class
@@ -130,10 +134,6 @@ S Class items are considered above and beyond anything else present in the game.
 - It is not a damage multiplier, but the large tear size and piercing is multiplicative in that you will often hit many enemies with one shot.
 - This is the only item upon that changes the rolling strategy such that you may want to roll a speed up for a tears up (at base speed).
 - Tammy's Head becomes very strong with this.
-
-#### Dead Eye
-
-- Don't be overly conservative with the amount of tears that you fire, especially after getting a tears up, as you will not lose the multiplier on every missed shot.
 
 #### Cricket's Body
 
