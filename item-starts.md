@@ -134,6 +134,18 @@ S Class items are considered above and beyond anything else present in the game.
 
 - You need to fully charge the shot in order to deal the maximum amount of damage.
 
+#### Judas Shadow
+
+- n/a
+
+#### Incubus
+
+- n/a
+
+#### Twisted Pair
+
+- n/a
+
 <br>
 
 ### D Class
