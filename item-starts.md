@@ -11,26 +11,33 @@ By Zamiel & Gamonymous
 - More detail about these items can be found below in the [explanations section](#explanations).
 - The ordering is somewhat subjective; other speedrunners may prefer the list be slightly shuffled in some way or another.
 
-| Rank | Item Name                                 | Class | Vanilla | Racing+
-| ---- | ----------------------------------------- | ----- | ------- | -------
-| 1    | [Mom's Knife](#moms-knife)                | S     | ✅     | ✅
-| 2    | [Epic Fetus](#epic-fetus)                 | S     | ✅     | ✅
-| 3    | [Ipecac](#ipecac)                         | S     | ✅     | ✅
-| 4    | [Dr. Fetus](#dr-fetus)                    | A     | ✅     | ✅
-| 5    | [Proptosis](#proptosis)                   | A     | ✅     | ✅
-| 6    | [20/20](#2020)                            | B     | ✅     | ✅
-| 7    | [Magic Mushroom](#magic-mushroom)         | B     | ✅     | ✅
-| 8    | [Cricket's Head](#crickets-head)          | B     | ✅     | ✅
-| 9    | [Tech.5](#tech5)                          | B     | ✅     | ✅
-| 10   | [Polyphemus](#polyphemus)                 | B     | ✅     | ✅
-| 11   | [Death's Touch](#deaths-touch)            | C     | ✅     | ✅
-| 12   | [Dead Eye](#dead-eye)                     | C     | ✅     | ✅
-| 13   | [Cricket's Body](#crickets-body)          | C     | ✅     | ✅
-| 14   | [Tech X](#tech-x)                         | C     | ✅     | ✅
-| 15   | [Haemolacria](#haemolacria)               | D     | ✅     | ✅
-| 16   | [Monstro's Lung](#monstros-lung)          | D     | ✅     | ✅
-| 17   | [Chocolate Milk](#chocolate-milk)         | D     | ✅     | ✅
-| 18   | [Sacrificial Dagger](#sacrificial-dagger) | D     | ✅     | ✅
+| Rank | Item Name                                 | Class | Vanilla | Racing+ |
+| ---- | ----------------------------------------- | ----- | ------- | ------- |
+| 1    | [Mom's Knife](#moms-knife)                | S     | ✅      | ✅      |
+| 2    | [Epic Fetus](#epic-fetus)                 | S     | ✅      | ✅      |
+| 3    | [Ipecac](#ipecac)                         | S     | ✅      | ✅      |
+| 4    | [Sacred Heart](#sacred-heart)             | S     | ❌      | ✅      |
+| 5    | [Dr. Fetus](#dr-fetus)                    | A     | ✅      | ✅      |
+| 6    | [Proptosis](#proptosis)                   | A     | ✅      | ✅      |
+| 7    | [Godhead](#godhead)                       | A     | ❌      | ✅      |
+| 8    | [Maw of the Void](#maw-of-the-void)       | A     | ❌      | ✅      |
+| 9    | [20/20](#2020)                            | B     | ✅      | ✅      |
+| 10   | [Magic Mushroom](#magic-mushroom)         | B     | ✅      | ✅      |
+| 11   | [Cricket's Head](#crickets-head)          | B     | ✅      | ✅      |
+| 12   | [Tech.5](#tech5)                          | B     | ✅      | ✅      |
+| 13   | [Polyphemus](#polyphemus)                 | B     | ✅      | ✅      |
+| 14   | [Crown of Light](#crown-of-light)         | B     | ✅      | ✅      |
+| 15   | [Death's Touch](#deaths-touch)            | C     | ✅      | ✅      |
+| 16   | [Dead Eye](#dead-eye)                     | C     | ✅      | ✅      |
+| 17   | [Cricket's Body](#crickets-body)          | C     | ✅      | ✅      |
+| 18   | [Tech X](#tech-x)                         | C     | ✅      | ✅      |
+| 19   | [Judas Shadow](#judas-shadow)             | C     | ❌      | ✅      |
+| 20   | [Incubus](#incubus)                       | C     | ❌      | ✅      |
+| 21   | [Twisted Pair](#twisted-pair)             | C     | ❌      | ✅      |
+| 22   | [Haemolacria](#haemolacria)               | D     | ✅      | ✅      |
+| 23   | [Monstro's Lung](#monstros-lung)          | D     | ✅      | ✅      |
+| 24   | [Chocolate Milk](#chocolate-milk)         | D     | ✅      | ✅      |
+| 25   | [Sacrificial Dagger](#sacrificial-dagger) | E     | ✅      | ✅      |
 
 <br>
 
@@ -130,6 +137,8 @@ S Class items are considered above and beyond anything else present in the game.
 #### Chocolate Milk
 
 - Considered to be one of the weakest starting items. If no power level increase from a devil deal is received, then the resulting long Caves 1 and Caves 2 can turn into an automatic loss.
+
+### E Class
 
 #### Sacrificial Dagger
 
