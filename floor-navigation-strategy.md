@@ -91,10 +91,11 @@ The term "moon strats" was coined by speedrunners back around 2013 before the re
 Rooms have a specific order in which they generate. Boss Room always generates in a valid room that is the farthest away from the starting room. Then, the Super Secret Room generates. After that, the Shop generates. While the Shop can generate far away from the boss, it usually generates within just a few rooms of it.
 
 This has a couple of implications:
-* If you see the Shop, keep going in the direction you were going. You're likely close to the boss.
-* If you teleport with a Hermit card, you will usually be close to the boss, closer than you would get by using a card like the Stars.
-* The Super Secret room is very likely to generate between the Boss Room and the Shop.
-* In cases where the Super-secret room isn't near the Boss, it's near the Shop instead (this can be useful if the Shop and Super-secret room spawns on the other side of the floor)
+
+- If you see the shop, keep going in the direction you were going. You're likely close to the boss.
+- If you teleport with a Hermit card, you will usually be close to the boss, closer than you would get by using a card like the Stars.
+- The Super Secret Room is very likely to generate between the Boss Room and the shop.
+- In cases where the Super Secret Room isn't near the Boss, it's near the Shop instead (this can be useful if the Shop and Super-secret room spawns on the other side of the floor)
 
 Credit goes to from Blade's GitHub Gist for figuring out Isaac's level generation (the pseudo-code for the level generation can be found here: https://gist.github.com/bladecoding/d75aef7e830c738ad5e3d66d146a095c), and credit for Dr. Monty for bringing this to the attention of the community.
 
