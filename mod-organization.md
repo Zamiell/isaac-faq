@@ -1,5 +1,7 @@
 # Mod Organization
 
+[EDIT - This blog is now outdated; see my new post on [feature classes](https://isaacscript.github.io/main/mod-feature).]
+
 This is a short blog about how to organize a big Isaac mod - one that has thousands of lines of code. It's aimed at more experienced programmers who want to be the best coders that they can be, and not just get the job done as quickly as possible. The principles here are agnostic in that they equally apply to a mod written in TypeScript or a mod written in Lua.
 
 Software has the problem where if you keep on adding things to it, eventually it becomes a Frankenstein monster - hard to manage and hard to understand. It is helpful to keep your mod code nice and organized so that it never reaches a state of unmaintainable spaghetti.
