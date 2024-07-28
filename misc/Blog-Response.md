@@ -224,7 +224,7 @@ Jill seems to imply that this was somehow a major flaw in the software, but I do
 
 Edit - As of May 2022, TSTL now produces comments in the Lua output, so this point is no longer relevant.
 
-However, even if there was not comments in the Lua output, it would make **zero practical difference**. Jill points out that without comments, troubleshooting might become really hard, but this is dead wrong. When you get a runtime error and a Lua line number, finding the matching TypeScript code is trivial because all of the Lua function names and variable names are the same.
+However, even if there were not comments in the Lua output, it would make **zero practical difference**. Jill points out that without comments, troubleshooting might become really hard, but this is dead wrong. When you get a runtime error and a Lua line number, finding the matching TypeScript code is trivial because all of the Lua function names and variable names are the same.
 
 <br>
 
